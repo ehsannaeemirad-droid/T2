@@ -1,29 +1,54 @@
 {
-  "title": "گرامر درس ۲A: افعال Modal و مصدر با -ing",
-  "explanation": [
+  "title": "گرامر درس ۲A: افعال کمکی و مصدر",
+  "steps": [
     {
-      "heading": "افعال Modal (can / can't)",
-      "text": "افعال Modal مثل <code>can</code> و <code>can't</code> برای بیان <strong>توانایی</strong> یا <strong>عدم توانایی</strong> استفاده می‌شوند. نکته‌ی بسیار مهم این است که بعد از این افعال، فعل به صورت <strong>ساده (بدون to و بدون s)</strong> می‌آید. مثلاً: <code>He can run fast.</code> (او می‌تواند سریع بدود)."
+      "type": "teach",
+      "title": "افعال کمکی: can, should, must",
+      "content_fa": "افعال کمکی مثل <code>can</code>، <code>should</code> و <code>must</code> بعد از فاعل می‌آیند و بعد از آن‌ها فعل <strong>بدون to و بدون s</strong> قرار می‌گیرد: <code>You should get more sleep.</code> این افعال s سوم‌شخص نمی‌گیرند و برای منفی، <code>not</code> بعد از آن‌ها می‌آید: <code>Dogs can't fly.</code>",
+      "examples": [
+        { "en": "You should get more sleep.", "fa": "بهتر است بیشتر بخوابی." },
+        { "en": "Dogs can be dangerous.", "fa": "سگ‌ها می‌توانند خطرناک باشند." },
+        { "en": "We must protect wild animals.", "fa": "ما باید از حیوانات وحشی محافظت کنیم." }
+      ]
     },
     {
-      "heading": "افعال علاقه + Gerund (-ing)",
-      "text": "وقتی می‌خواهیم بگوییم از انجام کاری لذت می‌بریم، یا آن را دوست داریم، از افعالی مثل <code>like, love, enjoy, hate</code> استفاده می‌کنیم. بعد از این افعال، فعل به صورت <strong>اسم مصدر (verb-ing)</strong> می‌آید. مثلاً: <code>I love playing with my cat.</code> (من عاشق بازی کردن با گربه‌ام هستم). <code>She enjoys watching birds.</code> (او از تماشای پرندگان لذت می‌برد)."
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "You ____ see a doctor.", "o": ["should", "shoulds", "to should"], "a": "should", "fb": "افعال کمکی s نمی‌گیرند." },
+        { "k": "type", "q": "Dogs ____ (can) be dangerous.", "a": "can", "fb": "بعد از فاعل، فعل کمکی بدون تغییر می‌آید." }
+      ]
     },
     {
-      "heading": "نکته‌ی مهم",
-      "text": "بعد از حروف اضافه (مثل at, in, of) هم همیشه از <code>verb-ing</code> استفاده می‌شود. مثلاً: <code>He is good at training dogs.</code> (او در تربیت سگ‌ها خوب است)."
+      "type": "teach",
+      "title": "فعل + ing یا فعل + to",
+      "content_fa": "بعضی فعل‌ها با <code>-ing</code> می‌آیند: <code>enjoy</code>، <code>love</code>، <code>hate</code>، <code>like</code> (برای لذت بردن): <code>I enjoy watching birds.</code> بعضی فعل‌ها با <code>to + verb</code> می‌آیند: <code>want</code>، <code>decide</code>، <code>hope</code>، <code>plan</code>: <code>She wants to adopt a dog.</code>",
+      "examples": [
+        { "en": "I enjoy watching birds.", "fa": "از تماشای پرنده‌ها لذت می‌برم." },
+        { "en": "She wants to adopt a dog.", "fa": "او می‌خواهد یک سگ به سرپرستی بگیرد." },
+        { "en": "We decided to visit the zoo.", "fa": "ما تصمیم گرفتیم به باغ‌وحش برویم." }
+      ]
+    },
+    {
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "I enjoy ____ photos of animals.", "o": ["taking", "take", "to take"], "a": "taking", "fb": "enjoy با فعل + ing می‌آید." },
+        { "k": "type", "q": "She wants ____ (adopt) a dog.", "a": "to adopt", "fb": "want با to + فعل می‌آید." }
+      ]
+    },
+    {
+      "type": "final_test",
+      "items": [
+        { "k": "tap", "q": "You ____ feed wild animals.", "o": ["shouldn't", "don't should", "not should"], "a": "shouldn't", "fb": "منفی افعال کمکی با n't ساخته می‌شود." },
+        { "k": "tap", "q": "He ____ swim very well.", "o": ["can", "cans", "can to"], "a": "can", "fb": "can هیچ‌وقت s نمی‌گیرد." },
+        { "k": "type", "q": "We ____ (must) protect the environment.", "a": "must", "fb": "must بدون تغییر می‌آید." },
+        { "k": "type", "q": "I love ____ (watch) animal documentaries.", "a": "watching", "fb": "love با فعل + ing می‌آید." },
+        { "k": "type", "q": "They decided ____ (visit) the zoo.", "a": "to visit", "fb": "decide با to + فعل می‌آید." },
+        { "k": "drag", "w": ["You", "should", "be", "careful", "with", "dogs", "."], "a": "You should be careful with dogs .", "fb": "بعد از should فعل ساده می‌آید." },
+        { "k": "drag", "w": ["She", "enjoys", "playing", "with", "her", "cat", "."], "a": "She enjoys playing with her cat .", "fb": "enjoy + فعل ing." },
+        { "k": "tap", "q": "I hope ____ you at the party.", "o": ["to see", "seeing", "see"], "a": "to see", "fb": "hope با to + فعل می‌آید." },
+        { "k": "tap", "q": "Cats ____ be very independent.", "o": ["can", "can to", "cans"], "a": "can", "fb": "can + فعل ساده." },
+        { "k": "drag", "w": ["We", "must", "not", "feed", "the", "animals", "."], "a": "We must not feed the animals .", "fb": "منفی must: must not + فعل ساده." }
+      ]
     }
-  ],
-  "test": [
-    {"k": "tap", "q": "I enjoy ____ with my pet.", "o": ["playing", "to play", "play"], "a": "playing", "fb": "بعد از enjoy از -ing استفاده می‌کنیم."},
-    {"k": "tap", "q": "She can ____ very fast.", "o": ["run", "running", "to run"], "a": "run", "fb": "بعد از can فعل ساده می‌آید."},
-    {"k": "tap", "q": "They love ____ care of animals.", "o": ["taking", "take", "to take"], "a": "taking", "fb": "بعد از love می‌توان از -ing استفاده کرد."},
-    {"k": "tap", "q": "Dogs can't ____ in the house.", "o": ["fly", "flying", "to fly"], "a": "fly", "fb": "بعد از can't فعل ساده می‌آید."},
-    {"k": "type", "q": "He is good at ____ (train) dogs.", "a": "training", "fb": "بعد از حرف اضافه at از -ing استفاده می‌کنیم."},
-    {"k": "type", "q": "I hate ____ (clean) the litter box.", "a": "cleaning", "fb": "بعد از hate از -ing استفاده می‌کنیم."},
-    {"k": "type", "q": "Cats can ____ (see) in the dark.", "a": "see", "fb": "بعد از can فعل ساده."},
-    {"k": "drag", "w": ["I", "enjoy", "watching", "nature", "documentaries", "."], "a": "I enjoy watching nature documentaries .", "fb": "enjoy + verb-ing."},
-    {"k": "drag", "w": ["She", "can", "understand", "her", "cat", "."], "a": "She can understand her cat .", "fb": "can + base verb."},
-    {"k": "drag", "w": ["They", "love", "playing", "with", "their", "dog", "."], "a": "They love playing with their dog .", "fb": "love + verb-ing."}
   ]
 }

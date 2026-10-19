@@ -1,29 +1,54 @@
 {
-  "title": "گرامر درس ۲C: برنامه‌های آینده (Be going to و Will)",
-  "explanation": [
+  "title": "گرامر درس ۲C: کار و مسئولیت‌ها",
+  "steps": [
     {
-      "heading": "قصد و برنامه (Be going to)",
-      "text": "وقتی می‌خواهیم درباره <strong>قصد یا برنامه‌ای برای آینده</strong> صحبت کنیم (مثلاً چیزی که از قبل تصمیم گرفته‌ایم انجام دهیم)، از ساختار <code>am / is / are + going to + فعل ساده</code> استفاده می‌کنیم. مثلاً: <code>I am going to apply for a new job.</code> (من قصد دارم برای یک شغل جدید درخواست بدهم). این ساختار برای برنامه‌های قطعی و تصمیم‌های گرفته شده بسیار رایج است."
+      "type": "teach",
+      "title": "have to برای اجبار و وظیفه",
+      "content_fa": "برای کارهایی که <strong>باید</strong> انجام دهیم (قانون، وظیفه شغلی) از <code>have to</code> استفاده می‌کنیم. با he/she/it به <code>has to</code> تبدیل می‌شود و بعد از آن فعل ساده می‌آید: <code>I have to wear a uniform.</code> / <code>She has to start at eight.</code> منفی آن <code>don't/doesn't have to</code> است و یعنی «لازم نیست»، نه «نباید».",
+      "examples": [
+        { "en": "I have to wear a uniform at work.", "fa": "من باید سر کار لباس فرم بپوشم." },
+        { "en": "She has to start work at eight.", "fa": "او باید ساعت هشت کار را شروع کند." },
+        { "en": "We don't have to work on Fridays.", "fa": "ما لازم نیست جمعه‌ها کار کنیم." }
+      ]
     },
     {
-      "heading": "پیش‌بینی و تصمیم لحظه‌ای (Will)",
-      "text": "از <code>will + فعل ساده</code> در دو حالت اصلی استفاده می‌کنیم: ۱. برای <strong>پیش‌بینی</strong> آینده بدون شواهد قطعی (مثلاً: <code>I think she will get the job.</code> - فکر می‌کنم او شغل را بگیرد). ۲. برای <strong>تصمیم لحظه‌ای</strong> که همین الان گرفته‌ایم (مثلاً تلفن زنگ می‌زند و شما می‌گویید: <code>I will answer it!</code> - من جواب می‌دهم!)."
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "She ____ wear a uniform.", "o": ["has to", "have to", "has"], "a": "has to", "fb": "با she از has to استفاده می‌کنیم." },
+        { "k": "type", "q": "I ____ (not / have to) work on weekends.", "a": "don't have to", "fb": "منفی have to با don't have to ساخته می‌شود." }
+      ]
     },
     {
-      "heading": "تفاوت مهم",
-      "text": "اگر از قبل برای انجام کاری برنامه‌ریزی کرده‌اید، از <code>be going to</code> استفاده کنید. اگر در همان لحظه تصمیم می‌گیرید یا در حال پیش‌بینی هستید، از <code>will</code> استفاده کنید. برای هر دو ساختار، فعل بعد از آن‌ها <strong>همیشه ساده (بدون to و بدون s)</strong> است."
+      "type": "teach",
+      "title": "should برای توصیه",
+      "content_fa": "<code>should</code> برای <strong>توصیه و پیشنهاد</strong> به کار می‌رود، نه برای اجبار. بعد از آن فعل ساده می‌آید: <code>You should update your CV.</code> منفی آن <code>shouldn't</code> است: <code>You shouldn't arrive late.</code> برای سوال، should را به اول جمله می‌بریم: <code>Should I apply for this job?</code>",
+      "examples": [
+        { "en": "You should update your CV.", "fa": "بهتر است رزومه‌ات را به‌روز کنی." },
+        { "en": "He shouldn't arrive late for the interview.", "fa": "او نباید برای مصاحبه دیر برسد." },
+        { "en": "Should I call the manager?", "fa": "آیا باید به مدیر زنگ بزنم؟" }
+      ]
+    },
+    {
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "You ____ take a break; you look tired.", "o": ["should", "should to", "shoulds"], "a": "should", "fb": "بعد از should فعل ساده می‌آید." },
+        { "k": "type", "q": "You ____ (not / should) be late for the interview.", "a": "shouldn't", "fb": "منفی should: shouldn't." }
+      ]
+    },
+    {
+      "type": "final_test",
+      "items": [
+        { "k": "tap", "q": "He ____ work on Saturdays.", "o": ["has to", "have to", "has"], "a": "has to", "fb": "با he از has to استفاده می‌کنیم." },
+        { "k": "tap", "q": "You ____ check your email regularly.", "o": ["should", "should to", "must to"], "a": "should", "fb": "توصیه با should + فعل ساده." },
+        { "k": "type", "q": "We ____ (have to) attend the meeting tomorrow.", "a": "have to", "fb": "با we از have to استفاده می‌کنیم." },
+        { "k": "type", "q": "She ____ (not / have to) wear a suit.", "a": "doesn't have to", "fb": "منفی has to با doesn't have to." },
+        { "k": "type", "q": "You ____ (not / should) smoke in the office.", "a": "shouldn't", "fb": "منفی should: shouldn't." },
+        { "k": "drag", "w": ["I", "have", "to", "finish", "this", "report", "today", "."], "a": "I have to finish this report today .", "fb": "have to + فعل ساده." },
+        { "k": "drag", "w": ["You", "should", "apply", "for", "that", "job", "."], "a": "You should apply for that job .", "fb": "should + فعل ساده." },
+        { "k": "tap", "q": "____ I bring my laptop to the interview?", "o": ["Should", "Should I to", "Do should"], "a": "Should", "fb": "برای سوال، should به اول جمله می‌آید." },
+        { "k": "tap", "q": "We ____ wear a uniform here; it's optional.", "o": ["don't have to", "mustn't", "shouldn't"], "a": "don't have to", "fb": "لازم نیست: don't have to." },
+        { "k": "drag", "w": ["She", "doesn't", "have", "to", "work", "on", "Fridays", "."], "a": "She doesn't have to work on Fridays .", "fb": "منفی has to: doesn't have to." }
+      ]
     }
-  ],
-  "test": [
-    {"k": "tap", "q": "I have a plan. I ____ start my own business.", "o": ["am going to", "will", "am"], "a": "am going to", "fb": "برای برنامه از be going to استفاده می‌کنیم."},
-    {"k": "tap", "q": "Don't worry, I ____ help you with your resume.", "o": ["will", "am going to", "am"], "a": "will", "fb": "برای تصمیم لحظه‌ای از will استفاده می‌کنیم."},
-    {"k": "tap", "q": "She ____ probably get the promotion.", "o": ["will", "is going to", "is"], "a": "will", "fb": "برای پیش‌بینی از will استفاده می‌کنیم."},
-    {"k": "tap", "q": "We ____ meet at the office at 9 AM tomorrow.", "o": ["are going to", "will", "are"], "a": "are going to", "fb": "برنامه قطعی از قبل مشخص شده."},
-    {"k": "type", "q": "He ____ (be) going to travel next month.", "a": "is", "fb": "با he از is going to."},
-    {"k": "type", "q": "I think it ____ (will) rain tomorrow.", "a": "will", "fb": "پیش‌بینی با will."},
-    {"k": "type", "q": "They ____ (be) going to buy a new house.", "a": "are", "fb": "با they از are going to."},
-    {"k": "drag", "w": ["I", "am", "going", "to", "start", "a", "new", "career", "."], "a": "I am going to start a new career .", "fb": "be going to + base verb."},
-    {"k": "drag", "w": ["I", "will", "call", "you", "later", "."], "a": "I will call you later .", "fb": "will + base verb."},
-    {"k": "drag", "w": ["She", "will", "be", "a", "great", "manager", "."], "a": "She will be a great manager .", "fb": "پیش‌بینی با will."}
   ]
 }

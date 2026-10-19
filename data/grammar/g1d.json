@@ -1,0 +1,54 @@
+{
+  "title": "گرامر درس ۱D: حال کامل و used to",
+  "steps": [
+    {
+      "type": "teach",
+      "title": "حال کامل برای تجربه‌ها",
+      "content_fa": "برای صحبت از <strong>تجربه‌های زندگی</strong> بدون گفتن زمان دقیق، از حال کامل استفاده می‌کنیم: <code>have/has + past participle</code>. کلمه‌های <code>ever</code> و <code>never</code> در این ساختار بسیار رایج‌اند: <code>I've been to Canada.</code> / <code>She has never tried sushi.</code> اگر زمان دقیق را بگوییم، از گذشته ساده استفاده می‌کنیم.",
+      "examples": [
+        { "en": "I've watched this series three times.", "fa": "من این سریال را سه بار دیده‌ام." },
+        { "en": "Have you ever been to Turkey?", "fa": "تا حالا ترکیه رفته‌ای؟" },
+        { "en": "He has never eaten sushi.", "fa": "او هرگز سوشی نخورده است." }
+      ]
+    },
+    {
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "I ____ never been to Japan.", "o": ["have", "has", "am"], "a": "have", "fb": "با I از have استفاده می‌کنیم." },
+        { "k": "type", "q": "He ____ (visit) London twice.", "a": "has visited", "fb": "با he از has + past participle استفاده می‌کنیم." }
+      ]
+    },
+    {
+      "type": "teach",
+      "title": "used to برای عادت‌های گذشته",
+      "content_fa": "<code>used to</code> نشان می‌دهد کاری در گذشته عادت بوده اما <strong>الان دیگر انجام نمی‌شود</strong>: <code>I used to live in a small apartment.</code> برای منفی و سوالی از <code>didn't use to</code> و <code>Did ... use to</code> استفاده می‌کنیم (بدون d): <code>She didn't use to like coffee.</code> / <code>Did you use to watch cartoons?</code>",
+      "examples": [
+        { "en": "I used to watch cartoons every morning.", "fa": "قبلاً هر صبح کارتون تماشا می‌کردم." },
+        { "en": "She didn't use to like coffee.", "fa": "او قبلاً قهوه دوست نداشت." },
+        { "en": "Did you use to live here?", "fa": "قبلاً اینجا زندگی می‌کردی؟" }
+      ]
+    },
+    {
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "I ____ to play tennis when I was a child.", "o": ["used", "use", "using"], "a": "used", "fb": "در جمله مثبت used to می‌آید." },
+        { "k": "type", "q": "She ____ (not / use) to like coffee.", "a": "didn't use to", "fb": "منفی used to با didn't use to ساخته می‌شود." }
+      ]
+    },
+    {
+      "type": "final_test",
+      "items": [
+        { "k": "tap", "q": "She ____ never seen this film.", "o": ["has", "have", "is"], "a": "has", "fb": "با she از has استفاده می‌کنیم." },
+        { "k": "tap", "q": "We ____ to go to the beach every summer.", "o": ["used", "use", "uses"], "a": "used", "fb": "عادت گذشته: used to." },
+        { "k": "type", "q": "I ____ (be) to Paris twice.", "a": "have been", "fb": "حال کامل: have been." },
+        { "k": "type", "q": "He ____ (not / eat) sushi before.", "a": "hasn't eaten", "fb": "منفی حال کامل با hasn't + past participle." },
+        { "k": "type", "q": "I ____ (try) Mexican food before.", "a": "have tried", "fb": "حال کامل برای تجربه: have tried." },
+        { "k": "drag", "w": ["I", "have", "never", "been", "abroad", "."], "a": "I have never been abroad .", "fb": "never بین have و past participle می‌آید." },
+        { "k": "drag", "w": ["She", "didn't", "use", "to", "wear", "glasses", "."], "a": "She didn't use to wear glasses .", "fb": "در منفی، use بدون d می‌آید." },
+        { "k": "tap", "q": "Did you use to ____ near the school?", "o": ["live", "lived", "living"], "a": "live", "fb": "بعد از use to فعل ساده می‌آید." },
+        { "k": "tap", "q": "I ____ this movie last night.", "o": ["watched", "have watched", "watch"], "a": "watched", "fb": "چون زمان دقیق (last night) گفته شده، گذشته ساده می‌آید." },
+        { "k": "drag", "w": ["Have", "you", "ever", "been", "to", "Canada", "?"], "a": "Have you ever been to Canada ?", "fb": "الگوی سوال: Have + فاعل + ever + been ...?" }
+      ]
+    }
+  ]
+}

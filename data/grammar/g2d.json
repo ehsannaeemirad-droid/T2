@@ -1,0 +1,54 @@
+{
+  "title": "گرامر درس ۲D: مقایسه و بهترین‌ها",
+  "steps": [
+    {
+      "type": "teach",
+      "title": "صفت تفضیلی: مقایسه دو چیز",
+      "content_fa": "برای مقایسه دو چیز از صفت تفضیلی استفاده می‌کنیم. صفت‌های کوتاه <code>-er</code> می‌گیرند و بعد از آن‌ها <code>than</code> می‌آید: <code>cheap → cheaper than</code>. صفت‌های بلند با <code>more</code> مقایسه می‌شوند: <code>more expensive than</code>. چند صفت بی‌قاعده‌اند: <code>good → better</code>، <code>bad → worse</code>.",
+      "examples": [
+        { "en": "This jacket is cheaper than that one.", "fa": "این کاپشن از آن یکی ارزان‌تر است." },
+        { "en": "Online shops are often more convenient than malls.", "fa": "فروشگاه‌های اینترنتی اغلب راحت‌تر از مراکز خرید هستند." },
+        { "en": "The quality here is better than online.", "fa": "کیفیت اینجا از آنلاین بهتر است." }
+      ]
+    },
+    {
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "This bag is ____ than that one.", "o": ["cheaper", "cheapest", "more cheap"], "a": "cheaper", "fb": "صفت کوتاه cheap با -er تفضیلی می‌شود." },
+        { "k": "type", "q": "These shoes are ____ (expensive) than mine.", "a": "more expensive", "fb": "صفت بلند با more مقایسه می‌شود." }
+      ]
+    },
+    {
+      "type": "teach",
+      "title": "صفت عالی: بهترین در یک گروه",
+      "content_fa": "برای گفتن اینکه چیزی <strong>بهترین یا بدترین</strong> در یک گروه است، از صفت عالی استفاده می‌کنیم: <code>the + -est</code> برای صفت‌های کوتاه و <code>the most</code> برای صفت‌های بلند: <code>the cheapest</code>، <code>the most popular</code>. شکل‌های بی‌قاعده: <code>good → the best</code>، <code>bad → the worst</code>.",
+      "examples": [
+        { "en": "This is the cheapest shop in town.", "fa": "این ارزان‌ترین فروشگاه شهر است." },
+        { "en": "It's the most popular brand this year.", "fa": "این محبوب‌ترین برند امسال است." },
+        { "en": "That was the worst purchase I've made.", "fa": "آن بدترین خریدی بود که انجام داده‌ام." }
+      ]
+    },
+    {
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "It's ____ shop in the city.", "o": ["the cheapest", "cheaper", "the most cheap"], "a": "the cheapest", "fb": "صفت عالی کوتاه: the + -est." },
+        { "k": "type", "q": "This is ____ (good) coffee in town.", "a": "the best", "fb": "شکل عالی good می‌شود the best." }
+      ]
+    },
+    {
+      "type": "final_test",
+      "items": [
+        { "k": "tap", "q": "This phone is ____ than my old one.", "o": ["faster", "fastest", "more fast"], "a": "faster", "fb": "fast صفت کوتاه است: faster." },
+        { "k": "tap", "q": "It's ____ dress in the store.", "o": ["the most elegant", "more elegant", "the elegantest"], "a": "the most elegant", "fb": "صفت بلند: the most + صفت." },
+        { "k": "type", "q": "My new laptop is ____ (light) than the old one.", "a": "lighter", "fb": "light صفت کوتاه است: lighter." },
+        { "k": "type", "q": "This is ____ (bad) film of the year.", "a": "the worst", "fb": "شکل عالی bad می‌شود the worst." },
+        { "k": "type", "q": "Online prices are usually ____ (low) than in stores.", "a": "lower", "fb": "low صفت کوتاه است: lower." },
+        { "k": "drag", "w": ["This", "jacket", "is", "cheaper", "than", "that", "one", "."], "a": "This jacket is cheaper than that one .", "fb": "مقایسه با than." },
+        { "k": "drag", "w": ["It", "is", "the", "best", "shop", "in", "town", "."], "a": "It is the best shop in town .", "fb": "بهترین در یک محدوده: the best ... in." },
+        { "k": "tap", "q": "These shoes are ____ than the black ones.", "o": ["more comfortable", "comfortabler", "most comfortable"], "a": "more comfortable", "fb": "صفت بلند با more مقایسه می‌شود." },
+        { "k": "tap", "q": "Which is ____: this one or that one?", "o": ["cheaper", "cheapest", "the cheapest"], "a": "cheaper", "fb": "مقایسه دو چیز: تفضیلی." },
+        { "k": "drag", "w": ["She", "is", "the", "most", "careful", "buyer", "here", "."], "a": "She is the most careful buyer here .", "fb": "صفت عالی بلند: the most + صفت." }
+      ]
+    }
+  ]
+}

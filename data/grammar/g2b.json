@@ -1,0 +1,54 @@
+{
+  "title": "گرامر درس ۲B: قابل‌شمارش و غیرقابل‌شمارش",
+  "steps": [
+    {
+      "type": "teach",
+      "title": "اسم‌های قابل‌شمارش و غیرقابل‌شمارش",
+      "content_fa": "اسم‌های <strong>قابل‌شمارش</strong> شکل جمع می‌گیرند و با عدد می‌آیند: <code>one apple → two apples</code>. اسم‌های <strong>غیرقابل‌شمارش</strong> جمع نمی‌شوند و با عدد نمی‌آیند: <code>water, rice, bread, milk</code>. برای شمارش آن‌ها از واحد استفاده می‌کنیم: <code>a glass of water</code>، <code>a loaf of bread</code>.",
+      "examples": [
+        { "en": "I need two apples.", "fa": "من دو سیب لازم دارم." },
+        { "en": "There is some water in the fridge.", "fa": "کمی آب در یخچال هست." },
+        { "en": "Can I have a glass of milk?", "fa": "می‌توانم یک لیوان شیر داشته باشم؟" }
+      ]
+    },
+    {
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "There ____ some water in the bottle.", "o": ["is", "are", "be"], "a": "is", "fb": "water غیرقابل‌شمارش است، پس is می‌آید." },
+        { "k": "type", "q": "There are three ____ (apple) on the table.", "a": "apples", "fb": "apple قابل‌شمارش است و جمع می‌شود." }
+      ]
+    },
+    {
+      "type": "teach",
+      "title": "کمیت‌نماها: some, any, much, many",
+      "content_fa": "از <code>some</code> در جملات مثبت و از <code>any</code> در منفی و سوالی استفاده می‌کنیم: <code>We have some eggs.</code> / <code>We don't have any eggs.</code> برای اسم‌های قابل‌شمارش جمع از <code>many</code> و <code>a few</code> و برای غیرقابل‌شمارش از <code>much</code> و <code>a little</code> استفاده می‌کنیم: <code>How many eggs?</code> / <code>How much rice?</code>",
+      "examples": [
+        { "en": "How many eggs do we need?", "fa": "چند تخم‌مرغ لازم داریم؟" },
+        { "en": "There is only a little milk left.", "fa": "فقط کمی شیر مانده است." },
+        { "en": "We don't have any bread.", "fa": "ما نان نداریم." }
+      ]
+    },
+    {
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "How ____ eggs do we need?", "o": ["many", "much", "any"], "a": "many", "fb": "eggs قابل‌شمارش است، پس many." },
+        { "k": "type", "q": "There is only a ____ milk left.", "a": "little", "fb": "milk غیرقابل‌شمارش است، پس a little." }
+      ]
+    },
+    {
+      "type": "final_test",
+      "items": [
+        { "k": "tap", "q": "How ____ sugar do you take?", "o": ["much", "many", "few"], "a": "much", "fb": "sugar غیرقابل‌شمارش است." },
+        { "k": "tap", "q": "I'd like ____ apples, please.", "o": ["a few", "a little", "much"], "a": "a few", "fb": "apples جمع و قابل‌شمارش است." },
+        { "k": "type", "q": "There ____ (be) some rice in the bowl.", "a": "is", "fb": "rice غیرقابل‌شمارش است." },
+        { "k": "type", "q": "We don't have ____ milk.", "a": "any", "fb": "در جمله منفی از any استفاده می‌کنیم." },
+        { "k": "type", "q": "I need two ____ (tomato) for the salad.", "a": "tomatoes", "fb": "tomato جمع می‌شود: tomatoes." },
+        { "k": "drag", "w": ["How", "many", "apples", "do", "we", "need", "?"], "a": "How many apples do we need ?", "fb": "How many + اسم جمع قابل‌شمارش." },
+        { "k": "drag", "w": ["There", "is", "a", "little", "cheese", "in", "the", "fridge", "."], "a": "There is a little cheese in the fridge .", "fb": "a little + غیرقابل‌شمارش." },
+        { "k": "tap", "q": "There isn't ____ bread in the kitchen.", "o": ["any", "some", "many"], "a": "any", "fb": "جمله منفی است، پس any." },
+        { "k": "tap", "q": "She has ____ friends in this city.", "o": ["a few", "a little", "much"], "a": "a few", "fb": "friends جمع است." },
+        { "k": "drag", "w": ["I", "would", "like", "some", "water", "."], "a": "I would like some water .", "fb": "در جمله مثبت از some استفاده می‌کنیم." }
+      ]
+    }
+  ]
+}

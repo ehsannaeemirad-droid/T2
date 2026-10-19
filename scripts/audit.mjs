@@ -23,6 +23,56 @@ const readJson = async (path, label) => {
   }
 };
 
+function validateGrammar(g, file){
+  const checkItem = (item, where) => {
+    if (!item.q && item.k !== 'drag') fail(`${where}: question text missing`);
+    if (!item.fb) fail(`${where}: feedback missing`);
+    if (!['tap', 'type', 'drag'].includes(item.k)) fail(`${where}: unknown kind "${item.k}"`);
+    if (item.k === 'tap') {
+      if (!Array.isArray(item.o) || item.o.length < 2) fail(`${where}: tap needs options`);
+      else if (!item.o.includes(item.a)) fail(`${where}: answer "${item.a}" is not one of the options`);
+    }
+    if (item.k === 'type' && typeof item.a !== 'string') fail(`${where}: type needs a string answer`);
+    if (item.k === 'drag') {
+      if (!Array.isArray(item.w) || !item.w.length) fail(`${where}: drag needs words`);
+      else {
+        const tokens = item.w.slice().sort().join(' ');
+        const answer = String(item.a).trim().split(/\s+/).sort().join(' ');
+        if (tokens !== answer) fail(`${where}: drag words do not match the answer`);
+      }
+    }
+  };
+
+  if (Array.isArray(g.steps)) {
+    let teaches = 0, finals = 0;
+    g.steps.forEach((step, si) => {
+      const where = `${file} step ${si}`;
+      if (!step || !['teach', 'mini_test', 'final_test'].includes(step.type)) return fail(`${where}: unknown step type`);
+      if (step.type === 'teach') {
+        teaches++;
+        if (!step.title) fail(`${where}: teach card has no title`);
+        if (!step.content_fa) fail(`${where}: teach card has no content_fa`);
+        (step.examples || []).forEach((ex, ei) => {
+          if (!ex.en || !ex.fa) fail(`${where} example ${ei}: needs both en and fa`);
+        });
+      } else {
+        const items = step.items || [];
+        if (!items.length) fail(`${where}: no items`);
+        if (step.type === 'mini_test' && items.length !== 2) fail(`${where}: mini_test should have 2 items`);
+        if (step.type === 'final_test') finals = items.length;
+        items.forEach((item, ii) => checkItem(item, `${where} item ${ii}`));
+      }
+    });
+    if (!teaches) fail(`${file}: no teach cards`);
+    if (finals !== 10) fail(`${file}: final_test should have 10 items (has ${finals})`);
+    return;
+  }
+
+  // Legacy format
+  if (!Array.isArray(g.explanation) || !g.explanation.length) fail(`${file}: no "steps" and no legacy "explanation"`);
+  if (!Array.isArray(g.test) || !g.test.length) fail(`${file}: no "steps" and no legacy "test"`);
+}
+
 const topics = await readJson(TOPICS, 'data/topics.json');
 if (!Array.isArray(topics)) {
   fail('data/topics.json must be a JSON array of topics');
@@ -65,10 +115,7 @@ for (const [i, t] of (topics || []).entries()) {
       warn(`${t.file}: grammar_file ${lesson.grammar_file} is missing (Grammar tab shows a placeholder)`);
     } else {
       const g = await readJson(join(ROOT, lesson.grammar_file), lesson.grammar_file);
-      if (g) {
-        if (!Array.isArray(g.explanation) || !g.explanation.length) fail(`${lesson.grammar_file}: no "explanation"`);
-        if (!Array.isArray(g.test) || !g.test.length) fail(`${lesson.grammar_file}: no "test" questions`);
-      }
+      if (g) validateGrammar(g, lesson.grammar_file);
     }
   } else if (!lesson.grammar_notes) {
     warn(`${t.file}: no grammar_file or grammar_notes (Grammar tab shows a placeholder)`);

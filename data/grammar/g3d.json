@@ -1,0 +1,54 @@
+{
+  "title": "گرامر درس ۳D: حال کامل یا گذشته ساده؟",
+  "steps": [
+    {
+      "type": "teach",
+      "title": "حال کامل: ارتباط با حال",
+      "content_fa": "حال کامل (<code>have/has + past participle</code>) وقتی به کار می‌رود که نتیجه یا تجربه‌ای به <strong>حال</strong> مربوط است و زمان دقیق را نمی‌گوییم: <code>I've lost my keys.</code> با <code>for</code> و <code>since</code> مدت ادامه‌دار را نشان می‌دهیم: <code>I've lived here for five years.</code> / <code>since 2020</code>.",
+      "examples": [
+        { "en": "I've lost my keys.", "fa": "کلیدهایم را گم کرده‌ام." },
+        { "en": "She has worked here since 2020.", "fa": "او از سال ۲۰۲۰ اینجا کار می‌کند." },
+        { "en": "We've known each other for ten years.", "fa": "ما ده سال است که همدیگر را می‌شناسیم." }
+      ]
+    },
+    {
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "I ____ my keys. I can't open the door.", "o": ["have lost", "lost", "lose"], "a": "have lost", "fb": "نتیجه در حال حاضر مهم است: حال کامل." },
+        { "k": "type", "q": "She ____ (work) here since 2020.", "a": "has worked", "fb": "با since و ادامه تا حال: has worked." }
+      ]
+    },
+    {
+      "type": "teach",
+      "title": "گذشته ساده: زمان مشخص در گذشته",
+      "content_fa": "اگر زمان دقیق گذشته را بگوییم (<code>yesterday</code>، <code>last week</code>، <code>in 2019</code>، <code>two days ago</code>)، باید از <strong>گذشته ساده</strong> استفاده کنیم: <code>I lost my keys yesterday.</code> همچنین در سوال دربارهٔ یک اتفاق مشخص: <code>When did you arrive?</code> حال کامل با این زمان‌ها نمی‌آید.",
+      "examples": [
+        { "en": "I watched that film last night.", "fa": "من آن فیلم را دیشب دیدم." },
+        { "en": "We moved here in 2019.", "fa": "ما در سال ۲۰۱۹ به اینجا آمدیم." },
+        { "en": "When did you start this job?", "fa": "چه زمانی این کار را شروع کردی؟" }
+      ]
+    },
+    {
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "I ____ that film last night.", "o": ["watched", "have watched", "watch"], "a": "watched", "fb": "last night زمان مشخص گذشته است." },
+        { "k": "type", "q": "We ____ (move) here in 2019.", "a": "moved", "fb": "با in 2019 گذشته ساده می‌آید." }
+      ]
+    },
+    {
+      "type": "final_test",
+      "items": [
+        { "k": "tap", "q": "She ____ to Paris three times.", "o": ["has been", "went", "goes"], "a": "has been", "fb": "تجربه بدون زمان مشخص: حال کامل." },
+        { "k": "tap", "q": "They ____ married last summer.", "o": ["got", "have got", "get"], "a": "got", "fb": "last summer زمان مشخص است." },
+        { "k": "type", "q": "I ____ (live) in this city for six years.", "a": "have lived", "fb": "با for و ادامه تا حال: حال کامل." },
+        { "k": "type", "q": "He ____ (call) me two hours ago.", "a": "called", "fb": "ago نشانه گذشته ساده است." },
+        { "k": "type", "q": "____ you ever ____ (eat) Indian food?", "a": "Have ... eaten", "fb": "سوال تجربه: Have you ever eaten...?" },
+        { "k": "drag", "w": ["I", "have", "never", "seen", "this", "film", "."], "a": "I have never seen this film .", "fb": "تجربه منفی: have never + past participle." },
+        { "k": "drag", "w": ["We", "visited", "our", "grandparents", "last", "weekend", "."], "a": "We visited our grandparents last weekend .", "fb": "last weekend: گذشته ساده." },
+        { "k": "tap", "q": "____ you finish your homework yet?", "o": ["Have", "Did", "Do"], "a": "Have", "fb": "با yet از حال کامل استفاده می‌کنیم." },
+        { "k": "tap", "q": "I ____ him since we were children.", "o": ["have known", "knew", "know"], "a": "have known", "fb": "از گذشته تا حال ادامه دارد: حال کامل." },
+        { "k": "drag", "w": ["She", "has", "worked", "here", "since", "2020", "."], "a": "She has worked here since 2020 .", "fb": "since + نقطه شروع، با حال کامل." }
+      ]
+    }
+  ]
+}

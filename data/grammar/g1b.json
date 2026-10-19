@@ -1,29 +1,54 @@
 {
-  "title": "گرامر درس ۱B: پاسخ‌های کوتاه با Too و Either",
-  "explanation": [
+  "title": "گرامر درس ۱B: موافقت با too و either",
+  "steps": [
     {
-      "heading": "موافقت با جملات مثبت (Too / Me too)",
-      "text": "وقتی می‌خواهیم با یک <strong>جمله مثبت</strong> موافقت کنیم و بگوییم «من هم همینطور»، از کلمه <code>too</code> یا عبارت <code>Me too</code> استفاده می‌کنیم. مثلاً اگر کسی بگوید: «I love coffee» (من قهوه دوست دارم)، شما می‌گویید: «I do too» یا «Me too» (من هم همینطور)."
+      "type": "teach",
+      "title": "موافقت با جمله مثبت: too",
+      "content_fa": "وقتی می‌خواهیم بگوییم ما هم مثل طرف مقابل چیزی را دوست داریم یا همان ویژگی را داریم، از <strong>too</strong> استفاده می‌کنیم. اگر جمله با <code>be</code> یا فعل کمکی باشد، همان فعل را تکرار می‌کنیم: <code>I'm tired. — I am too.</code> اگر جمله فعل اصلی داشته باشد، از <code>do/does/did</code> کمک می‌گیریم: <code>I like tea. — I do too.</code>",
+      "examples": [
+        { "en": "I'm a student. — I am too.", "fa": "من دانش‌آموزم. — من هم همین‌طور." },
+        { "en": "I like pop music. — I do too.", "fa": "من موسیقی پاپ دوست دارم. — من هم." },
+        { "en": "She can swim. — I can too.", "fa": "او می‌تواند شنا کند. — من هم می‌توانم." }
+      ]
     },
     {
-      "heading": "موافقت با جملات منفی (Either / Me neither)",
-      "text": "وقتی می‌خواهیم با یک <strong>جمله منفی</strong> موافقت کنیم و بگوییم «من هم نه»، از کلمه <code>either</code> یا عبارت <code>Me neither</code> استفاده می‌کنیم. مثلاً اگر کسی بگوید: «I don't like spiders» (من از عنکبوت خوشم نمی‌آید)، شما می‌گویید: «I don't either» یا «Me neither» (من هم خوشم نمی‌آید)."
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "A: I'm a student. B: I ____ too.", "o": ["am", "do", "is"], "a": "am", "fb": "جمله با am است، پس همان را تکرار می‌کنیم." },
+        { "k": "type", "q": "A: I can swim. B: I ____ too.", "a": "can", "fb": "فعل کمکی can را تکرار می‌کنیم." }
+      ]
     },
     {
-      "heading": "نکته‌ی مهم",
-      "text": "دقت کنید که در انگلیسی عامیانه، اغلب به جای تکرار فعل از <strong>Me too</strong> و <strong>Me neither</strong> استفاده می‌شود که خیلی راحت‌تر است. اما در نوشتار رسمی‌تر، تکرار فعل با do/does/did یا am/is/are رایج‌تر است."
+      "type": "teach",
+      "title": "موافقت با جمله منفی: either",
+      "content_fa": "برای موافقت با یک جمله <strong>منفی</strong> از <code>either</code> استفاده می‌کنیم؛ یعنی «من هم نه». الگو این است: جمله منفی + <code>either</code>. مثلاً: <code>I don't like horror films. — I don't either.</code> دقت کن که در این ساختار too استفاده نمی‌شود.",
+      "examples": [
+        { "en": "I don't eat meat. — I don't either.", "fa": "من گوشت نمی‌خورم. — من هم نمی‌خورم." },
+        { "en": "She isn't ready. — I'm not either.", "fa": "او آماده نیست. — من هم نیستم." },
+        { "en": "I can't drive. — I can't either.", "fa": "من رانندگی نمی‌توانم بکنم. — من هم نمی‌توانم." }
+      ]
+    },
+    {
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "A: I don't smoke. B: I don't ____.", "o": ["too", "either", "neither"], "a": "either", "fb": "با جمله منفی از either استفاده می‌کنیم." },
+        { "k": "type", "q": "A: I'm not ready. B: I'm not ____.", "a": "either", "fb": "برای موافقت منفی either می‌آید." }
+      ]
+    },
+    {
+      "type": "final_test",
+      "items": [
+        { "k": "tap", "q": "A: I love pizza. B: I ____ too.", "o": ["do", "am", "does"], "a": "do", "fb": "جمله با فعل اصلی love است، پس از do استفاده می‌کنیم." },
+        { "k": "tap", "q": "A: I'm tired. B: I am ____.", "o": ["too", "either", "neither"], "a": "too", "fb": "جمله مثبت است، پس too می‌آید." },
+        { "k": "type", "q": "A: I don't like coffee. B: I don't ____.", "a": "either", "fb": "جمله منفی است، پس either می‌آید." },
+        { "k": "type", "q": "A: She can dance. B: I can ____.", "a": "too", "fb": "موافقت مثبت با too ساخته می‌شود." },
+        { "k": "drag", "w": ["I", "like", "tea", ".", "I", "do", "too", "."], "a": "I like tea . I do too .", "fb": "با فعل اصلی، موافقت مثبت را با do too می‌سازیم." },
+        { "k": "drag", "w": ["I", "don't", "eat", "meat", ".", "I", "don't", "either", "."], "a": "I don't eat meat . I don't either .", "fb": "موافقت منفی: don't either." },
+        { "k": "tap", "q": "A: I'm not hungry. B: I'm not ____.", "o": ["too", "either", "also"], "a": "either", "fb": "برای منفی از either استفاده می‌کنیم." },
+        { "k": "tap", "q": "A: We go to the gym. B: We ____ too.", "o": ["do", "are", "does"], "a": "do", "fb": "فعل اصلی go است، پس do تکرار می‌شود." },
+        { "k": "type", "q": "A: He doesn't watch TV. B: I don't ____.", "a": "either", "fb": "موافقت با جمله منفی همیشه با either است." },
+        { "k": "drag", "w": ["She", "is", "a", "teacher", ".", "I", "am", "too", "."], "a": "She is a teacher . I am too .", "fb": "با be، همان am را برای موافقت تکرار می‌کنیم." }
+      ]
     }
-  ],
-  "test": [
-    {"k": "tap", "q": "I like coffee.", "o": ["Me too", "Me neither", "I don't either"], "a": "Me too", "fb": "برای جمله مثبت از Me too استفاده می‌کنیم."},
-    {"k": "tap", "q": "I don't like tea.", "o": ["Me too", "Me neither", "So do I"], "a": "Me neither", "fb": "برای جمله منفی از Me neither استفاده می‌کنیم."},
-    {"k": "tap", "q": "She is very friendly.", "o": ["I am too", "I am not either", "Me neither"], "a": "I am too", "fb": "برای موافقت با is از am too استفاده می‌کنیم."},
-    {"k": "tap", "q": "They don't play football.", "o": ["We do too", "We don't either", "Me too"], "a": "We don't either", "fb": "برای منفی از don't either استفاده می‌کنیم."},
-    {"k": "type", "q": "I love cats. My sister ____ too. (do)", "a": "does", "fb": "با my sister از does استفاده می‌کنیم."},
-    {"k": "type", "q": "I can't swim. He can't ____. (either)", "a": "either", "fb": "برای منفی از either استفاده می‌کنیم."},
-    {"k": "type", "q": "We are happy. They are ____. (too)", "a": "too", "fb": "برای مثبت از too استفاده می‌کنیم."},
-    {"k": "drag", "w": ["I", "don't", "like", "spiders", ".", "Me", "neither"], "a": "I don't like spiders . Me neither", "fb": "Me neither برای منفی استفاده می‌شود."},
-    {"k": "drag", "w": ["She", "likes", "music", ".", "I", "do", "too", "."], "a": "She likes music . I do too .", "fb": "I do too برای مثبت استفاده می‌شود."},
-    {"k": "drag", "w": ["He", "is", "a", "teacher", ".", "I", "am", "too", "."], "a": "He is a teacher . I am too .", "fb": "am too برای موافقت با is."}
   ]
 }

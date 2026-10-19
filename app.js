@@ -22,6 +22,8 @@ const state = {
   topics: [],
   lesson: null,
   grammarData: null, // Holds the separate grammar JSON
+  gCards: null,      // Flattened grammar carousel cards
+  gIndex: 0,
   tab: 'home',
   cards: (JSON.parse(localStorage.getItem('ts2_cards') || '[]') || []).map(c => ({
     t: c.t, fa: c.fa, ease: c.ease ?? 2.5, ivl: c.ivl ?? 0, reps: c.reps ?? 0, due: c.due ?? Date.now()
@@ -124,6 +126,8 @@ async function loadLesson(id, switchTab = true){
   const r = await fetch(meta.file);
   state.lesson = await r.json();
   state.grammarData = null; // reset on lesson change
+  state.gCards = null;
+  state.gIndex = 0;
   localStorage.setItem('ts2_last_lesson', id);
   renderHeader();
   if (switchTab){ state.tab = 'speaking'; setActiveTab('speaking'); }
@@ -358,55 +362,286 @@ async function renderGrammar() {
   if (pSession && pSession.mode === 'grammar') return renderPracticeRunner();
 
   if (!state.grammarData) {
-    if (state.lesson.grammar_notes) {
-      return renderGrammarNotes(state.lesson.grammar_notes);
-    }
-    if (!state.lesson.grammar_file) {
-      return showPlaceholder('📖', 'گرامر این درس هنوز اضافه نشده است.');
-    }
+    if (state.lesson.grammar_notes) return renderGrammarNotes(state.lesson.grammar_notes);
+    if (!state.lesson.grammar_file) return showPlaceholder('📖', 'گرامر این درس هنوز اضافه نشده است.');
+
     $('#content').innerHTML = `<div class="placeholder"><span class="icon">⏳</span>در حال بارگذاری گرامر...</div>`;
-    
     try {
-      const r = await fetch(state.lesson.grammar_file);
+      const r = await fetch(state.lesson.grammar_file, { cache: 'no-store' });
       if (r.status === 404) return showPlaceholder('📖', 'گرامر این درس هنوز اضافه نشده است.');
       if (!r.ok) throw new Error('HTTP ' + r.status);
       state.grammarData = await r.json();
+      state.gCards = buildGrammarCards(state.grammarData);
+      state.gIndex = 0;
     } catch (e) {
       return showPlaceholder('⚠️', 'خطا در بارگذاری فایل گرامر.<br><small>' + esc(e.message) + '</small>');
     }
   }
 
-  const G = state.grammarData;
-  
-  // Render the explanation and the "Start Test" button
-  let html = `<div class="grammar-explain">
-    <h2 class="ge-title">${esc(G.title)}</h2>
-    ${G.explanation.map(ex => `
-      <div class="ge-section">
-        <div class="ge-heading">${esc(ex.heading)}</div>
-        <div class="ge-text">${ex.text}</div>
-      </div>
-    `).join('')}
-  </div>
-  <button class="btn btn-primary btn-block" id="startGrammarTest" style="padding:16px; font-size:14px">
-    📝 شروع آزمون گرامر (${G.test.length} سوال)
-  </button>`;
+  if (!state.gCards) { state.gCards = buildGrammarCards(state.grammarData); state.gIndex = 0; }
+  if (!state.gCards.length) return showPlaceholder('📖', 'محتوای گرامر این درس خالی است.');
+  renderGrammarCard(0, false);
+}
 
-  $('#content').innerHTML = html;
-
-  $('#startGrammarTest').onclick = () => {
-    pSession = {
-      mode: 'grammar', // special mode to route back here
-      index: 0, score: 0, answered: false,
-      items: G.test.map(x => ({
-        ...x, 
-        _options: x.k === 'tap' ? shuffle([...x.o]) : null, 
-        _bank: x.k === 'drag' ? shuffle([...x.w]) : null, 
-        _drop: []
-      }))
-    };
-    renderPracticeRunner();
+// Flatten a grammar file into one card per screen: teach, mini_test (2 items), each final item, summary
+function buildGrammarCards(G){
+  const cards = [];
+  const addFinal = items => {
+    const prepared = (items || []).map(prepGrammarItem);
+    prepared.forEach((item, i) => cards.push({ type:'final', item, pos:i + 1, total: prepared.length }));
+    if (prepared.length) cards.push({ type:'summary', total: prepared.length });
   };
+
+  if (Array.isArray(G.steps) && G.steps.length) {
+    G.steps.forEach(step => {
+      if (!step || !step.type) return;
+      if (step.type === 'teach') {
+        cards.push({ type:'teach', title: step.title || '', content: step.content_fa || '', examples: Array.isArray(step.examples) ? step.examples : [] });
+      } else if (step.type === 'mini_test') {
+        const items = (step.items || []).map(prepGrammarItem);
+        if (items.length) cards.push({ type:'mini', items });
+      } else if (step.type === 'final_test') {
+        addFinal(step.items);
+      }
+    });
+  } else if (Array.isArray(G.explanation)) {
+    // Legacy format: explanation[] + test[]
+    G.explanation.forEach(ex => cards.push({ type:'teach', title: ex.heading || G.title || '', content: ex.text || '', examples: [] }));
+    addFinal(G.test);
+  }
+  return cards;
+}
+
+function prepGrammarItem(x){
+  const item = { ...x, answered:false, correct:false, selected:null, userAnswer:'', _drop:[] };
+  if (item.k === 'tap' && Array.isArray(item.o)) item._options = shuffle([...item.o]);
+  if (item.k === 'drag' && Array.isArray(item.w)) item._bank = shuffle([...item.w]);
+  return item;
+}
+
+function grammarNextEnabled(card){
+  if (!card) return false;
+  if (card.type === 'teach') return true;
+  if (card.type === 'mini') return card.items.length > 0 && card.items.every(i => i.answered);
+  if (card.type === 'final') return !!card.item.answered;
+  return false;
+}
+
+function grammarSummaryHTML(cards){
+  const finals = cards.filter(c => c.type === 'final');
+  const score = finals.filter(c => c.item.correct).length;
+  const total = finals.length;
+  const pct = total ? Math.round(score / total * 100) : 0;
+  const msg = pct === 100 ? 'بی‌نقص بود! 🎉' : pct >= 70 ? 'خیلی خوب بود! 👏' : pct >= 40 ? 'خوب پیش رفتی، دوباره امتحان کن. 💪' : 'نگران نباش، با مرور بهتر می‌شی. 📘';
+
+  return `<div class="g-summary">
+    <div class="g-summary-emoji">${pct >= 70 ? '🏆' : '📘'}</div>
+    <div class="g-score">${score} / ${total}</div>
+    <div class="g-score-sub">${pct}% درست</div>
+    <div class="g-score-msg">${msg}</div>
+    <button class="btn btn-primary btn-block" id="gRestart">مرور دوباره درس</button>
+    <button class="btn btn-ghost btn-block" id="gToSpeaking">برگشت به سوالات</button>
+  </div>`;
+}
+
+function renderGrammarCard(dir = 0, animate = false){
+  const cards = state.gCards;
+  if (!cards || !cards.length) return;
+  if (state.gIndex < 0) state.gIndex = 0;
+  if (state.gIndex > cards.length - 1) state.gIndex = cards.length - 1;
+
+  const i = state.gIndex, card = cards[i], total = cards.length;
+  if (card.type === 'summary' && !card.tracked) { card.tracked = true; trackCompletion(); }
+
+  const badge = card.type === 'teach' ? 'آموزش'
+    : card.type === 'mini' ? 'تست کوتاه'
+    : card.type === 'final' ? `آزمون نهایی · ${card.pos} از ${card.total}`
+    : 'نتیجه';
+
+  let body = '';
+  if (card.type === 'teach') {
+    body = `<div class="g-step-label">${esc(card.title)}</div>
+      <div class="g-fa">${card.content}</div>
+      ${card.examples.length ? `<div class="g-examples">${card.examples.map(ex => `
+        <div class="g-ex" data-gspeak="${attr(ex.en)}">
+          <div class="g-ex-en">${esc(ex.en)}</div>
+          <div class="g-ex-fa">${esc(ex.fa || '')}</div>
+        </div>`).join('')}</div>` : ''}`;
+  } else if (card.type === 'mini') {
+    body = `<div class="g-step-label">تست کوتاه</div>
+      <div class="g-hint">به هر دو سوال جواب بده تا به مرحله بعد بروی.</div>
+      ${card.items.map((item, idx) => grammarItemHTML(item, idx)).join('')}`;
+  } else if (card.type === 'final') {
+    body = `<div class="g-step-label">سوال ${card.pos} از ${card.total}</div>
+      ${grammarItemHTML(card.item, 0)}`;
+  } else {
+    body = grammarSummaryHTML(cards);
+  }
+
+  const nextEnabled = grammarNextEnabled(card);
+  const nextLabel = card.type === 'summary' ? 'پایان' : 'بعدی ←';
+  const pct = Math.round((i + 1) / total * 100);
+  const anim = animate ? (dir < 0 ? ' slide-right' : ' slide-left') : '';
+
+  $('#content').innerHTML = `
+    <div class="g-carousel">
+      <div class="g-top-bar">
+        <div class="g-counter">${i + 1} / ${total}</div>
+        <div class="g-badge g-badge-${card.type}">${badge}</div>
+      </div>
+      <div class="g-prog-track"><i class="g-prog-fill" style="width:${pct}%"></i></div>
+      <div class="g-card${anim}" id="gCard">${body}</div>
+      <div class="q-nav-bar">
+        <button class="btn btn-ghost" id="gPrev" ${i === 0 ? 'disabled' : ''}>→ قبلی</button>
+        <button class="btn btn-primary" id="gNext" ${nextEnabled ? '' : 'disabled'}>${nextLabel}</button>
+      </div>
+    </div>`;
+
+  bindGrammarCard(card);
+
+  $('#gPrev').onclick = () => grammarGo(-1);
+  $('#gNext').onclick = () => grammarGo(1);
+
+  if (card.type === 'summary') {
+    $('#gRestart').onclick = () => {
+      state.gCards = buildGrammarCards(state.grammarData);
+      state.gIndex = 0;
+      renderGrammarCard(0, false);
+    };
+    $('#gToSpeaking').onclick = () => {
+      state.tab = 'speaking';
+      setActiveTab('speaking');
+      renderTab('speaking');
+    };
+  }
+
+  const gc = $('#gCard');
+  let sx = 0, sy = 0;
+  gc.addEventListener('touchstart', e => { sx = e.changedTouches[0].screenX; sy = e.changedTouches[0].screenY; }, { passive:true });
+  gc.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].screenX - sx;
+    const dy = e.changedTouches[0].screenY - sy;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+      if (dx > 0) grammarGo(-1); else grammarGo(1);
+    }
+  }, { passive:true });
+}
+
+function grammarGo(dir){
+  const cards = state.gCards;
+  const target = state.gIndex + dir;
+  if (target < 0 || target > cards.length - 1) return;
+  if (dir > 0 && !grammarNextEnabled(cards[state.gIndex])) return;
+  state.gIndex = target;
+  renderGrammarCard(dir, true);
+  window.scrollTo({ top:0, behavior:'smooth' });
+}
+
+function grammarItemHTML(item, idx){
+  let body = '';
+  if (item.k === 'tap') {
+    body = `<div class="p-options g-options">${(item._options || item.o || []).map(o => {
+      let cls = 'p-opt';
+      if (item.answered) { if (o === item.a) cls += ' correct'; else if (o === item.selected) cls += ' wrong'; }
+      else if (o === item.selected) cls += ' selected';
+      return `<button class="${cls}" data-gopt="${attr(o)}" ${item.answered ? 'disabled' : ''}>${esc(o)}</button>`;
+    }).join('')}</div>`;
+  } else if (item.k === 'type') {
+    body = `<input class="p-input g-input" id="gInput-${idx}" type="text" value="${item.answered || item.userAnswer ? attr(item.userAnswer) : ''}" placeholder="Type your answer..." autocomplete="off" spellcheck="false" ${item.answered ? 'disabled' : ''}>`;
+  } else if (item.k === 'drag') {
+    body = `<div class="p-drop${item.answered ? (item.correct ? ' correct' : ' wrong') : ''}">${item._drop.map((w, i) => `<button class="p-word in-drop" data-gdrop="${i}" ${item.answered ? 'disabled' : ''}>${esc(w)}</button>`).join('')}</div>
+      <div class="p-bank">${item._bank.map((w, i) => item._drop.includes(w) ? `<span class="p-word" style="visibility:hidden">${esc(w)}</span>` : `<button class="p-word" data-gbank="${i}" ${item.answered ? 'disabled' : ''}>${esc(w)}</button>`).join('')}</div>`;
+  }
+
+  const fb = item.answered
+    ? `<div class="p-feedback ${item.correct ? 'ok' : 'no'}">${item.correct ? '✓ درست!' : '✗ جواب درست: ' + esc(item.a)}${item.fb ? `<div class="g-fb-tip">${esc(item.fb)}</div>` : ''}</div>`
+    : '';
+
+  const prompt = item.k === 'drag'
+    ? (item.q ? formatQ(item) : 'کلمات را به ترتیب درست بچین:')
+    : formatQ(item);
+  const promptClass = item.k === 'drag' && !item.q ? 'p-q g-q g-q-fa' : 'p-q g-q';
+
+  return `<div class="g-item" data-gitem="${idx}">
+    <div class="${promptClass}">${prompt}</div>
+    ${body}${fb}
+    ${item.answered ? '' : `<button class="btn btn-primary btn-block g-check" data-gcheck="${idx}" disabled>بررسی</button>`}
+  </div>`;
+}
+
+function grammarItemReady(item, root){
+  if (item.k === 'tap') return !!item.selected;
+  if (item.k === 'type') { const inp = root.querySelector('input'); return !!(inp && inp.value.trim()); }
+  if (item.k === 'drag') return item._drop.length > 0;
+  return false;
+}
+
+function bindGrammarCard(card){
+  const items = card.type === 'mini' ? card.items : card.type === 'final' ? [card.item] : [];
+
+  items.forEach((item, idx) => {
+    const root = document.querySelector(`[data-gitem="${idx}"]`);
+    if (!root) return;
+    const enable = () => {
+      const b = root.querySelector('[data-gcheck]');
+      if (b) b.disabled = !grammarItemReady(item, root);
+    };
+
+    root.querySelectorAll('[data-gopt]').forEach(b => {
+      b.onclick = () => {
+        item.selected = b.dataset.gopt;
+        root.querySelectorAll('[data-gopt]').forEach(x => x.classList.toggle('selected', x === b));
+        enable();
+      };
+    });
+
+    if (item.k === 'type') {
+      const inp = root.querySelector('input');
+      if (inp) {
+        inp.oninput = () => { item.userAnswer = inp.value; enable(); };
+        inp.onkeydown = e => { if (e.key === 'Enter' && inp.value.trim()) checkGrammarItem(card, idx); };
+      }
+    }
+
+    root.querySelectorAll('[data-gbank]').forEach(b => {
+      b.onclick = () => {
+        const w = item._bank[+b.dataset.gbank];
+        if (!item._drop.includes(w)) { item._drop.push(w); renderGrammarCard(0, false); }
+      };
+    });
+    root.querySelectorAll('[data-gdrop]').forEach(b => {
+      b.onclick = () => { item._drop.splice(+b.dataset.gdrop, 1); renderGrammarCard(0, false); };
+    });
+
+    const check = root.querySelector('[data-gcheck]');
+    if (check) check.onclick = () => checkGrammarItem(card, idx);
+    enable();
+  });
+
+  document.querySelectorAll('[data-gspeak]').forEach(el => { el.onclick = () => speak(el.dataset.gspeak); });
+}
+
+function checkGrammarItem(card, idx){
+  const item = card.type === 'mini' ? card.items[idx] : card.item;
+  const root = document.querySelector(`[data-gitem="${idx}"]`);
+  if (!item || item.answered) return;
+
+  let ok = false;
+  if (item.k === 'tap') {
+    ok = item.selected === item.a;
+  } else if (item.k === 'type') {
+    const inp = root.querySelector('input');
+    item.userAnswer = inp ? inp.value.trim() : '';
+    ok = item.userAnswer.toLowerCase() === String(item.a).toLowerCase();
+  } else if (item.k === 'drag') {
+    item.userAnswer = item._drop.join(' ');
+    ok = item.userAnswer.replace(/\s+/g, ' ').trim().toLowerCase() === String(item.a).replace(/\s+/g, ' ').trim().toLowerCase();
+  }
+
+  item.answered = true;
+  item.correct = ok;
+  if (ok) speak(item.a);
+  renderGrammarCard(0, false);
 }
 
 function renderGrammarNotes(notes){

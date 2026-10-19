@@ -1,0 +1,54 @@
+{
+  "title": "گرامر درس ۳A: حال استمراری",
+  "steps": [
+    {
+      "type": "teach",
+      "title": "ساخت حال استمراری",
+      "content_fa": "حال استمراری با <code>am/is/are + verb-ing</code> ساخته می‌شود و کاری را نشان می‌دهد که <strong>همین حالا</strong> در جریان است: <code>I am studying.</code> / <code>She is cooking.</code> در نوشتن، اگر فعل با یک صامت کوتاه تمام شود، صامت آخر تکرار می‌شود (<code>run → running</code>) و اگر با <code>e</code> تمام شود، حذف می‌شود (<code>make → making</code>).",
+      "examples": [
+        { "en": "I'm waiting for the bus.", "fa": "من منتظر اتوبوس هستم." },
+        { "en": "She is making dinner.", "fa": "او دارد شام درست می‌کند." },
+        { "en": "They are running in the park.", "fa": "آن‌ها دارند در پارک می‌دوند." }
+      ]
+    },
+    {
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "She ____ dinner right now.", "o": ["is cooking", "cooks", "cooking"], "a": "is cooking", "fb": "برای کار در حال انجام: is + verb-ing." },
+        { "k": "type", "q": "They ____ (run) in the park now.", "a": "are running", "fb": "run با تکرار n به running تبدیل می‌شود." }
+      ]
+    },
+    {
+      "type": "teach",
+      "title": "حال استمراری یا حال ساده؟",
+      "content_fa": "از حال استمراری برای کارهای <strong>موقت و همین لحظه</strong> استفاده می‌کنیم، اغلب با <code>now</code>، <code>at the moment</code>، <code>today</code>. از حال ساده برای <strong>عادت‌ها و برنامه‌های ثابت</strong> استفاده می‌کنیم، با <code>every day</code>، <code>usually</code>، <code>always</code>: <code>I usually walk to work, but today I'm taking the bus.</code>",
+      "examples": [
+        { "en": "I usually walk to work.", "fa": "من معمولاً پیاده سر کار می‌روم." },
+        { "en": "Today I'm taking the bus.", "fa": "امروز دارم با اتوبوس می‌روم." },
+        { "en": "She is staying with us this week.", "fa": "او این هفته پیش ما می‌ماند." }
+      ]
+    },
+    {
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "He ____ to work every day.", "o": ["drives", "is driving", "drive"], "a": "drives", "fb": "با every day عادت است، پس حال ساده." },
+        { "k": "type", "q": "Be quiet! The baby ____ (sleep).", "a": "is sleeping", "fb": "کار در همین لحظه: is sleeping." }
+      ]
+    },
+    {
+      "type": "final_test",
+      "items": [
+        { "k": "tap", "q": "Look! It ____ outside.", "o": ["is raining", "rains", "rain"], "a": "is raining", "fb": "در همین لحظه: is raining." },
+        { "k": "tap", "q": "My sister ____ TV at the moment.", "o": ["is watching", "watches", "watch"], "a": "is watching", "fb": "at the moment نشانه حال استمراری است." },
+        { "k": "type", "q": "They ____ (study) for an exam now.", "a": "are studying", "fb": "با they از are + ing استفاده می‌کنیم." },
+        { "k": "type", "q": "She usually ____ (get) up at seven.", "a": "gets", "fb": "عادت روزانه: حال ساده با s." },
+        { "k": "type", "q": "I ____ (make) a cake right now.", "a": "am making", "fb": "make با حذف e به making تبدیل می‌شود." },
+        { "k": "drag", "w": ["I", "am", "waiting", "for", "the", "bus", "."], "a": "I am waiting for the bus .", "fb": "am + verb-ing." },
+        { "k": "drag", "w": ["She", "is", "staying", "with", "us", "this", "week", "."], "a": "She is staying with us this week .", "fb": "وضعیت موقت: حال استمراری." },
+        { "k": "tap", "q": "We ____ coffee every morning.", "o": ["drink", "are drinking", "drinks"], "a": "drink", "fb": "every morning عادت است." },
+        { "k": "tap", "q": "Please be quiet; the students ____.", "o": ["are studying", "study", "studies"], "a": "are studying", "fb": "در همین لحظه در حال مطالعه‌اند." },
+        { "k": "drag", "w": ["He", "is", "running", "in", "the", "park", "now", "."], "a": "He is running in the park now .", "fb": "is + running (تکرار n)." }
+      ]
+    }
+  ]
+}

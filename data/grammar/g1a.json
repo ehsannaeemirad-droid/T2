@@ -1,25 +1,54 @@
 {
-  "title": "گرامر درس ۱A: حال ساده و فعل بودن (Be)",
-  "explanation": [
+  "title": "گرامر درس ۱A: فعل بودن و حال ساده",
+  "steps": [
     {
-      "heading": "فعل بودن (to be)",
-      "text": "در زبان انگلیسی، وقتی می‌خواهیم بگوییم کسی یا چیزی <strong>چه وضعیتی دارد</strong> یا <strong>چه کسی است</strong>، از فعل to be استفاده می‌کنیم. این فعل در زمان حال سه شکل دارد: <code>am</code> برای I، <code>is</code> برای he/she/it و <code>are</code> برای we/you/they. مثلاً وقتی می‌گیم «I am friendly» یعنی «من خوش‌برخوردم»."
+      "type": "teach",
+      "title": "فعل بودن (be): am / is / are",
+      "content_fa": "وقتی می‌خواهیم بگوییم کسی یا چیزی <strong>چه کسی است</strong> یا <strong>چه وضعیتی دارد</strong>، از فعل <code>be</code> استفاده می‌کنیم. این فعل سه شکل دارد: <code>am</code> با I، <code>is</code> با he/she/it و <code>are</code> با you/we/they. برای منفی کردن کافی است <code>not</code> را بعد از فعل بیاوریم و برای سوال، فعل را به اول جمله ببریم.",
+      "examples": [
+        { "en": "I am a student.", "fa": "من دانش‌آموزم." },
+        { "en": "She isn't very talkative.", "fa": "او زیاد اهل صحبت کردن نیست." },
+        { "en": "Are they your neighbors?", "fa": "آن‌ها همسایه‌های شما هستند؟" }
+      ]
     },
     {
-      "heading": "زمان حال ساده (Simple Present)",
-      "text": "وقتی می‌خواهیم درباره <strong>کارهای روزمره، عادت‌ها یا حقایق کلی</strong> صحبت کنیم، از زمان حال ساده استفاده می‌کنیم. مثلاً «I make friends at work» یعنی «من سر کار دوست پیدا می‌کنم». برای منفی کردن از <code>don't</code> یا <code>doesn't</code> استفاده می‌کنیم (مثلاً: I don't need many friends)."
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "I ____ friendly.", "o": ["am", "is", "are"], "a": "am", "fb": "با I همیشه از am استفاده می‌کنیم." },
+        { "k": "type", "q": "She ____ (be) from Canada.", "a": "is", "fb": "با she از is استفاده می‌کنیم." }
+      ]
+    },
+    {
+      "type": "teach",
+      "title": "حال ساده برای عادت‌ها و حقایق",
+      "content_fa": "برای کارهای روزمره، عادت‌ها و حقایق کلی از <strong>حال ساده</strong> استفاده می‌کنیم. با I/you/we/they فعل ساده می‌آید، اما با he/she/it به فعل <code>s</code> اضافه می‌شود. منفی و سوالی با <code>do/does</code> ساخته می‌شود: <code>I don't work on Fridays.</code> / <code>Does she live here?</code>",
+      "examples": [
+        { "en": "I make friends easily.", "fa": "من راحت دوست پیدا می‌کنم." },
+        { "en": "He doesn't like small talk.", "fa": "او از حرف‌های سطحی خوشش نمی‌آید." },
+        { "en": "She talks a lot.", "fa": "او زیاد صحبت می‌کند." }
+      ]
+    },
+    {
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "He ____ coffee every morning.", "o": ["drinks", "drink", "drinking"], "a": "drinks", "fb": "با he فعل s می‌گیرد: drinks." },
+        { "k": "drag", "w": ["She", "is", "a", "good", "friend", "."], "a": "She is a good friend .", "fb": "ترتیب جمله: فاعل + is + اسم." }
+      ]
+    },
+    {
+      "type": "final_test",
+      "items": [
+        { "k": "tap", "q": "They ____ very close.", "o": ["am", "is", "are"], "a": "are", "fb": "با they از are استفاده می‌کنیم." },
+        { "k": "tap", "q": "We ____ coffee every morning.", "o": ["drinks", "drink", "drinking"], "a": "drink", "fb": "با we فعل ساده بدون s می‌آید." },
+        { "k": "type", "q": "He ____ (be) a teacher.", "a": "is", "fb": "با he از is استفاده می‌کنیم." },
+        { "k": "type", "q": "My sister ____ (work) in a hospital.", "a": "works", "fb": "با my sister که سوم‌شخص است، فعل s می‌گیرد." },
+        { "k": "type", "q": "I ____ (not / need) many friends.", "a": "don't need", "fb": "برای منفی با I از don't استفاده می‌کنیم." },
+        { "k": "drag", "w": ["She", "is", "not", "very", "outgoing", "."], "a": "She is not very outgoing .", "fb": "برای منفی کردن be، not را بعد از فعل می‌آوریم." },
+        { "k": "drag", "w": ["Do", "you", "live", "near", "here", "?"], "a": "Do you live near here ?", "fb": "برای سوال با you از Do استفاده می‌کنیم." },
+        { "k": "tap", "q": "____ she like pop music?", "o": ["Do", "Does", "Is"], "a": "Does", "fb": "با she در سوال از Does استفاده می‌کنیم." },
+        { "k": "tap", "q": "I ____ from Iran.", "o": ["am", "is", "are"], "a": "am", "fb": "با I از am استفاده می‌کنیم." },
+        { "k": "drag", "w": ["They", "don't", "watch", "TV", "in", "the", "morning", "."], "a": "They don't watch TV in the morning .", "fb": "با they منفی حال ساده را با don't می‌سازیم." }
+      ]
     }
-  ],
-  "test": [
-    {"k": "tap", "q": "I ____ a student.", "o": ["am", "is", "are"], "a": "am", "fb": "با I از am استفاده می‌کنیم."},
-    {"k": "tap", "q": "She ____ from Canada.", "o": ["am", "is", "are"], "a": "is", "fb": "با she از is استفاده می‌کنیم."},
-    {"k": "tap", "q": "They ____ good friends.", "o": ["am", "is", "are"], "a": "are", "fb": "با they از are استفاده می‌کنیم."},
-    {"k": "tap", "q": "We ____ coffee every morning.", "o": ["drinks", "drink", "drinking"], "a": "drink", "fb": "با we فعل ساده بدون s استفاده می‌شود."},
-    {"k": "type", "q": "He ____ (be) a teacher.", "a": "is", "fb": "با he از is استفاده می‌کنیم."},
-    {"k": "type", "q": "I ____ (not / need) many friends.", "a": "don't need", "fb": "برای منفی با I از don't استفاده می‌کنیم."},
-    {"k": "type", "q": "She ____ (talk) a lot.", "a": "talks", "fb": "با she فعل s می‌گیرد."},
-    {"k": "drag", "w": ["She", "is", "a", "good", "friend", "."], "a": "She is a good friend .", "fb": "فاعل + is + صفت/اسم."},
-    {"k": "drag", "w": ["They", "are", "very", "close", "."], "a": "They are very close .", "fb": "با they از are استفاده می‌کنیم."},
-    {"k": "drag", "w": ["I", "don't", "like", "rude", "people", "."], "a": "I don't like rude people .", "fb": "برای منفی کردن افعال از don't استفاده می‌کنیم."}
   ]
 }

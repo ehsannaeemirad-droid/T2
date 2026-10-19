@@ -1,0 +1,54 @@
+{
+  "title": "گرامر درس ۳C: گذشته استمراری",
+  "steps": [
+    {
+      "type": "teach",
+      "title": "ساخت گذشته استمراری",
+      "content_fa": "گذشته استمراری با <code>was/were + verb-ing</code> ساخته می‌شود و کاری را نشان می‌دهد که در گذشته <strong>مدتی در جریان بود</strong>: <code>I was studying at eight.</code> / <code>They were playing football.</code> با I/he/she/it از <code>was</code> و با you/we/they از <code>were</code> استفاده می‌کنیم.",
+      "examples": [
+        { "en": "I was cooking when you called.", "fa": "وقتی زنگ زدی، من داشتم آشپزی می‌کردم." },
+        { "en": "They were watching a film at nine.", "fa": "آن‌ها ساعت نه داشتند فیلم تماشا می‌کردند." },
+        { "en": "It was raining all morning.", "fa": "تمام صبح باران می‌بارید." }
+      ]
+    },
+    {
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "I ____ dinner when she arrived.", "o": ["was cooking", "cooked", "am cooking"], "a": "was cooking", "fb": "کار در جریان در گذشته: was + ing." },
+        { "k": "type", "q": "They ____ (play) football at that time.", "a": "were playing", "fb": "با they از were + ing استفاده می‌کنیم." }
+      ]
+    },
+    {
+      "type": "teach",
+      "title": "گذشته استمراری و گذشته ساده با هم",
+      "content_fa": "اغلب گذشته استمراری زمینه را می‌سازد و گذشته ساده کاری را که <strong>در آن میان اتفاق افتاد</strong> بیان می‌کند: <code>I was walking home when it started to rain.</code> با <code>while</code> معمولاً گذشته استمراری و با <code>when</code> معمولاً گذشته ساده می‌آید: <code>While I was studying, the phone rang.</code>",
+      "examples": [
+        { "en": "I was walking home when it started to rain.", "fa": "داشتم به خانه برمی‌گشتم که باران شروع شد." },
+        { "en": "While I was studying, the phone rang.", "fa": "در حالی که درس می‌خواندم، تلفن زنگ زد." },
+        { "en": "She was sleeping when the alarm went off.", "fa": "وقتی زنگ ساعت به صدا درآمد، او خواب بود." }
+      ]
+    },
+    {
+      "type": "mini_test",
+      "items": [
+        { "k": "tap", "q": "While I ____, the phone rang.", "o": ["was studying", "studied", "study"], "a": "was studying", "fb": "با while زمینه‌سازی با گذشته استمراری می‌آید." },
+        { "k": "type", "q": "He ____ (drive) when the accident happened.", "a": "was driving", "fb": "کار در جریان: was driving." }
+      ]
+    },
+    {
+      "type": "final_test",
+      "items": [
+        { "k": "tap", "q": "They ____ TV when I got home.", "o": ["were watching", "watched", "are watching"], "a": "were watching", "fb": "کار در جریان در گذشته ادامه داشت." },
+        { "k": "tap", "q": "While she ____, someone knocked on the door.", "o": ["was cooking", "cooked", "cooks"], "a": "was cooking", "fb": "after while: گذشته استمراری." },
+        { "k": "type", "q": "It ____ (rain) when we left the house.", "a": "was raining", "fb": "با it از was + ing استفاده می‌کنیم." },
+        { "k": "type", "q": "I ____ (walk) home when I saw him.", "a": "was walking", "fb": "زمینه در گذشته: was walking." },
+        { "k": "type", "q": "They ____ (not / listen) when the teacher explained.", "a": "weren't listening", "fb": "منفی: weren't + ing." },
+        { "k": "drag", "w": ["I", "was", "sleeping", "when", "you", "called", "."], "a": "I was sleeping when you called .", "fb": "گذشته استمراری + when + گذشته ساده." },
+        { "k": "drag", "w": ["They", "were", "playing", "football", "at", "five", "."], "a": "They were playing football at five .", "fb": "were + verb-ing." },
+        { "k": "tap", "q": "What ____ you doing at nine last night?", "o": ["were", "was", "did"], "a": "were", "fb": "با you از were استفاده می‌کنیم." },
+        { "k": "tap", "q": "She ____ when the lights went out.", "o": ["was reading", "read", "reads"], "a": "was reading", "fb": "کار ادامه‌دار در گذشته." },
+        { "k": "drag", "w": ["They", "were", "not", "listening", "to", "the", "teacher", "."], "a": "They were not listening to the teacher .", "fb": "منفی گذشته استمراری: were not + ing." }
+      ]
+    }
+  ]
+}
