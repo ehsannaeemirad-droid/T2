@@ -1,0 +1,123 @@
+{
+  "id": "1c-home",
+  "title": "Home",
+  "emoji": "🏠",
+  "unit": 1,
+  "lesson": "C",
+  "grammar_labels": ["there is / there are"],
+  "grammar_file": "data/grammar/g1c.json",
+
+  "words": {
+    "apartment": "آپارتمان", "bedroom": "اتاق خواب", "living room": "اتاق نشیمن",
+    "kitchen": "آشپزخانه", "balcony": "بالکن", "hallway": "راهرو",
+    "sofa": "مبل", "coffee table": "میز جلومبلی", "cabinet": "کابینت",
+    "wardrobe": "کمد لباس", "sunlight": "نور خورشید", "location": "موقعیت مکانی",
+    "storage": "فضای ذخیره‌سازی", "renovate": "بازسازی کردن", "noisy": "پر سر و صدا",
+    "quiet": "آرام", "neighborhood": "محله", "convenient": "راحت و در دسترس",
+    "safe": "امن", "gym": "باشگاه", "mall": "مرکز خرید", "park": "پارک"
+  },
+
+  "questions": [
+    {
+      "q": "Describe the house you are living in.",
+      "a": "I currently live in a [[bright and comfortable|روشن و راحت]] apartment on the third floor of a modern residential building. It has two [[cozy bedrooms|اتاق خواب دنج]], a spacious living room, a clean kitchen, and a small balcony. When you enter the front door, {{there is::there_is}} a small hallway with a coat rack and a mirror on the wall. The living room {{is::be}} my favorite area because it {{has::be}} two large windows that let in plenty of warm sunlight during the morning. In the living room, {{there is::there_is}} a soft grey sofa, a wooden coffee table, and a television on a low cabinet. The kitchen {{is::be}} right next to the living room, and it {{is::be}} equipped with a refrigerator and white cupboards. My bedroom {{is::be}} simple, with a comfortable double bed and a wooden wardrobe."
+    },
+    {
+      "q": "What do you like about your home? What don't you like? What changes would you like to make to your home?",
+      "a": "{{There are::there_are}} many things that I really like about my home. First of all, the apartment {{gets::simple_present}} a lot of natural sunlight, which {{makes::simple_present}} every room feel warm and cheerful. I also {{love::simple_present}} the location because it {{is::be}} quiet and close to local supermarkets. However, {{there are::there_are}} a few things that I do not like very much. The biggest problem {{is::be}} the bathroom, which {{is::be}} quite small and outdated. Another issue {{is::be}} that we do not have enough storage space. If I could make changes, I would definitely renovate the bathroom first. In addition, I would like to paint the living room walls and buy a bigger bookcase for all my favorite novels."
+    },
+    {
+      "q": "How long have you lived there?",
+      "a": "I {{have lived::present_perfect}} in my current apartment for about four years now. My family and I {{moved::simple_past}} here in the autumn of 2020. Before moving into this place, we {{lived::simple_past}} in a much older apartment on the opposite side of town. That previous building {{was::simple_past}} too noisy because it {{was::simple_past}} located next to a busy main avenue. When we {{found::simple_past}} this current apartment four years ago, we immediately {{liked::simple_past}} the quiet street and the clean neighborhood. Over the last four years, we {{have made::present_perfect}} many small improvements to make it feel like a real home. We {{bought::simple_past}} new furniture, {{hung::simple_past}} family pictures, and {{painted::simple_past}} the bedrooms."
+    },
+    {
+      "q": "How many different homes have you lived in? Which one did you like the best?",
+      "a": "Throughout my life, I {{have lived::present_perfect}} in three different homes. The first one {{was::simple_past}} a traditional single-family house with a lovely backyard where I {{spent::simple_past}} my early childhood. The second home {{was::simple_past}} a small two-bedroom apartment that my parents {{rented::simple_past}} when I was a teenager. The third home {{is::be}} the apartment where I live today. Among all of them, I {{liked::simple_past}} the first house with the yard the best. It {{had::simple_past}} large rooms, high ceilings, and a beautiful garden with fruit trees. Although modern apartments {{are::be}} more convenient, that childhood house {{had::simple_past}} a special charm and warmth."
+    },
+    {
+      "q": "What do you think is the best color for a living room?",
+      "a": "In my opinion, the best color for a living room {{is::be}} a soft neutral shade, such as warm beige, cream, or light grey. These soft colors {{create::simple_present}} a calm and relaxing atmosphere where people can unwind after a long day of work. When the walls {{are::be}} light and neutral, the whole room {{looks::simple_present}} noticeably larger and brighter. Another great benefit of choosing beige or light grey {{is::be}} that it matches easily with different furniture styles. For example, you can add colorful cushions, paintings, and rugs without clashing with the walls. Dark colors like deep red can make a living room {{feel::simple_present}} crowded and dark. Therefore, soft neutral tones {{are::be}} definitely the most practical choice."
+    },
+    {
+      "q": "Where would your dream home be?",
+      "a": "My [[dream home|خانه رویایی]] would be located in a quiet coastal town near the sea, surrounded by green hills. I would love to live in a place where the air {{is::be}} clean and free from city pollution. The house itself would be a modern two-story villa with large glass windows and a wide wooden balcony facing the water. On the ground floor, {{there would be::there_is}} an open-plan kitchen and a sunny living room with a fireplace for cool winter evenings. Upstairs, {{there would be::there_is}} three bedrooms and a quiet home office with a view of the ocean. Outside, I would have a small garden with colorful flowers and a comfortable patio where I could drink morning coffee. Living in such a tranquil place would bring me immense peace."
+    },
+    {
+      "q": "Do you like your neighborhood? Is it clean, convenient, safe?",
+      "a": "Yes, I really {{like::simple_present}} my neighborhood, and I feel very happy living there. It {{is::be}} a very clean and well-maintained residential area. The municipal workers {{clean::simple_present}} the streets every morning, and the residents always {{take::simple_present}} good care of the trees. It {{is::be}} also extremely convenient for daily life. Within a short five-minute walk, {{there are::there_are}} two grocery stores, a traditional bakery, a pharmacy, and a cozy coffee shop. Public transportation {{is::be}} also readily available. Most importantly, the neighborhood {{is::be}} very safe and peaceful. {{There are::there_are}} bright streetlights at night, and people of all ages walk around comfortably in the evenings."
+    },
+    {
+      "q": "Are there any parks / gym / mall near your home?",
+      "a": "Yes, {{there are::there_are}} several wonderful facilities near my home. Just two blocks away, {{there is::there_is}} a lovely public park with tall green trees, walking paths, and wooden benches. Many people go there in the morning to jog or walk their dogs. In addition, {{there is::there_is}} a modern fitness gym about a ten-minute walk from my apartment. It {{has::be}} new exercise machines and group classes, and I try to go there three times a week to stay healthy. However, {{there is not::there_is}} a large shopping mall right next to my house. The nearest shopping center {{is::be}} about fifteen minutes away by car or bus. That distance {{is::be}} actually great because our local streets stay quiet and peaceful."
+    },
+    {
+      "q": "What are the key things you look for when choosing a house to live in?",
+      "a": "When I look for a house to live in, {{there are::there_are}} several key factors that I consider carefully. First and foremost, location {{is::be}} the most important thing. I {{prefer::simple_present}} a neighborhood that {{is::be}} safe, quiet, and close to public transit and grocery stores. The second factor {{is::be}} natural sunlight and proper ventilation. I {{like::simple_present}} rooms with big windows because natural light {{makes::simple_present}} any space feel healthy and energetic. Third, I {{check::simple_present}} the overall layout and size of the rooms. Finally, I {{pay::simple_present}} attention to the condition of the building, including the plumbing and heating system. A good home must be functional, peaceful, and structurally sound."
+    },
+    {
+      "q": "Where is the best location in your city to live?",
+      "a": "In my city, the best location to live {{is::be}} the northern district near the foothills. This area {{is::be}} widely considered the most desirable neighborhood for several reasons. First, the air quality {{is::be}} much better there compared to the city center. The streets {{are::be}} lined with tall plane trees, and {{there are::there_are}} many beautiful public parks nearby. Second, it {{has::be}} outstanding urban amenities, including modern supermarkets and well-equipped medical centers. The residential buildings in that area {{are::be}} modern, spacious, and built with high-quality materials. While housing prices in this northern district {{are::be}} higher than in other parts of the city, the exceptional quality of life {{makes::simple_present}} it the top location."
+    },
+    {
+      "q": "Would you like to live in a different city? If yes, where would you like to live?",
+      "a": "Yes, I would definitely like to experience living in a different city for a few years. If I had the opportunity, I would choose to live in a coastal city like Vancouver or Melbourne. I have always {{loved::present_perfect}} cities that combine vibrant urban culture with easy access to nature. In a place like Vancouver, you {{have::simple_present}} modern skyscrapers and great public libraries, but you {{are::be}} also surrounded by the blue ocean and majestic green mountains. You can work in the city during the week and {{go::simple_present}} hiking on the weekend. The public transportation systems in those cities {{are::be}} also clean and efficient. Living in a multicultural city would also allow me to meet people from all around the world."
+    },
+    {
+      "q": "Would you like to live in a different country? If yes, which country would you like to live in?",
+      "a": "Yes, I would love to live in a different country, at least for a chapter of my life. If I could pick any country, I would choose Canada or Spain. Canada {{appeals::simple_present}} to me because it {{is::be}} famous for its friendly people, safe communities, and excellent healthcare systems. On the other hand, Spain {{attracts::simple_present}} me because of its warm sunny climate, rich artistic history, and relaxed lifestyle. People there {{enjoy::simple_present}} spending time outdoors, eating delicious meals with friends, and celebrating local festivals. Living abroad would be a [[life-changing experience|تجربه تغییر دهنده زندگی]]. It would challenge me to become more independent, teach me how to adapt to new customs, and expand my perspective on the world."
+    },
+    {
+      "q": "Do you think you can adapt yourself easily to living in that country?",
+      "a": "I think I would be able to adapt relatively easily, although {{there would be::there_is}} some initial challenges. On the positive side, I {{am::be}} generally an open-minded, flexible, and curious person. I {{enjoy::simple_present}} learning about different traditions, trying foreign foods, and meeting people from diverse backgrounds. I {{am::be}} also comfortable speaking English, which {{makes::simple_present}} daily communication much smoother. However, moving to a completely new culture always involves adjustments. For example, getting used to colder weather or understanding complex rental contracts can take some time. You might also miss your family and familiar hometown food during the first few months. Nevertheless, with a positive mindset, patience, and active involvement in local activities, I {{am::be}} confident that I could adjust successfully."
+    },
+    {
+      "q": "Do you get along well with your neighbors?",
+      "a": "Yes, I {{get along very well|رابطه بسیار خوبی دارم}} with my neighbors, and we {{have::simple_present}} a very friendly relationship. In our apartment building, {{there are::there_are}} eight families in total, so most of us {{know::simple_present}} each other by name. Whenever we {{meet::simple_present}} in the hallway or by the main entrance, we always smile and greet each other warmly. We also show consideration for one another by keeping noise levels down. If someone {{is::be}} having repair work done in their flat, they politely inform the neighbors in advance. Furthermore, we {{help::simple_present}} each other with simple everyday tasks. For example, if a neighbor {{travels::simple_present}} for a few days, we gladly collect their mail or water their hallway plants."
+    },
+    {
+      "q": "How well do you know them? How friendly are they?",
+      "a": "I {{know::simple_present}} most of my neighbors fairly well, especially the elderly couple who live on the second floor and the young family next door. We {{are not::be}} extremely close like best friends, but we {{have::simple_present}} a very respectful connection. The elderly couple {{has lived::present_perfect}} in the building for over fifteen years. They {{are::be}} exceptionally friendly and kind; whenever the grandmother {{bakes::simple_present}} fresh cookies, she often {{shares::simple_present}} a small plate with us. In return, I often offer to carry their heavy grocery bags upstairs. The family next door {{has::be}} a young daughter, and they {{are::be}} also very pleasant and quiet. Everyone {{is::be}} respectful of each other's privacy, which strikes a wonderful balance."
+    },
+    {
+      "q": "Would you prefer to live in a house or an apartment?",
+      "a": "If I had to choose, I would prefer to live in a detached house rather than an apartment. The main reason {{is::be}} privacy and space. In a house, you {{do not share::simple_present}} walls or ceilings with neighbors, so you do not have to worry about hearing footsteps or loud music. You also {{have::simple_present}} your own private backyard where you can plant flowers, grow fresh herbs, and host barbecue parties. A house usually {{offers::simple_present}} more storage space and parking convenience as well. Of course, an apartment {{has::simple_present}} some benefits, like lower utility bills and easier cleaning. However, the independence and quiet atmosphere of a private house {{are::be}} much more attractive to me in the long run."
+    },
+    {
+      "q": "Have you ever been homesick?",
+      "a": "Yes, I {{have experienced::present_perfect}} [[homesickness|دلتنگ خانه]] before, and it {{was::simple_past}} quite an emotional feeling. A few years ago, I {{traveled::simple_past}} to another city for a three-month professional training course. It {{was::simple_past}} my first time living completely alone in an unfamiliar city. During the first two weeks, everything {{was::simple_past}} new and exciting, but soon after, I {{started::simple_past}} missing my home deeply. I {{missed::simple_past}} my mother's home-cooked dinners and chatting with my siblings in the evening. Whenever I {{felt::simple_past}} lonely, I {{called::simple_past}} my parents on video chat, and hearing their voices {{made::simple_past}} me feel much better. That experience {{taught::simple_past}} me how precious home really is."
+    },
+    {
+      "q": "Do you like to live in a big luxurious house or a normal cozy one?",
+      "a": "I would definitely choose to live in a normal, [[cozy house|خانه دنج]] rather than a big luxurious mansion. While luxurious houses {{look::simple_present}} impressive in photographs, they often {{feel::simple_present}} cold, formal, and empty inside. A massive house also {{requires::simple_present}} an enormous amount of time, energy, and money to clean, heat, and maintain. If a house {{is::be}} too big, family members can spend hours without seeing each other, which {{reduces::simple_present}} closeness. On the other hand, a normal cozy home {{feels::simple_present}} warm, intimate, and lived-in. Every room {{has::simple_present}} a clear purpose, and it is much easier to decorate and keep tidy. For me, true luxury {{is::be}} not about square meters; it is about warmth and peaceful family moments."
+    },
+    {
+      "q": "How often do you redecorate your house? Do you enjoy it?",
+      "a": "I usually {{redecorate::simple_present}} my home once every year or two, typically in the spring. I {{do not::simple_present}} make major structural changes or buy expensive new furniture every time. Instead, I {{focus::simple_present}} on small, creative updates that give the rooms a refreshed look. For instance, I {{like::simple_present}} changing the sofa cushion covers, buying a new patterned rug, switching curtains, or hanging different framed art prints on the walls. Yes, I really {{enjoy::simple_present}} the redecorating process! It {{feels::simple_present}} like a fun, creative project that breaks the daily routine. Spending an afternoon organizing shelves and introducing fresh colors {{makes::simple_present}} the whole apartment feel new and energizing."
+    },
+    {
+      "q": "Have you ever had a roommate?",
+      "a": "Yes, I {{had::simple_past}} a roommate during my university years. In my second year of college, my friend Danial and I {{decided::simple_past}} to rent a small two-bedroom apartment near our campus to save money. It {{was::simple_past}} a very memorable and educational experience. Living together {{was::simple_past}} great because we {{shared::simple_past}} the monthly expenses, {{split::simple_past}} the utility bills, and {{helped::simple_past}} each other study for difficult exams. We often {{cooked::simple_past}} simple meals together and {{talked::simple_past}} about our future goals. Of course, we also {{had::simple_past}} to learn how to compromise and respect each other's habits. We {{agreed::simple_past}} on a weekly cleaning schedule. Overall, having a roommate {{taught::simple_past}} me responsibility and patience."
+    },
+    {
+      "q": "Do you think it is difficult to share your flat with someone?",
+      "a": "Yes, I think sharing a flat with someone can be quite difficult, especially if the roommates {{have::simple_present}} different habits and personalities. When two people {{live::simple_present}} together, small daily disagreements can easily turn into big problems if they {{are not::be}} handled maturely. For example, problems often {{arise::simple_present}} over cleanliness, doing the dishes, or dividing utility expenses fairly. Differences in daily routines can also {{cause::simple_present}} friction. To make flat-sharing work successfully, both people must communicate openly and {{establish::simple_present}} clear house rules from the beginning. If both roommates {{are::be}} mature, considerate, and willing to compromise, sharing a flat can be rewarding, but it definitely requires patience."
+    },
+    {
+      "q": "Do you like being at home alone? Are you a stay-at-home person or a going-out person?",
+      "a": "Yes, I really {{enjoy::simple_present}} being at home alone from time to time. When the house {{is::be}} quiet, I {{find::simple_present}} it very peaceful and restorative. I can read a good book, listen to soft music, or simply rest on the sofa without any social pressure. Overall, I would describe myself mostly as a [[stay-at-home person|آدم خانه‌نشین]]. I truly {{value::simple_present}} the comfort and calm of my own living space. While I definitely {{enjoy::simple_present}} going out with close friends on the weekends, I {{do not like::simple_present}} going to crowded, noisy places every day. After a busy work week, being in my cozy apartment {{is::be}} the best way for me to recharge my mental energy."
+    }
+  ],
+
+  "practice": [
+    {"k": "tap", "q": "The apartment gets a lot of natural ____.", "o": ["sunlight", "water", "furniture"], "a": "sunlight", "fb": "natural sunlight یعنی نور طبیعی خورشید."},
+    {"k": "tap", "q": "The apartment is very ____. It has plenty of space.", "o": ["spacious", "small", "noisy"], "a": "spacious", "fb": "spacious یعنی جادار."},
+    {"k": "tap", "q": "We need more ____ space for our clothes.", "o": ["storage", "living", "kitchen"], "a": "storage", "fb": "storage space یعنی فضای ذخیره‌سازی."},
+    {"k": "tap", "q": "I want to ____ the bathroom.", "o": ["renovate", "clean", "sell"], "a": "renovate", "fb": "renovate یعنی بازسازی کردن."},
+    {"k": "type", "q": "There ____ two bedrooms in my apartment.", "a": "are", "fb": "با دو اتاق خواب از are استفاده می‌کنیم."},
+    {"k": "type", "q": "There ____ a small balcony.", "a": "is", "fb": "با یک بالکن از is استفاده می‌کنیم."},
+    {"k": "type", "q": "I have ____ (live) here for four years.", "a": "lived", "fb": "حال کامل: have + lived."},
+    {"k": "drag", "w": ["There", "is", "a", "sofa", "in", "the", "living", "room", "."], "a": "There is a sofa in the living room .", "fb": "There is برای یک شیء."},
+    {"k": "drag", "w": ["There", "are", "two", "bedrooms", "."], "a": "There are two bedrooms .", "fb": "There are برای چند شیء."},
+    {"k": "drag", "w": ["The", "house", "is", "very", "quiet", "."], "a": "The house is very quiet .", "fb": "فاعل + is + صفت."}
+  ]
+}

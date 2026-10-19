@@ -1,0 +1,135 @@
+{
+  "id": "1a-friends",
+  "title": "Friends",
+  "emoji": "👥",
+  "unit": 1,
+  "lesson": "A",
+  "grammar_labels": ["simple present", "be"],
+  "grammar_file": "data/grammar/g1a.json",
+
+  "words": {
+    "make": "ساختن، پیدا کردن", "friends": "دوستان", "friendly": "خوش‌برخورد",
+    "talk": "حرف زدن", "smile": "لبخند زدن", "ask": "پرسیدن", "questions": "سؤال‌ها",
+    "answer": "جواب دادن", "shy": "خجالتی", "group": "گروه", "weekends": "آخر هفته‌ها",
+    "coffee": "قهوه", "important": "مهم", "listen": "گوش دادن", "happy": "خوشحال",
+    "usually": "معمولاً", "always": "همیشه", "sometimes": "بعضی وقت‌ها", "need": "نیاز داشتن",
+    "life": "زندگی", "close": "نزدیک", "best": "بهترین", "help": "کمک کردن",
+    "respect": "احترام گذاشتن", "trust": "اعتماد کردن", "time": "زمان", "money": "پول",
+    "family": "خانواده", "home": "خانه", "city": "شهر", "online": "آنلاین",
+    "messages": "پیام‌ها", "photos": "عکس‌ها", "car": "ماشین", "book": "کتاب",
+    "quiet": "ساکت", "laugh": "خندیدن", "understand": "فهمیدن", "problem": "مشکل",
+    "truth": "حقیقت", "sad": "غمگین", "weekends": "آخر هفته‌ها", "usually": "معمولاً"
+  },
+
+  "questions": [
+    {
+      "q": "Do you make friends easily?",
+      "a": "Yes, I do. I [[make friends easily|راحت دوست پیدا کردن]]. I {{am friendly::be}} and I like to talk. I smile and [[say hello first|اول سلام کردن]]. I ask [[simple questions|سؤال‌های ساده]]. I ask about work, hobbies, or family. People answer and then we talk more. I am not shy. I feel OK with new people. I usually make friends at work, at school, or at the gym. I also make friends online sometimes. I like to meet new people. But I {{do not need::simple_present}} many friends. I need good friends. I have a [[small group of friends|گروه کوچکی از دوستان]]. We {{meet on weekends::simple_present}}. We drink coffee and talk. I think it is easy to make friends when you are [[open and kind|باز و مهربان]]. It is also [[important to listen|مهم است گوش کنی]]. New friends make life fun. So yes, I make friends easily. I am happy about that."
+    },
+    {
+      "q": "What do you usually do with your friends?",
+      "a": "We usually [[meet on weekends|آخر هفته‌ها همدیگر را می‌بینیم]]. We go to a café and drink coffee. We talk about work, family, and movies. Sometimes we eat lunch together. We like to [[try new restaurants|رستوران‌های جدید امتحان کردن]]. After lunch, we [[walk around town|در شهر قدم زدن]]. We look at shops and take photos. On some days, we watch a movie at home. We cook dinner and listen to music. We also play cards or [[board games|بازی‌های رومیزی]]. When the weather is nice, we go to the park. We sit on the grass and talk. Sometimes we go to the beach. We swim and eat ice cream. I like these simple times. We do not need much money. We just [[enjoy being together|از با هم بودن لذت بردن]]. We [[laugh a lot|زیاد خندیدن]]. I feel happy with my friends. It is always fun. We meet again the next week."
+    },
+    {
+      "q": "How many people do you consider your \"best friends\"?",
+      "a": "I consider two people my [[best friends|بهترین دوستان]]. One is a friend from school. The other is a friend from work. I know them for many years. We are [[very close|خیلی نزدیک]]. I can [[talk to them about everything|با آن‌ها درباره همه چیز حرف زدن]]. They listen to me and I listen to them. We [[help each other|به هم کمک کردن]]. When I have a problem, I call them. When they need help, I am there. We do not meet every day. But we talk often. We send messages and make short calls. Sometimes we meet for dinner. We laugh and tell stories. I feel lucky to have them. I do not need many best friends. Two is enough for me. [[A good friend is more important than many friends|یک دوست خوب مهم‌تر از دوستان زیاد است]]. I am happy with my [[small circle|حلقه کوچک]]."
+    },
+    {
+      "q": "Can you describe one of your closest friends?",
+      "a": "Yes, I can. One of my [[closest friends|نزدیک‌ترین دوستان]] is Maria. She is short and has [[long dark hair|موی بلند تیره]]. She has brown eyes and a big smile. She is very kind and funny. She likes to help people. She is also a [[good listener|شنونده خوب]]. When I am sad, she listens to me. She [[does not judge me|قضاوتم نمی‌کند]]. She works in a hospital. She is busy, but she always [[makes time for friends|برای دوستان وقت می‌گذارد]]. We meet on Saturdays. We drink coffee and talk for hours. She loves music and movies. She also likes to cook. Sometimes she cooks dinner for us. Her food is very good. I like her because she is [[honest and warm|صادق و گرم]]. She is a great friend. I am lucky to know her."
+    },
+    {
+      "q": "What are some things you like about your best friend?",
+      "a": "I like many things about my best friend. She is kind and honest. She always [[tells me the truth|حقیقت را به من می‌گوید]]. She is also very funny. She [[makes me laugh|مرا می‌خنداند]] when I am sad. I like that she listens to me. She does not talk too much. She asks good questions. She [[remembers important things|چیزهای مهم را به یاد می‌آورد]]. For example, she remembers my birthday. She also helps me with my problems. She is [[patient and calm|صبور و آرام]]. I am not always calm, but she is. We are different, but we are good friends. She likes sports and I like movies. We enjoy different things, but we [[respect each other|به هم احترام می‌گذاریم]]. I like her because she is a good person. She is [[friendly to everyone|با همه مهربان است]]. I feel happy when I am with her."
+    },
+    {
+      "q": "Do you prefer having a large or small circle of friends?",
+      "a": "I prefer a [[small circle of friends|حلقه کوچک دوستان]]. I have a few close friends. We [[know each other well|همدیگر را خوب می‌شناسیم]]. We [[trust each other|به هم اعتماد داریم]]. I think a small circle is better for me. With many friends, it is hard to [[spend time with everyone|با همه وقت گذراندن]]. I am busy, and I do not have much free time. I like to talk deeply with my friends. I do not like [[small talk|حرف‌های سطحی]] very much. With a small circle, I can listen and help. My friends can also help me. We meet often. We do not need a big group. A big group can be fun, but it can also be noisy. I feel more comfortable with a few people. I think [[quality is more important than quantity|کیفیت مهم‌تر از کمیت است]]. So I choose a small circle. It is simple and warm."
+    },
+    {
+      "q": "Do you have any friends who live overseas?",
+      "a": "Yes, I do. I have one friend in Canada. Her name is Anna. She is from my old school. She [[moved to Canada|به کانادا نقل مکان کرد]] five years ago. We [[talk online|آنلاین صحبت کردن]] every month. We send messages and photos. We talk about our lives. She tells me about the weather in Canada. I tell her about my city. Sometimes we make [[video calls|تماس تصویری]]. It is nice to see her face. [[I miss her|دلم برایش تنگ شده]], but I am happy for her. She has a good job there. She also has a new family. I would like to visit her one day. I want to see Canada. She says I can stay at her home. I think that is very kind. We are far away, but we are still good friends. [[Distance is not a big problem|فاصله مشکل بزرگی نیست]] for us."
+    },
+    {
+      "q": "Have you ever made any friends online?",
+      "a": "Yes, I [[made a friend online|آنلاین دوست پیدا کردن]] last year. We met in a [[language group|گروه زبان]]. We both wanted to [[practice English|تمرین انگلیسی]]. At first, we only [[sent messages|پیام فرستادن]]. Then we started to make video calls. We talk about many things. We talk about our families, our work, and our hobbies. My online friend lives in another city. We do not meet in person. But we are good friends. We help each other with English. I help her with speaking, and she helps me with listening. We also [[share funny videos|ویدیوهای خنده‌دار به اشتراک گذاشتن]]. Sometimes we play online games. It is fun. I think online friends can be real friends. But you need to be careful. You should not share too much [[personal information|اطلاعات شخصی]]. I am happy with my online friend. She is kind and funny."
+    },
+    {
+      "q": "Do you have any childhood friendships that are still strong today?",
+      "a": "Yes, I do. I have one [[childhood friend|دوست دوران کودکی]]. His name is David. We met in [[primary school|دبستان]]. We were six years old. We played football and [[rode bikes|دوچرخه سواری کردیم]] together. We also did homework together. Now we are adults. We still live in the same city. We meet for coffee every month. We talk about [[old times|زمان‌های قدیم]] and new times. He knows my family. I know his family. We help each other when we need help. Last year, he helped me move to a new apartment. I helped him with his car. Our friendship is strong because we are honest. We do not need to talk every day. But we are [[always there for each other|همیشه برای هم هستیم]]. I think [[childhood friends are special|دوستان دوران کودکی خاص هستند]]. I am lucky to have him."
+    },
+    {
+      "q": "Has a friend ever let you down?",
+      "a": "Yes, a friend [[let me down|ناامیدم کرد]] once. It happened two years ago. I [[needed help|کمک لازم داشتم]] with a small move. My friend said, “I can help you.” But on that day, he [[did not come|نیامد]]. He did not call me. I was angry and sad. I waited for two hours. Then I moved my things alone. The next day, he [[said sorry|عذرخواهی کرد]]. He had a family problem. He forgot to call me. I listened to him. I was still a little angry. But I [[forgave him|او را بخشیدم]]. [[Everyone makes mistakes|همه اشتباه می‌کنند]]. I think friendship needs forgiveness. After that, we talked about it. We are still friends today. But I learned something. I should not wait for help from one person. I should ask two people. It is better. Now our friendship is OK."
+    },
+    {
+      "q": "What are some ways your best friend has influenced your life in a positive way?",
+      "a": "My best friend [[helped me in many positive ways|به روش‌های مثبت زیادی به من کمک کرد]]. She is very calm. I am sometimes nervous. When I have a problem, she says, “[[Take it easy|آرام باش]].” She helps me [[think clearly|واضح فکر کردن]]. She also taught me to [[be more patient|صبورتر بودن]]. I was not patient before. Now I listen more and talk less. She also helped me with English. We practice speaking together. She says, “You can do it.” Her words help me. She is [[a good example for me|الگوی خوبی برای من است]]. She works hard and helps people. I want to be like her. She also showed me how to be a good listener. Now I listen to my family more. I think I am a better person because of her. [[I am very thankful|خیلی سپاسگزارم]]. Good friends change your life."
+    },
+    {
+      "q": "What type of people do you get along with best?",
+      "a": "I [[get along best with|رابطه خوب داشتن با]] kind and funny people. I like people with a [[good heart|قلب مهربان]]. I like people who listen. I do not like people who talk only about themselves. I like people with a good [[sense of humor|حس شوخ‌طبعی]]. We can laugh together. I also get along with calm people. I am sometimes busy, so calm people [[help me relax|کمک می‌کنند آرام شوم]]. I like people with many interests. We can talk about movies, food, or travel. I do not need people to be the same as me. [[Different people are interesting|آدم‌های متفاوت جالب‌اند]]. But I need people to be honest. [[I do not like lies|دروغ را دوست ندارم]]. I also like people who help others. When people are kind, I feel safe. So I get along best with kind, funny, and honest people. I think these people are good friends."
+    },
+    {
+      "q": "Do you ever fight with your friends?",
+      "a": "Yes, sometimes I [[fight with|دعوا کردن با]] my friends. But not very often. We are all different people. Sometimes we [[do not agree|موافق نیستیم]]. For example, my friend wants to eat at a restaurant, but I want to eat at home. We talk about it. Sometimes we argue a little. But we do not [[stay angry|عصبانی ماندن]]. We [[say sorry and move on|عذرخواهی کنیم و ادامه بدهیم]]. I think small fights are normal. They can help friends understand each other. But I do not like big fights. Big fights are bad. When I am angry, I wait. I do not call my friend at once. I take a walk. Then I call and talk. I listen to my friend. I say how I feel. We [[find a solution|راه‌حل پیدا کردن]]. I think talking is very important. After a fight, we are often [[better friends|دوستان بهتر]]."
+    },
+    {
+      "q": "Are you a good friend?",
+      "a": "Yes, I think I am [[a good friend|دوست خوب]]. I listen to my friends. I [[help them when they need help|وقتی نیاز دارند کمکشان کنم]]. I do not forget important days. I call them on their birthdays. I ask, “How are you?” I am honest with them. But [[I am not perfect|من بی‌عیب نیستم]]. Sometimes I am busy. I do not call for many days. I say sorry. I try to be better. I think a good friend is kind and patient. A good friend listens and does not judge. I try to do these things. I also like to make my friends laugh. I share good news and bad news with them. I [[do not tell their secrets|رازهایشان را نمی‌گویم]]. I [[keep promises|به قول‌ها عمل کردن]]. I think my friends can [[trust me|به من اعتماد دارند]]. I am happy to be their friend."
+    },
+    {
+      "q": "Do you think it’s easier or harder for adults to make new friends?",
+      "a": "I think it is harder for adults to [[make new friends|دوستان جدید پیدا کردن]]. Adults are busy. They work and [[take care of family|از خانواده مراقبت کردن]]. They do not have much [[free time|وقت آزاد]]. They cannot meet people easily. In school, you see many people every day. You can talk and play. As an adult, you go to work and then go home. You are tired. You also have old friends. You do not need many new friends. Adults are also more careful. They do not [[trust people quickly|سریع به مردم اعتماد کردن]]. They have [[more responsibilities|مسئولیت‌های بیشتر]]. But adults can still make friends. They can meet people at work, at the gym, or online. They can join a class. [[It is not easy, but it is possible|آسان نیست، اما ممکن است]]. I think adults need to try. They need to say hello first. It is hard, but good friends are important at every age."
+    },
+    {
+      "q": "How do you maintain a good friendship? How can you be a good friend?",
+      "a": "I [[maintain a good friendship|دوستی خوب را حفظ کردن]] with [[small actions|کارهای کوچک]]. I call my friends. I send messages. I ask, “How are you?” I listen to them. I remember important things. I help them when they need help. I say sorry when I make a mistake. I also [[spend time with them|با آن‌ها وقت گذراندن]]. We meet for coffee or dinner. I do not need to spend money. Time is more important. To be a good friend, I need to be honest. I need to [[keep secrets|راز نگه داشتن]]. I need to be patient. I should not judge. I should [[listen more and talk less|بیشتر گوش کن و کمتر حرف بزن]]. I can also give advice, but only when they ask. I think good friends are kind and loyal. They are there [[in good times and bad times|در خوبی و بدی]]. I try to be this kind of friend. It is not always easy, but I try."
+    },
+    {
+      "q": "What makes friends different from family?",
+      "a": "Friends are [[different from|متفاوت از]] family in some ways. Family is always family. I cannot change my family. We have the [[same blood|خون‌واحد]]. We know each other for many years. Family helps me because we are family. Friends [[choose me|من را انتخاب می‌کنند]], and I choose them. We are not family, but we like each other. We [[spend time together|با هم وقت گذراندن]] because we want to. Friends can change. I can have new friends. Family is usually forever. Also, I can talk to friends about some things. I cannot always talk to family about those things. Friends can be more open. But family can be very close, too. Some people say [[friends are like family|دوستان مثل خانواده هستند]]. I think both are important. Family gives me [[love and support|عشق و حمایت]]. Friends give me fun and understanding. I need both in my life."
+    },
+    {
+      "q": "Do you believe parents should be friends with their children?",
+      "a": "I think parents should be [[friendly with|خوش‌برخورد با]] their children. They should talk and listen. They should laugh together. But parents are not only friends. Parents are parents. They need to [[guide their children|فرزندانشان را راهنمایی کنند]]. They need to [[say “no” sometimes|گاهی نه بگویند]]. They need rules. Children need love and safety. They also [[need limits|به محدودیت نیاز دارند]]. If parents are only friends, children may not listen. If parents are [[too strict|خیلی سخت‌گیر]], children may not talk. I think parents can be both. They can be warm and strong. They can be friends in good times. They can be parents in hard times. My parents are friendly with me. We talk about many things. But they also give me advice. I think this is good. So yes, parents can be friends, but they are [[parents first|اول از همه پدر و مادر]]."
+    },
+    {
+      "q": "Can you tell me about a time that you helped a friend? How did you help?",
+      "a": "Sure. [[A few months ago|چند ماه پیش]], my friend Emma [[moved to a new apartment|به آپارتمان جدیدی اسباب‌کشی کرد]]. She asked me for help. On Saturday morning, I went to her old place. We [[packed her things|وسایلش را بسته‌بندی کردیم]] into boxes. Then we carried the boxes to a small truck. It was [[hard work|کار سختی بود]], and we [[felt tired|خسته شدیم]]. After that, we drove to her new apartment. We carried everything upstairs. I helped her put the boxes in the right rooms. In the afternoon, we bought some pizza and ate it on the floor because she had no table yet. Emma said, “[[Thank you so much|خیلی ممنون]]. You are a great friend.” I [[felt happy to help|از کمک کردن خوشحال شدم]]. Helping a friend is a good feeling. I think friends should [[help each other|به هم کمک کنیم]]. When I need help, I know Emma will help me, too."
+    },
+    {
+      "q": "Do you think sites like Facebook are good for friendships or do they stop people from becoming close?",
+      "a": "I think [[social media|رسانه‌های اجتماعی]] is good and bad for friendships. On the good side, it helps me [[keep in touch|در ارتباط ماندن]] with friends who live [[far away|دور]]. I can [[share photos|عکس به اشتراک گذاشتن]] and send messages. I can see what they are doing. It is fast and easy. But I also think it can stop people from becoming close. Some people spend too much time on their phones. They do not have [[real conversations|گفتگوهای واقعی]]. They only “like” photos. They do not meet [[face to face|رو در رو]]. Also, people sometimes [[compare their lives|زندگی‌شان را مقایسه کنند]] with other people’s lives. That can make them feel sad. For me, Facebook is a tool. I use it to say hello, but I also call my friends and meet them. I think we should [[use social media carefully|از رسانه‌های اجتماعی با احتیاط استفاده کنیم]]. It cannot replace real time together. So it is good for [[keep in touch|در ارتباط ماندن]], but it is not enough for close friendship."
+    },
+    {
+      "q": "Do you mind being alone sometimes? For example, would you go to a movie by yourself? Or do you always try to invite friends?",
+      "a": "Yes, I [[do not mind|اشکالی ندارد]] [[being alone|تنها بودن]] sometimes. I am happy with [[my own company|با خودم بودن]]. For example, I sometimes go to a movie [[by myself|خودم تنها]]. [[At first|در ابتدا]], I felt a little strange. But now I like it. I can choose the movie. I can sit anywhere. I do not need to talk. I can just enjoy the story. I also like to walk in the park alone. It is [[quiet time|وقت سکوت و آرامش]] for me. But I do not always want to be alone. Sometimes I invite friends to a movie or dinner. I think it is good to have both. When I am alone too much, I [[feel lonely|احساس تنهایی می‌کنم]]. When I am with friends all the time, I feel tired. So I need [[a balance|تعادل]]. I enjoy my own company [[from time to time|گاهی اوقات]], and I also enjoy my friends. Both are important for me."
+    },
+    {
+      "q": "Do you have any friends from a different culture or country than you? Do your differences make it harder to be friends?",
+      "a": "Yes, I have a friend [[from a different country|از کشور متفاوت]]. Her name is Yuki. She is from Japan. We met at a language class. [[At first|در ابتدا]], we had some problems. Her English was not very good, and I did not know Japanese. We used [[simple words|کلمات ساده]] and our phones to translate. But we were patient. Now we are good friends. Our differences do not make it harder to be friends. [[In fact|در واقع]], they make our friendship interesting. She teaches me about Japanese food and culture. I tell her about my country. We try new food together. We [[respect each other|به هم احترام بگذاریم]]. I think differences are not a problem when people are [[kind and open|مهربان و باز]]. You can [[learn a lot|چیزهای زیادی یاد بگیریم]] from a friend from another culture. I feel lucky to have Yuki as my friend."
+    },
+    {
+      "q": "Do you think people can be best friends with animals?",
+      "a": "Yes, I think people can be [[best friends with animals|بهترین دوست حیوانات بودن]]. Many people have [[pets|حیوانات خانگی]]. Dogs and cats are very common. My aunt has a dog named Max. She loves him very much. Max [[follows her everywhere|همه‌جا دنبالش می‌کند]]. When she is sad, Max sits next to her. He does not talk, but he listens [[in his own way|به روش خودش]]. She talks to him every day. I think animals can be [[true friends|دوستان واقعی]]. They love you and they [[do not judge you|قضاوتت نمی‌کنند]]. They are happy to see you. But I also think animal friendship is different from human friendship. You cannot talk about problems in the same way. You cannot go to a café together. Still, animals give people [[love and company|عشق و همراهی]]. For many people, a pet is a best friend. So yes, I believe people can be best friends with animals."
+    },
+    {
+      "q": "Is there a maximum number of friends one person can have?",
+      "a": "I do not think there is a [[maximum number|حداکثر تعداد]] of friends. But I think there is a maximum number of [[close friends|دوستان نزدیک]]. For me, a close friend is someone I can talk to about everything. I can only have [[a few close friends|چند دوست نزدیک]] because I need time for them. I have maybe three or four close friends. But I can have many friends. I know people at work, at the gym, and in my neighborhood. I say hello and talk with them. They are friends, but not close friends. So I think we can have many friends, but only a [[small circle|حلقه کوچک]] of close friends. [[Quality is more important than quantity|کیفیت مهم‌تر از کمیت است]]. Some scientists say people can only have about 150 friends. Maybe that is true for close friends. For me, I just try to [[be a good friend|دوست خوب بودن]] to the people I have."
+    }
+  ],
+
+  "practice": [
+    {"k": "tap", "q": "I ____ new people at the gym.", "o": ["meet", "met", "meeting"], "a": "meet", "fb": "برای کارهای روزمره از حال ساده استفاده می‌کنیم."},
+    {"k": "tap", "q": "She is very ____ and likes to talk to everyone.", "o": ["shy", "friendly", "quiet"], "a": "friendly", "fb": "friendly یعنی خوش‌برخورد و اجتماعی."},
+    {"k": "tap", "q": "We drink ____ and talk on weekends.", "o": ["coffee", "book", "car"], "a": "coffee", "fb": "coffee یعنی قهوه."},
+    {"k": "tap", "q": "It is ____ to listen to your friends.", "o": ["important", "boring", "hard"], "a": "important", "fb": "important یعنی مهم."},
+    {"k": "type", "q": "I usually ____ (make) friends at work.", "a": "make", "fb": "با I از فعل ساده استفاده می‌کنیم."},
+    {"k": "type", "q": "She ____ (need) good friends.", "a": "needs", "fb": "با she فعل s می‌گیرد: needs."},
+    {"k": "type", "q": "They ____ (meet) on weekends.", "a": "meet", "fb": "با they فعل ساده استفاده می‌شود."},
+    {"k": "drag", "w": ["I", "make", "friends", "easily", "."], "a": "I make friends easily .", "fb": "ترتیب کلمات در جمله انگلیسی: فاعل + فعل + مفعول."},
+    {"k": "drag", "w": ["We", "meet", "on", "weekends", "."], "a": "We meet on weekends .", "fb": "on weekends یعنی آخر هفته‌ها."},
+    {"k": "drag", "w": ["She", "is", "very", "friendly", "."], "a": "She is very friendly .", "fb": "فعل to be با she می‌شود is."}
+  ]
+}

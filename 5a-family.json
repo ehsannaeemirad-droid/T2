@@ -1,0 +1,193 @@
+{
+  "id": "5a-family",
+  "title": "Family",
+  "emoji": "👨‍👩‍👧‍👦",
+  "unit": 5,
+  "lesson": "A",
+  "grammar_labels": ["be born", "simple past"],
+
+  "grammar_notes": {
+    "simple_past": {
+      "label": "حال ساده گذشته (Simple Past)",
+      "tip": "برای صحبت درباره کارهایی که در گذشته تمام شده‌اند از حال ساده گذشته استفاده می‌کنیم. افعال با قاعده با افزودن -ed گذشته می‌شوند (مثل played) و افعال بی‌قاعده شکل خاص خودشان را دارند (مثل went, saw, grew up). برای منفی کردن از didn't و برای سوال از Did استفاده می‌کنیم."
+    },
+    "be_born": {
+      "label": "متولد شدن (Be Born)",
+      "tip": "برای گفتن اینکه کجا و چه زمانی به دنیا آمده‌ایم از was born (برای I, he, she, it) و were born (برای you, we, they) استفاده می‌کنیم. مثلاً: I was born in 1995. They were born in Canada."
+    }
+  },
+
+  "words": {
+    "brother": "برادر", "sister": "خواهر", "parents": "والدین", 
+    "cousin": "پسرخاله/دخترخاله/پسرعمو/دخترعمو", "grandparents": "پدربزرگ و مادربزرگ",
+    "grew": "بزرگ شد", "grow": "بزرگ شدن", "lived": "زندگی کرد", "live": "زندگی کردن",
+    "played": "بازی کرد", "play": "بازی کردن", "went": "رفت", "go": "رفتن",
+    "saw": "دید", "see": "دیدن", "met": "ملاقات کرد", "meet": "ملاقات کردن",
+    "spent": "گذراند", "spend": "گذراندن", "shared": "به اشتراک گذاشت", "share": "به اشتراک گذاشتن",
+    "talked": "صحبت کرد", "talk": "صحبت کردن", "worked": "کار کرد", "work": "کار کردن",
+    "strict": "سخت‌گیر", "chores": "کارهای خانه", "vacation": "تعطیلات",
+    "childhood": "دوران کودکی", "support": "حمایت", "generation": "نسل",
+    "traditional": "سنتی", "memory": "خاطره", "remember": "به یاد آوردن",
+    "funny": "بامزه", "kind": "مهربان", "patient": "صبور", "calm": "آرام",
+    "wise": "دانا", "generous": "سخاوتمند", "successful": "موفق"
+  },
+
+  "questions": [
+    {
+      "q": "Do you have younger or older brothers/sisters? How often do you meet them?",
+      "a": "Yes, I have one {{older brother}} and one [[younger sister|خواهر کوچک‌تر]]. My brother {{is}} thirty years old, and he {{is}} married now. He {{lives}} in a [[different apartment|آپارتمان متفاوت]] across town with his wife. My sister {{is}} eighteen, and she {{is}} still a student at university. She still {{lives}} at home with my parents. I {{see}} my younger sister [[almost every day|تقریباً هر روز]] because we often {{have}} dinner together at our parents' house. However, I {{do not see}} my brother every day because he {{is}} very busy with his work. He {{works}} long hours at an office, so we usually {{meet}} only [[on weekends|آخر هفته‌ها]]. Every Friday, we {{gather}} at my parents' home for lunch. We {{talk}} about our week, {{share}} funny stories, and {{watch}} TV together. Sometimes, my brother and I also {{play}} video games or {{go}} to a café in the afternoon. I really {{enjoy}} spending time with both of them."
+    },
+    {
+      "q": "Do you have a favorite cousin?",
+      "a": "Yes, I have a [[favorite cousin|پسرخاله/دخترخاله موردعلاقه]], and his name is Reza. He is twenty-four years old, so he is very close to my age. We {{grew up::simple_past}} together, so we have [[a lot in common|چیزهای زیادی مشترک]]. When we {{were::simple_past}} children, we always {{played::simple_past}} football in the yard, and we {{spent::simple_past}} all our summer vacations together. He is a very [[friendly and cheerful person|آدم خوش‌برخورد و شاد]], and he always [[makes me laugh|منو می‌خندونه]] when I am sad. He also works in technology, so we often talk about computers, games, and new phones. We try to meet once a week on the weekend. Usually, we meet at a quiet coffee shop to chat, or we go to the cinema to watch an action movie. When we are both busy with work, we send text messages and share funny videos online. I feel very lucky because he is not just my cousin; he is truly my best friend."
+    },
+    {
+      "q": "How often do you see your grandparents? What are they like?",
+      "a": "I see my [[grandparents|پدربزرگ و مادربزرگ]] about two or three times a month. They live in a lovely, quiet neighborhood about thirty minutes away from my apartment. My grandfather is seventy-five years old, and my grandmother is seventy-two. They are both retired now, so they spend a lot of time at home gardening and cooking. They are the [[kindest and most generous|مهربان‌ترین و سخاوتمندترین]] people in our family. My grandmother is very warm and caring. Whenever I visit them, she always cooks delicious traditional food and bakes sweet cakes for me. My grandfather is very wise and calm, but he is also funny. He loves telling stories about his youth and giving me good advice about life. When I visit them, we drink tea together and look at old photo albums. I really love them, and I try to visit them as often as possible because their company [[brings me peace|به من آرامش می‌دهد]]."
+    },
+    {
+      "q": "Who is the funniest person in your family?",
+      "a": "The funniest person in my family is definitely my uncle Ali. He is my father's younger brother, and he has a [[fantastic sense of humor|حس شوخ‌طبعی فوق‌العاده]]. Whenever our family has a party or a dinner, he is always the center of attention. He knows hundreds of funny jokes, and he is great at telling stories with silly voices and funny facial expressions. Even when someone is [[having a bad day|روز بدی داشتن]], my uncle can easily [[make them smile|کاری کنه که لبخند بزنن]] and laugh. For example, during our last holiday dinner, he {{told::simple_past}} a story about his funny driving test from twenty years ago, and everyone {{laughed::simple_past}} until their eyes were watering. He never takes life too seriously, and he always looks on the bright side of things. I think every family needs someone like him because he brings so much joy and positive energy to all our family gatherings."
+    },
+    {
+      "q": "Who do you get along with best in your family?",
+      "a": "In my family, I [[get along with best|بهترین رابطه را دارم با]] my mother. We have a very close relationship, and we understand each other very well. She is a wonderful listener, so whenever I have a problem at work or feel stressed, I always go to her first. She never judges me; instead, she gives me gentle advice and makes me feel safe. We also share many of the same interests. For instance, we both love cooking, so on weekends, we often try new recipes in the kitchen together. We also enjoy drinking morning tea while chatting about our daily plans. She has a very calm and patient personality, which helps me stay relaxed when I feel worried. Of course, I love all my family members, but my mother is someone I can talk to about anything. She is truly my [[biggest supporter|بزرگ‌ترین حامی]] and my closest companion."
+    },
+    {
+      "q": "What do you like the most about your family?",
+      "a": "What I like most about my family is our strong connection and [[unconditional support|حمایت بی‌قید و شرط]]. No matter what happens in life, I know that my family is [[always there for me|همیشه برای من هست]]. Whenever one of us faces a difficult situation or feels sick, everyone comes together immediately to help. We are very open and honest with each other, so we can talk about our feelings without fear. Another thing I really love is our [[family tradition|سنت خانوادگی]] of eating meals together. Even though we all have busy schedules with work and study, we make sure to sit down at the dinner table every evening. We turn off the television, put our phones away, and talk about our day. This simple habit [[keeps us close|ما را نزدیک نگه می‌دارد]]. We also respect each other's opinions, which creates a peaceful atmosphere at home. Having such a loving and reliable family is a wonderful blessing."
+    },
+    {
+      "q": "What’s the best thing about your mom/dad?",
+      "a": "The best thing about my father is his hard work and his generous heart. He {{worked::simple_past}} very hard for many years to provide a comfortable life for our family, but he never complained about being tired. Even after a long day at his job, he always {{came::simple_past}} home with a warm smile on his face. He is also an [[extremely patient|بسیار صبور]] teacher. When I was younger, he {{taught::simple_past}} me how to ride a bicycle, how to fix things around the house, and how to treat other people with kindness. He always listens carefully when I speak and encourages me to [[follow my dreams|دنبال رویاهایم بروم]]. What I admire most is his calm personality during stressful times. When there is a problem, he does not panic; he simply stays calm and finds a smart solution. He is truly a [[wonderful role model|الگوی فوق‌العاده]] for me."
+    },
+    {
+      "q": "What characteristics have you inherited from your parents? Do you look like them? Do you behave like they do?",
+      "a": "I think I have inherited characteristics from both of my parents. Physically, I [[look much more like|خیلی شبیه‌تر هستم به]] my father. I have his dark brown eyes, the same shape of face, and his thick black hair. People often say that when they look at old pictures of my father, it is like looking at me. However, in terms of personality and behavior, I am definitely more like my mother. Like her, I am generally a calm, patient, and quiet person. I like [[organized spaces|فضاهای مرتب]], and I always plan my day carefully, just like she does. She also loves reading books and listening to soft music in the evenings, and I have the exact same hobbies. Sometimes, when I talk to my friends, I notice that I even use the same hand gestures and expressions as my mother. I am [[proud|افتخار می‌کنم]] to have pieces of both of them in me."
+    },
+    {
+      "q": "What games did you use to play with your brothers/sisters?",
+      "a": "When we {{were::simple_past}} children, my brother, my sister, and I {{used to play::simple_past}} many different games together. In the afternoons, especially during the warm summer months, we loved playing [[hide-and-seek|قایم موشک]] in our house and in our grandparents' backyard. There were so many great hiding spots, and we had so much fun trying to find each other. When the weather was cold or rainy, we stayed inside and played [[board games|بازی‌های رومیزی]] like Monopoly and chess on the living room rug. Sometimes, the games became very competitive, but we always [[ended up laughing|آخرش می‌خندیدیم]] together. We also created our own imaginary games using pillows, blankets, and chairs to build huge castles in our bedroom. We {{pretended::simple_past}} to be brave explorers on exciting adventures. Those games were simple, but they helped us [[bond closely|رابطه نزدیکی برقرار کنیم]], and I still have wonderful memories of playing together."
+    },
+    {
+      "q": "How often did you go on vacation with your family?",
+      "a": "When I {{was::simple_past}} growing up, my family and I {{went::simple_past}} on vacation at least once or twice a year. Our main trip was always during the long summer holiday when school was closed. We usually {{packed::simple_past}} our bags, {{loaded::simple_past}} our car, and {{drove::simple_past}} to the north coast to spend two weeks near the sea. We also {{took::simple_past}} a shorter trip during the spring holiday for the New Year celebration. During those trips, we {{visited::simple_past}} historical cities and {{stayed::simple_past}} in small, cozy hotels or rented villas. We {{spent::simple_past}} our days walking through green parks, exploring traditional markets, and trying local food at family restaurants. My parents always {{believed::simple_past}} that traveling together was the best way to relax and learn new things outside of school. Those family vacations were very special because we {{left::simple_past}} our daily routines behind and spent [[quality time|وقت با کیفیت]] together."
+    },
+    {
+      "q": "What is the best memory you have of your family doing something together?",
+      "a": "My [[best family memory|بهترین خاطره خانوادگی]] is from five years ago when we {{went::simple_past}} on a camping trip in the mountains. We {{drove::simple_past}} early in the morning and {{arrived::simple_past}} at a beautiful spot next to a clear river. In the afternoon, we all {{worked::simple_past}} together to set up our tents. My brother and I {{collected::simple_past}} dry wood, my father {{pitched::simple_past}} the tents, and my mother {{prepared::simple_past}} fresh ingredients for a picnic. In the evening, we {{built::simple_past}} a warm campfire and {{grilled::simple_past}} chicken kebabs. The sky was completely clear, and there were thousands of bright stars. My father {{brought::simple_past}} his acoustic guitar, and we {{sang::simple_past}} old folk songs together while drinking hot tea. There was no internet connection, so no one looked at a smartphone. We simply {{talked::simple_past}}, {{laughed::simple_past}}, and {{enjoyed::simple_past}} the quiet nature. That night felt magical, and it brought us closer than ever before."
+    },
+    {
+      "q": "Are your parents strict? Did your parents let you stay up late?",
+      "a": "My parents {{were::simple_past}} moderately strict when I was growing up, but they were always very fair and loving. They {{had::simple_past}} clear rules about education, homework, and good manners. For example, my brother and I {{had to::simple_past}} finish all our schoolwork before we could play video games or go outside with friends. Regarding bedtime, they were definitely strict on weekdays. We {{were not allowed::simple_past}} to stay up late because we had to wake up early for school. We usually {{had to::simple_past}} turn off the lights by ten o'clock. However, on weekends and during summer vacations, they were much more relaxed. On Friday nights, they {{let::simple_past}} us stay up late until midnight to watch family movies or play games together. I think their rules were very reasonable because they {{taught::simple_past}} me discipline while still giving me freedom to enjoy my childhood."
+    },
+    {
+      "q": "Do you think that children should help with chores around the house?",
+      "a": "Yes, I strongly believe that children should help with [[chores around the house|کارهای خانه]]. Doing household tasks teaches children important life skills that they will need when they grow up and live on their own. For example, simple chores like making the bed, washing dishes, tidying up toys, and taking out the trash teach them [[responsibility and self-reliance|مسئولیت‌پذیری و اتکا به خود]]. In addition, when children help their parents, they learn to appreciate how much work goes into maintaining a clean home. It also shows them the value of [[teamwork|کار تیمی]] within the family. Instead of expecting their parents to do everything, children understand that everyone in the house has a role to play. Of course, parents should give them [[age-appropriate tasks|کارهای متناسب با سن]] and not overload them with too much work. Overall, doing chores helps children become more independent, responsible, and caring adults in the future."
+    },
+    {
+      "q": "Do you prefer spending time with your family or friends?",
+      "a": "I really enjoy spending time with both, but my preference depends on my mood and the situation. Generally, I prefer spending time with my family on weekends and during holidays. Being with my family gives me a [[deep sense of comfort|احساس عمیق آرامش]] and peace. We can relax at home, share homemade meals, and have meaningful conversations without any pressure. On the other hand, spending time with my friends is exciting, fun, and energetic. With friends, I like to go to trendy cafés, play sports, watch movies, or travel to new places. We talk about our careers, hobbies, and social lives. So, while my friends bring excitement and fun into my life, my family provides my [[emotional foundation|پایه و اساس عاطفی]]. If I have to choose, family comes first, but I believe having a [[healthy balance|تعادل سالم]] between both is the key to happiness."
+    },
+    {
+      "q": "Among people you know, who do you look up to? Who is successful?",
+      "a": "Among the people I know personally, I [[look up to|الگو قرار می‌دهم / احترام می‌گذارم به]] my older cousin, Amin. In my opinion, he is truly successful, not just because he earns good money, but because of his character and dedication. A few years ago, he {{decided::simple_past}} to start his own small business from scratch. In the beginning, he {{faced::simple_past}} many difficult challenges and {{worked::simple_past}} twelve hours a day. However, he never {{gave::simple_past}} up, and he {{remained::simple_past}} patient and optimistic. Today, his company is thriving, and he manages a team of ten people. Despite his great success, he is still [[humble and polite|متواضع و مؤدب]], and always willing to help others. He also maintains a healthy [[work-life balance|تعادل بین کار و زندگی]] and spends plenty of quality time with his wife and children. I admire his discipline and positive attitude, and he inspires me to work hard for my own goals."
+    },
+    {
+      "q": "What qualities are must-haves for a father/mother?",
+      "a": "In my opinion, there are several essential qualities that every good father or mother must have. First of all, [[patience|صبوری]] is crucial. Children make mistakes, ask endless questions, and sometimes misbehave, so parents need to stay calm and guide them gently. Secondly, unconditional love and emotional warmth are vital. A child needs to feel safe, valued, and accepted at all times. In addition, [[good communication skills|مهارت‌های ارتباطی خوب]] are very important. Parents should listen actively to their children's thoughts and concerns instead of just giving orders. Furthermore, consistency and [[leading by example|الگو بودن با عمل]] are necessary traits. Children learn more from what their parents do than from what they say. If parents show kindness, honesty, and hard work in their daily lives, their children will naturally develop those same positive values. Being a parent is a big responsibility, but these qualities build a strong family."
+    },
+    {
+      "q": "What do you think about children leaving their parents at 18?",
+      "a": "I think children leaving their parents at age eighteen has both advantages and disadvantages, and it largely depends on culture and individual circumstances. In many Western countries, moving out at eighteen is normal because it encourages young people to become independent, manage their own money, and take care of themselves. They learn how to cook, pay bills, and solve daily problems on their own. However, in many other cultures, including my own, young people usually live with their parents until they finish university or get married. I personally think staying with family during college is very helpful. It provides [[emotional support|حمایت عاطفی]] and saves a lot of money on rent and food. Eighteen is still quite young, and many teenagers are not ready for [[adult responsibilities|مسئولیت‌های بزرگسالی]] yet. Therefore, I believe the right timing depends on the person's [[maturity|بلوغ فکری]] and financial situation."
+    },
+    {
+      "q": "Why do some couples decide not to have children?",
+      "a": "Nowadays, many couples decide not to have children for various personal, financial, and lifestyle reasons. One of the main reasons is the [[high cost of raising a child|هزینه بالای بزرگ کردن فرزند]] today. Education, healthcare, housing, and daily expenses are very expensive, so some couples feel they cannot provide a good quality of life for a child. Another common reason is [[career commitment|تعهد شغلی]]. Many individuals work long hours and want to focus on their professional ambitions or travel the world freely without the huge responsibility of parenting. Additionally, some couples feel that their personal relationship is already complete and fulfilling without children. They prefer having more free time, flexibility, and less daily stress. Finally, concerns about global problems, such as [[climate change|تغییر اقلیم]] and economic instability, also influence this decision. Every couple has the right to choose the lifestyle that makes them happy."
+    },
+    {
+      "q": "How is our generation's lifestyle different from the previous one? Compare your grandparents’ lifestyle, your parents’ lifestyle, and yours.",
+      "a": "Our lifestyle today is remarkably different from the lifestyles of [[previous generations|نسل‌های قبلی]]. My grandparents {{lived::simple_past}} a very simple, traditional, and slow-paced life. They {{worked::simple_past}} mostly in agriculture or local trade, {{spent::simple_past}} almost all their time with extended family, and {{had::simple_past}} very little modern technology. My parents' generation {{experienced::simple_past}} rapid modernization and urbanization. They {{worked::simple_past}} regular office jobs, {{bought::simple_past}} televisions and cars, and {{focused::simple_past}} heavily on formal education and job stability. In contrast, my generation lives in a fast-paced, digital world. We rely completely on the internet, smartphones, and social media for our work, shopping, and communication. We also value [[flexibility|انعطاف‌پذیری]] and personal experiences like travel more than previous generations did. However, while our lives are much more convenient and connected, we often experience more daily stress and spend less [[face-to-face time|وقت رو در رو]] with our loved ones."
+    },
+    {
+      "q": "Has social media affected relationships?",
+      "a": "Yes, I believe [[social media|شبکه‌های اجتماعی]] has had a huge impact on personal and family relationships, with both positive and negative effects. On the positive side, social media makes it very easy to [[stay connected with|در ارتباط ماندن با]] relatives and friends who live far away. We can share photos, send instant messages, and make video calls anytime for free. It helps us feel closer to people we do not see often. However, on the negative side, social media can harm relationships when people use it too much. For example, during family dinners or social gatherings, many people stare at their smartphone screens instead of talking to each other. This habit reduces [[real communication|ارتباط واقعی]] and creates [[emotional distance|فاصله عاطفی]]. In addition, comparing our daily lives to unrealistic photos online can cause dissatisfaction and jealousy. Overall, social media is useful, but we must use it mindfully."
+    },
+    {
+      "q": "How do you think western families and eastern families differ?",
+      "a": "In my view, Western families and Eastern families often differ in their cultural values and family structures. Generally speaking, Western families tend to focus more on [[individualism and personal independence|فردگرایی و استقلال شخصی]]. Children are encouraged to make their own choices early in life, and they usually move out of the family home around age eighteen. Privacy and self-reliance are highly valued. On the other hand, Eastern families place a stronger emphasis on [[collectivism|جمع‌گرایی]] and family unity, and respect for elders. Extended families often live close together or even in the same household. Major life decisions, such as career choices or marriage, are frequently discussed with parents and elders. In Eastern culture, [[family ties|پیوندهای خانوادگی]] remain very tight throughout life, and children feel a strong responsibility to care for their aging parents. Both approaches have unique strengths and reflect different cultural perspectives."
+    },
+    {
+      "q": "What do you think is the most important thing to make a happy family?",
+      "a": "In my opinion, the most important thing to make a happy family is [[open communication|ارتباط باز]] based on mutual respect and love. When family members talk honestly and listen to each other with patience, they can solve misunderstandings before they turn into major arguments. Every person in the home needs to feel valued, safe, and heard. Another key factor is spending [[quality time together|وقت با کیفیت با هم]]. Sharing meals, celebrating small achievements, and enjoying simple activities like watching a film or walking in the park help maintain a strong [[emotional bond|پیوند عاطفی]]. In addition, forgiveness is essential because no family is perfect, and people will occasionally make mistakes. When parents show warmth and kindness instead of harsh criticism, children grow up feeling confident and secure. Ultimately, love, trust, and quality time are the true ingredients of a happy family."
+    },
+    {
+      "q": "What do you think is the biggest challenge families face today?",
+      "a": "I think the biggest challenge families face today is the [[lack of quality time together|کمبود وقت با کیفیت با هم]] due to busy lifestyles and digital distractions. Nowadays, both parents often work long hours to cope with [[rising living costs|افزایش هزینه‌های زندگی]], and children have heavy school schedules and extracurricular activities. By the time everyone gets home in the evening, they are exhausted. Instead of talking and connecting, family members often retreat into their own bedrooms to look at their smartphones, tablets, or laptops. This creates emotional distance even when everyone is living under the same roof. In addition, [[financial pressure|فشار مالی]] and economic instability cause significant stress for parents, which can lead to tension and arguments at home. To overcome this challenge, families need to [[set healthy boundaries|مرزهای سالم تعیین کنند]] with technology and prioritize simple daily moments together, like sharing dinner without screens."
+    }
+  ],
+
+  "vocab": [
+    {
+      "t": "get along with", "l": "A2", "fa": "کنار آمدن با، رابطه خوب داشتن با",
+      "en": "To have a friendly relationship with someone.",
+      "ex": "I get along with my mother very well.", "ex_fa": "من با مادرم خیلی خوب کنار می‌آیم."
+    },
+    {
+      "t": "look up to", "l": "B1", "fa": "الگو قرار دادن، احترام گذاشتن به",
+      "en": "To admire and respect someone.",
+      "ex": "I look up to my older cousin Amin.", "ex_fa": "من پسرعموی بزرگترم امین را الگو قرار می‌دهم."
+    },
+    {
+      "t": "grow up", "l": "A2", "fa": "بزرگ شدن",
+      "en": "To become an adult.",
+      "ex": "We grew up together in the same neighborhood.", "ex_fa": "ما با هم در یک محله بزرگ شدیم."
+    },
+    {
+      "t": "use to", "l": "A2", "fa": "قبلاً (عادت داشتن به)",
+      "en": "Something you did regularly in the past but not now.",
+      "ex": "We used to play hide-and-seek.", "ex_fa": "ما قبلاً قایم موشک بازی می‌کردیم."
+    },
+    {
+      "t": "strict", "l": "A2", "fa": "سخت‌گیر",
+      "en": "Demanding that rules are followed.",
+      "ex": "My parents were moderately strict.", "ex_fa": "والدین من نسبتاً سخت‌گیر بودند."
+    },
+    {
+      "t": "chores", "l": "A2", "fa": "کارهای خانه",
+      "en": "Regular jobs around the house.",
+      "ex": "Children should help with chores.", "ex_fa": "بچه‌ها باید در کارهای خانه کمک کنند."
+    },
+    {
+      "t": "generation", "l": "B1", "fa": "نسل",
+      "en": "All the people born around the same time.",
+      "ex": "My generation lives in a fast-paced world.", "ex_fa": "نسل من در دنیای پرسرعتی زندگی می‌کند."
+    }
+  ],
+
+  "practice": [
+    {"k": "tap", "q": "I have one older ____ and one younger sister.", "o": ["brother", "cousin", "uncle"], "a": "brother", "fb": "Brother یعنی برادر."},
+    {"k": "tap", "q": "My grandparents live in a quiet ____.", "o": ["neighborhood", "apartment", "car"], "a": "neighborhood", "fb": "Neighborhood یعنی محله."},
+    {"k": "tap", "q": "He always tells funny stories and has a great sense of ____.", "o": ["humor", "hair", "family"], "a": "humor", "fb": "Sense of humor یعنی حس شوخ‌طبعی."},
+    {"k": "tap", "q": "She is a wonderful ____, she always listens to my problems.", "o": ["listener", "teacher", "cook"], "a": "listener", "fb": "Listener یعنی شنونده."},
+    {"k": "type", "q": "I ____ (look) much more like my father. (Present Simple)", "a": "look", "fb": "با I از فعل ساده استفاده می‌کنیم."},
+    {"k": "type", "q": "My parents ____ (be) very strict. (Past Simple)", "a": "were", "fb": "با they/parents از were استفاده می‌کنیم."},
+    {"k": "type", "q": "We ____ (go) on a camping trip. (Past Simple)", "a": "went", "fb": "گذشته go می‌شود went."},
+    {"k": "drag", "w": ["I", "get", "along", "with", "my", "mother", "."], "a": "I get along with my mother .", "fb": "get along with یعنی کنار آمدن با."},
+    {"k": "drag", "w": ["They", "grew", "up", "together", "."], "a": "They grew up together .", "fb": "grew up یعنی بزرگ شدند."},
+    {"k": "drag", "w": ["We", "used", "to", "play", "hide-and-seek", "."], "a": "We used to play hide-and-seek .", "fb": "used to برای عادت در گذشته استفاده می‌شود."}
+  ],
+
+  "grammar": [
+    {"k": "tap", "q": "I ____ born in 1995.", "o": ["was", "were", "am"], "a": "was", "fb": "با I از was born استفاده می‌کنیم."},
+    {"k": "tap", "q": "They ____ born in Canada.", "o": ["was", "were", "are"], "a": "were", "fb": "با They از were born استفاده می‌کنیم."},
+    {"k": "tap", "q": "We ____ to the park yesterday.", "o": ["go", "went", "gone"], "a": "went", "fb": "گذشته go می‌شود went."},
+    {"k": "tap", "q": "She ____ her cousin last week.", "o": ["see", "saw", "seen"], "a": "saw", "fb": "گذشته see می‌شود saw."},
+    {"k": "type", "q": "He ____ (not / come) to the party last night.", "a": "didn't come", "fb": "برای منفی گذشته از didn't + فعل ساده استفاده می‌کنیم."},
+    {"k": "type", "q": "Where ____ (be) you born?", "a": "were", "fb": "سوالی با you از were استفاده می‌کند."},
+    {"k": "type", "q": "I ____ (be) very happy when I was a child.", "a": "was", "fb": "با I از was استفاده می‌کنیم."},
+    {"k": "type", "q": "They ____ (move) to a new house in 2010.", "a": "moved", "fb": "move با قاعده است و ed می‌گیرد."},
+    {"k": "drag", "w": ["I", "was", "born", "in", "Iran", "."], "a": "I was born in Iran .", "fb": "was born یعنی متولد شدم."},
+    {"k": "drag", "w": ["We", "played", "football", "when", "we", "were", "kids", "."], "a": "We played football when we were kids .", "fb": "گذشته play می‌شود played."}
+  ]
+}

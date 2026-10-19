@@ -1,0 +1,29 @@
+{
+  "title": "گرامر درس ۲C: برنامه‌های آینده (Be going to و Will)",
+  "explanation": [
+    {
+      "heading": "قصد و برنامه (Be going to)",
+      "text": "وقتی می‌خواهیم درباره <strong>قصد یا برنامه‌ای برای آینده</strong> صحبت کنیم (مثلاً چیزی که از قبل تصمیم گرفته‌ایم انجام دهیم)، از ساختار <code>am / is / are + going to + فعل ساده</code> استفاده می‌کنیم. مثلاً: <code>I am going to apply for a new job.</code> (من قصد دارم برای یک شغل جدید درخواست بدهم). این ساختار برای برنامه‌های قطعی و تصمیم‌های گرفته شده بسیار رایج است."
+    },
+    {
+      "heading": "پیش‌بینی و تصمیم لحظه‌ای (Will)",
+      "text": "از <code>will + فعل ساده</code> در دو حالت اصلی استفاده می‌کنیم: ۱. برای <strong>پیش‌بینی</strong> آینده بدون شواهد قطعی (مثلاً: <code>I think she will get the job.</code> - فکر می‌کنم او شغل را بگیرد). ۲. برای <strong>تصمیم لحظه‌ای</strong> که همین الان گرفته‌ایم (مثلاً تلفن زنگ می‌زند و شما می‌گویید: <code>I will answer it!</code> - من جواب می‌دهم!)."
+    },
+    {
+      "heading": "تفاوت مهم",
+      "text": "اگر از قبل برای انجام کاری برنامه‌ریزی کرده‌اید، از <code>be going to</code> استفاده کنید. اگر در همان لحظه تصمیم می‌گیرید یا در حال پیش‌بینی هستید، از <code>will</code> استفاده کنید. برای هر دو ساختار، فعل بعد از آن‌ها <strong>همیشه ساده (بدون to و بدون s)</strong> است."
+    }
+  ],
+  "test": [
+    {"k": "tap", "q": "I have a plan. I ____ start my own business.", "o": ["am going to", "will", "am"], "a": "am going to", "fb": "برای برنامه از be going to استفاده می‌کنیم."},
+    {"k": "tap", "q": "Don't worry, I ____ help you with your resume.", "o": ["will", "am going to", "am"], "a": "will", "fb": "برای تصمیم لحظه‌ای از will استفاده می‌کنیم."},
+    {"k": "tap", "q": "She ____ probably get the promotion.", "o": ["will", "is going to", "is"], "a": "will", "fb": "برای پیش‌بینی از will استفاده می‌کنیم."},
+    {"k": "tap", "q": "We ____ meet at the office at 9 AM tomorrow.", "o": ["are going to", "will", "are"], "a": "are going to", "fb": "برنامه قطعی از قبل مشخص شده."},
+    {"k": "type", "q": "He ____ (be) going to travel next month.", "a": "is", "fb": "با he از is going to."},
+    {"k": "type", "q": "I think it ____ (will) rain tomorrow.", "a": "will", "fb": "پیش‌بینی با will."},
+    {"k": "type", "q": "They ____ (be) going to buy a new house.", "a": "are", "fb": "با they از are going to."},
+    {"k": "drag", "w": ["I", "am", "going", "to", "start", "a", "new", "career", "."], "a": "I am going to start a new career .", "fb": "be going to + base verb."},
+    {"k": "drag", "w": ["I", "will", "call", "you", "later", "."], "a": "I will call you later .", "fb": "will + base verb."},
+    {"k": "drag", "w": ["She", "will", "be", "a", "great", "manager", "."], "a": "She will be a great manager .", "fb": "پیش‌بینی با will."}
+  ]
+}

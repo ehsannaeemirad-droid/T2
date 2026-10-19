@@ -1,0 +1,25 @@
+{
+  "title": "گرامر درس ۱A: حال ساده و فعل بودن (Be)",
+  "explanation": [
+    {
+      "heading": "فعل بودن (to be)",
+      "text": "در زبان انگلیسی، وقتی می‌خواهیم بگوییم کسی یا چیزی <strong>چه وضعیتی دارد</strong> یا <strong>چه کسی است</strong>، از فعل to be استفاده می‌کنیم. این فعل در زمان حال سه شکل دارد: <code>am</code> برای I، <code>is</code> برای he/she/it و <code>are</code> برای we/you/they. مثلاً وقتی می‌گیم «I am friendly» یعنی «من خوش‌برخوردم»."
+    },
+    {
+      "heading": "زمان حال ساده (Simple Present)",
+      "text": "وقتی می‌خواهیم درباره <strong>کارهای روزمره، عادت‌ها یا حقایق کلی</strong> صحبت کنیم، از زمان حال ساده استفاده می‌کنیم. مثلاً «I make friends at work» یعنی «من سر کار دوست پیدا می‌کنم». برای منفی کردن از <code>don't</code> یا <code>doesn't</code> استفاده می‌کنیم (مثلاً: I don't need many friends)."
+    }
+  ],
+  "test": [
+    {"k": "tap", "q": "I ____ a student.", "o": ["am", "is", "are"], "a": "am", "fb": "با I از am استفاده می‌کنیم."},
+    {"k": "tap", "q": "She ____ from Canada.", "o": ["am", "is", "are"], "a": "is", "fb": "با she از is استفاده می‌کنیم."},
+    {"k": "tap", "q": "They ____ good friends.", "o": ["am", "is", "are"], "a": "are", "fb": "با they از are استفاده می‌کنیم."},
+    {"k": "tap", "q": "We ____ coffee every morning.", "o": ["drinks", "drink", "drinking"], "a": "drink", "fb": "با we فعل ساده بدون s استفاده می‌شود."},
+    {"k": "type", "q": "He ____ (be) a teacher.", "a": "is", "fb": "با he از is استفاده می‌کنیم."},
+    {"k": "type", "q": "I ____ (not / need) many friends.", "a": "don't need", "fb": "برای منفی با I از don't استفاده می‌کنیم."},
+    {"k": "type", "q": "She ____ (talk) a lot.", "a": "talks", "fb": "با she فعل s می‌گیرد."},
+    {"k": "drag", "w": ["She", "is", "a", "good", "friend", "."], "a": "She is a good friend .", "fb": "فاعل + is + صفت/اسم."},
+    {"k": "drag", "w": ["They", "are", "very", "close", "."], "a": "They are very close .", "fb": "با they از are استفاده می‌کنیم."},
+    {"k": "drag", "w": ["I", "don't", "like", "rude", "people", "."], "a": "I don't like rude people .", "fb": "برای منفی کردن افعال از don't استفاده می‌کنیم."}
+  ]
+}

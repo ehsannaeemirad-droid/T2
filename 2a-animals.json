@@ -1,0 +1,83 @@
+{
+  "id": "2a-animals",
+  "title": "Animals",
+  "emoji": "🐾",
+  "unit": 2,
+  "lesson": "A",
+  "grammar_labels": ["modals", "gerund-infinitive"],
+  "grammar_file": "data/grammar/g2a.json",
+
+  "words": {
+    "pet": "حیوان خانگی", "rescue": "نجات دادن", "kitten": "بچه گربه",
+    "playful": "بازیگوش", "smart": "باهوش", "allergy": "حساسیت",
+    "mess": "به‌هم‌ریختگی", "responsibility": "مسئولیت", "empathy": "همدلی",
+    "compassion": "دلسوزی", "companionship": "همراهی", "loyalty": "وفاداری",
+    "stray": "ولگرد", "adopt": "به سرپرستی گرفتن", "vet": "دامپزشک",
+    "wildlife": "حیات وحش", "endangered": "در خطر انقراض", "extinct": "منقرض شده",
+    "hunting": "شکار", "fur": "خز", "habitat": "زیستگاه"
+  },
+
+  "questions": [
+    {
+      "q": "Do you have a pet? How old is it? Where did you get it from? Who takes care of it? What do you feed it? Do you play with it? What is its name? How did you choose this name? Does it know any tricks or understand any words?",
+      "a": "Yes, I {{have::simple_present}} a pet cat, and his name {{is::be}} Milo. He {{is::be}} three years old now. I {{got::simple_past}} him from an [[animal rescue center|مرکز نگهداری حیوانات]] in my city when he was just a little kitten. My sister and I {{chose::simple_past}} the name Milo because we {{watched::simple_past}} an animated movie with a cute cat by that name. Everyone in my family {{helps::simple_present}} to [[take care of|مراقبت کردن از]] him, but I {{am::be}} mainly responsible for feeding him. Every morning, I {{feed::simple_present}} him dry cat food, and sometimes I {{give::simple_present}} him canned tuna as a special treat. I {{play::simple_present}} with him every afternoon using a small toy mouse. He {{is::be}} very [[playful|بازیگوش]] and {{loves chasing::gerund}} toys around the living room. Milo {{is::be}} also quite smart; he {{understands::modal}} his name and {{knows::modal}} words like 'food' and 'come'."
+    },
+    {
+      "q": "If you don't have a pet, would you ever consider getting a pet?",
+      "a": "If I did not have a pet right now, I would definitely consider getting one in the future. I really {{like::simple_present}} animals, especially dogs and cats, because they {{bring::simple_present}} a lot of happiness and warmth into a home. Having a pet {{makes::simple_present}} a house feel lively and welcoming. However, before getting one, I would make sure that my living situation {{is::be}} suitable. Right now, many apartments {{do not::simple_present}} allow large animals, so I would probably choose a small dog or a domestic cat that {{is::be}} comfortable indoors. I also {{know::simple_present}} that having a pet {{requires::simple_present}} plenty of free time, energy, and financial resources for food and veterinary visits. Therefore, if I {{have::simple_present}} a steady job and a spacious apartment, I will certainly adopt an animal from a local shelter."
+    },
+    {
+      "q": "Why do some people not like pets?",
+      "a": "In my opinion, {{there are::there_are}} several reasons why some people {{do not::simple_present}} like having pets. First of all, some individuals {{have::simple_present}} severe allergies to animal fur. For them, being near a cat or a dog {{causes::simple_present}} sneezing, coughing, or skin irritation, so keeping a pet {{is::be}} uncomfortable. Secondly, pets can {{make::simple_present}} a lot of mess in the house. They {{shed::simple_present}} hair on carpets, {{scratch::simple_present}} expensive furniture, and sometimes have accidents on the floor. People who {{like::simple_present}} perfectly clean homes often {{find::simple_present}} this very frustrating. In addition, some people {{had::simple_past}} bad experiences when they were younger, such as being bitten by an aggressive dog, so they {{feel::simple_present}} afraid around animals. Finally, pets {{require::simple_present}} a lot of daily care, time, and money."
+    },
+    {
+      "q": "Did you grow up with pets in your home?",
+      "a": "Yes, I {{grew up::simple_past}} with pets in my home, and it {{was::simple_past}} a wonderful part of my childhood. When I {{was::simple_past}} about seven years old, my parents {{brought::simple_past}} home two small, colorful parakeets. We {{kept::simple_past}} them in a large cage near the living room window, and they {{sang::simple_past}} beautiful songs every morning. Later, when I was ten, my grandfather {{gave::simple_past}} us a golden retriever puppy named Max. Max quickly {{became::simple_past}} a true member of our family. My brother and I {{spent::simple_past}} hours playing fetch with him in the garden after school. We also {{learned::simple_past}} how to brush his fur and take him for walks. Growing up with Max {{taught::simple_past}} me how to be kind, patient, and responsible."
+    },
+    {
+      "q": "Do you know someone who owns a pet?",
+      "a": "Yes, my best friend, Daniel, {{owns::simple_present}} a lovely golden retriever named Charlie. Charlie {{is::be}} four years old, and he {{is::be}} one of the friendliest dogs I have ever met. Daniel {{adopted::simple_past}} him when he was a puppy, and they {{are::be}} completely inseparable now. Whenever I {{visit::simple_present}} Daniel's house, Charlie {{greets::simple_present}} me at the front door by wagging his tail excitedly. Daniel {{takes::simple_present}} great care of him; he {{takes::simple_present}} him for a long walk in the city park twice every day. On weekends, we often {{go::simple_present}} hiking in the hills together, and Charlie {{loves running::gerund}} through the green fields. Watching them together {{shows::simple_present}} me how strong the connection between a person and a pet can be."
+    },
+    {
+      "q": "What can children learn by having a pet?",
+      "a": "I {{believe::simple_present}} that having a pet {{teaches::simple_present}} children several valuable life lessons. First, it {{teaches::simple_present}} them a strong sense of responsibility. A pet {{depends::simple_present}} on humans for everything, so children learn that an animal needs daily food, fresh water, and clean bedding. When parents {{give::simple_present}} children simple daily chores, children {{learn::simple_present}} to think about the needs of others. Second, pets {{teach::simple_present}} empathy, kindness, and compassion. By observing an animal's body language, kids {{learn::simple_present}} to understand when an animal is frightened or tired. Third, having a pet {{helps::simple_present}} children develop social skills. A loyal pet {{provides::simple_present}} unconditional friendship and comfort, which {{helps::simple_present}} shy or anxious children feel confident and secure."
+    },
+    {
+      "q": "Why do some people sacrifice their time and money on a pet?",
+      "a": "Many people {{are::be}} willing to spend significant time and money on their pets because the emotional rewards {{are::be}} so great. For many owners, a pet {{is::be}} not just an animal; it {{is::be}} a beloved member of the family. Modern life {{can be::modal}} very lonely and stressful, but coming home to an affectionate dog or cat {{gives::simple_present}} people genuine companionship and comfort. Pets {{offer::simple_present}} unconditional love without any judgment, which {{helps::simple_present}} reduce loneliness and anxiety. In addition, taking care of an animal {{gives::simple_present}} people a meaningful daily routine and a sense of purpose. When an animal {{becomes::simple_present}} sick, owners naturally {{pay::simple_present}} for medical treatment because they care deeply about its well-being."
+    },
+    {
+      "q": "What problems do pets create for people?",
+      "a": "Although pets {{bring::simple_present}} immense happiness, they {{can::modal}} also cause several common problems for their owners. One major issue {{is::be}} the financial cost. Buying quality pet food and paying for regular veterinary visits {{can become::modal}} very expensive over time. Another challenge {{is::be}} the restriction on personal freedom. When pet owners {{want::simple_present}} to go on vacation, they cannot simply leave; they must arrange a pet sitter, which {{takes::simple_present}} time and money. Furthermore, pets {{can::modal}} create messes and damage property. Dogs might {{chew::modal}} shoes and {{bark::modal}} loudly, disturbing the neighbors, while cats might {{scratch::modal}} curtains. There {{is::be}} also the issue of hygiene, as animals shed fur. Keeping a pet {{requires::simple_present}} patience and extra daily work."
+    },
+    {
+      "q": "Do you prefer dogs or cats?",
+      "a": "I personally {{prefer::simple_present}} cats, although I {{like::simple_present}} dogs as well. In my opinion, cats {{are::be}} the ideal pets for people who {{live::simple_present}} in modern apartments and {{have::simple_present}} busy work schedules. Cats {{are::be}} very independent, quiet, and clean animals. They {{do not::simple_present}} need to go outside for walks in the cold or rain; they {{are::be}} completely satisfied playing with a toy indoors. They also {{clean::simple_present}} their own fur and use a litter box without making loud noises. While some people {{think::simple_present}} cats are unfriendly, my experience {{is::be}} quite the opposite. When a cat {{trusts::simple_present}} you, it {{sits::simple_present}} on your lap and {{purrs::simple_present}} softly, which {{is::be}} very calming. Dogs {{are::be}} wonderful, but they {{require::simple_present}} a lot of energy and attention."
+    },
+    {
+      "q": "Is it morally right to spend a lot of money on pets, rather than helping people in need?",
+      "a": "This {{is::be}} a very thoughtful question, and I {{believe::simple_present}} there must be a reasonable balance. On the one hand, spending thousands of dollars on luxury items for pets {{seems::simple_present}} unnecessary when millions of human beings {{lack::simple_present}} basic food and shelter. We certainly {{have::simple_present}} a moral duty to help people who {{are::be}} suffering in our communities. On the other hand, spending a reasonable amount of money on an animal's health and nutrition {{is::be}} entirely responsible. When you {{adopt::simple_present}} a pet, you {{take::simple_present}} on a serious duty to protect its life. Neglecting a sick animal to save money {{is::be}} cruel. Therefore, taking proper care of your pet while also donating to charitable causes {{is::be}} the best and most ethical approach."
+    },
+    {
+      "q": "What is the best pet to own? A cat, a dog, or something else?",
+      "a": "In my view, {{there is::there_is}} no single 'best' pet because the right choice {{depends::simple_present}} completely on a person's personality and home environment. For instance, dogs {{are::be}} fantastic for active people and families with children who {{have::simple_present}} spacious houses. Dogs {{enjoy::simple_present}} walking and running outside, so they {{encourage::simple_present}} an active lifestyle. In contrast, cats {{are::be}} much better suited for busy professionals because they {{are::be}} independent and {{require::simple_present}} less space. For individuals with limited time, smaller pets like fish or hamsters {{are::be}} great alternatives. Fish {{are::be}} relaxing to watch, while hamsters {{are::be}} easy to feed. Ultimately, the best pet {{is::be}} the one that {{fits::simple_present}} your daily lifestyle and receives proper love and care."
+    },
+    {
+      "q": "What are the pros and cons of keeping a pet?",
+      "a": "Keeping a pet {{has::simple_present}} both clear advantages and notable disadvantages. On the positive side, pets {{provide::simple_present}} wonderful companionship and emotional support. They {{reduce::simple_present}} stress, prevent feelings of loneliness, and {{make::simple_present}} your home feel cheerful. Owning a dog also {{encourages::simple_present}} daily physical exercise through regular walks. Furthermore, caring for an animal {{teaches::simple_present}} responsibility and empathy to children. On the negative side, keeping a pet {{demands::simple_present}} a serious commitment of time and money. Pet food and veterinary care {{can become::modal}} very expensive. Pets {{can::modal}} also make messes, shed hair, and damage furniture. Moreover, having a pet {{makes::simple_present}} traveling more complicated. In summary, keeping a pet {{brings::simple_present}} great emotional rewards, but owners must {{be::modal}} ready for the long-term work involved."
+    }
+  ],
+
+  "practice": [
+    {"k": "tap", "q": "I got my cat from an animal ____ center.", "o": ["rescue", "food", "toy"], "a": "rescue", "fb": "animal rescue center یعنی مرکز نگهداری حیوانات."},
+    {"k": "tap", "q": "Dogs are very ____ and love to play.", "o": ["playful", "lazy", "boring"], "a": "playful", "fb": "playful یعنی بازیگوش."},
+    {"k": "tap", "q": "Some people have ____ to animal fur.", "o": ["allergies", "food", "pets"], "a": "allergies", "fb": "allergies یعنی حساسیت."},
+    {"k": "tap", "q": "A pet requires a lot of ____.", "o": ["responsibility", "money", "time"], "a": "responsibility", "fb": "responsibility یعنی مسئولیت."},
+    {"k": "type", "q": "I ____ (love) playing with my dog.", "a": "love", "fb": "با I از فعل ساده استفاده می‌کنیم."},
+    {"k": "type", "q": "She ____ (can) understand her cat's meows.", "a": "can", "fb": "فعل کمکی can."},
+    {"k": "type", "q": "They ____ (enjoy) watching birds.", "a": "enjoy", "fb": "با they فعل ساده."},
+    {"k": "drag", "w": ["I", "love", "playing", "with", "my", "dog", "."], "a": "I love playing with my dog .", "fb": "love + verb-ing."},
+    {"k": "drag", "w": ["Dogs", "can", "be", "very", "loyal", "."], "a": "Dogs can be very loyal .", "fb": "can + base verb."},
+    {"k": "drag", "w": ["She", "enjoys", "taking", "care", "of", "animals", "."], "a": "She enjoys taking care of animals .", "fb": "enjoys + verb-ing."}
+  ]
+}

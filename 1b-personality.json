@@ -1,0 +1,100 @@
+{
+  "id": "1b-personality",
+  "title": "Personality",
+  "emoji": "😊",
+  "unit": 1,
+  "lesson": "B",
+  "grammar_labels": ["too / either"],
+  "grammar_file": "data/grammar/g1b.json",
+
+  "words": {
+    "calm": "آرام", "friendly": "خوش‌برخورد", "hardworking": "سخت‌کوش",
+    "patient": "صبور", "easygoing": "خونسرد", "outgoing": "اجتماعی",
+    "talkative": "پرحرف", "energetic": "پرانرژی", "disciplined": "منضبط",
+    "reliable": "قابل اعتماد", "generous": "سخاوتمند", "dishonest": "ناصادق",
+    "rude": "بی‌ادب", "stubborn": "لجباز", "determined": "مصمم",
+    "selfish": "خودخواه", "empathy": "همدلی", "extrovert": "برون‌گرا",
+    "introvert": "درون‌گرا", "confident": "با اعتماد به نفس", "honest": "صادق",
+    "loyal": "وفادار", "mature": "بالغ"
+  },
+
+  "questions": [
+    {
+      "q": "How would you describe your best friend/dad/yourself?",
+      "a": "I would describe myself as a calm, friendly, and hardworking person. Most of the time, I {{am::be}} patient and easygoing, so I [[get along well|رابطه خوبی داشتن]] with different kinds of people. I like listening to others, and I always try to help my friends when they have problems. However, I {{can be::be}} a little quiet and shy when I meet new people in large groups. My best friend {{is::be}} quite different from me. He {{is::be}} very outgoing, talkative, and energetic. He loves making jokes and being the center of attention, but he also {{has::be}} a kind heart. My father {{is::be}} the most disciplined person I know. He {{is::be}} very reliable, punctual, and generous. In general, I think our different personalities make our relationships interesting, balanced, and strong."
+    },
+    {
+      "q": "What are some things that make you angry?",
+      "a": "I {{am::be}} usually a very relaxed person, but a few specific things can make me angry. First of all, dishonest behavior really bothers me. When someone {{lies::simple_present}} to my face or {{breaks::simple_present}} a promise, I feel disappointed and upset because trust {{is::be}} very important to me. Another thing that makes me angry {{is::be}} rudeness, especially when people {{are::be}} disrespectful to service workers in restaurants or stores. In addition, I get frustrated when people {{are::be}} late for appointments and do not send a message to explain why. I value other people's time, so I expect them to respect mine as well. When I start feeling angry, I try not to shout or react immediately. Instead, I take a deep breath and walk away for a few minutes."
+    },
+    {
+      "q": "Would you like to be different?",
+      "a": "Overall, I {{am::be}} happy with who I am, but there are a few things about my personality that I would like to improve. For example, I would like to be more confident and outgoing in public situations. Sometimes, when I have to give a presentation at work or speak in front of a big audience, I {{feel::simple_present}} very nervous and hesitant. I wish I could speak more naturally and feel relaxed on stage. In addition, I tend to worry too much about the future and overthink small problems. I would like to be more easygoing and learn to [[go with the flow|با جریان پیش رفتن]] when things do not go as planned. However, I know that changing habits takes time and regular practice."
+    },
+    {
+      "q": "Are you a determined person? Are you a stubborn person?",
+      "a": "I think there is a [[thin line|مرز باریک]] between determination and stubbornness, but I consider myself more determined than stubborn. When I set an important goal for myself, such as learning English or finishing a difficult project at work, I stay focused and work hard until I succeed. I {{do not::simple_present}} give up easily when I face challenges or setbacks. That is my determined side. However, I try hard not to be stubborn. A stubborn person refuses to change their mind even when they {{are::be}} wrong. I always try to listen to other people's opinions and accept constructive criticism from my colleagues and friends. If someone {{shows::simple_present}} me a better way to do something, I {{am::be}} happy to adapt."
+    },
+    {
+      "q": "Are you shy?",
+      "a": "Yes, I can be a bit shy, especially in unfamiliar social settings. When I {{am::be}} at a party or a conference where I {{do not::simple_present}} know many people, I usually prefer to stand quietly, observe the room, and wait for others to start a conversation. I often {{feel::simple_present}} nervous about saying the wrong thing or making a bad impression. However, once I get to know someone and feel comfortable with them, my shyness completely disappears. With close friends and family members, I {{am::be}} very talkative, cheerful, and expressive. I think my shyness {{was::simple_past}} stronger when I was a teenager. Over the years, I have pushed myself to meet new people at work and join group activities."
+    },
+    {
+      "q": "Do you consider yourself selfish?",
+      "a": "No, I {{do not::simple_present}} consider myself a selfish person at all. In fact, I often put the needs and feelings of my family and friends before my own. Whenever someone {{asks::simple_present}} for my help, whether it is moving furniture or just listening to a personal problem, I gladly give my time and energy. I really {{enjoy::gerund}} sharing what I have, like cooking dinner for guests or buying thoughtful gifts for holidays. However, I also {{believe::simple_present}} that healthy boundaries are necessary in life. Taking care of your own mental health, resting when you are tired, and saying no to unreasonable requests is not selfish; it {{is::be}} self-care."
+    },
+    {
+      "q": "Is your personality suited to your job?",
+      "a": "Yes, I {{believe::simple_present}} my personality {{is::be}} very well suited to my current job. In my line of work, patience, attention to detail, and good listening skills {{are::be}} extremely important every day. Since I {{am::be}} naturally calm and organized, I can handle daily stress, meet tight deadlines, and solve problems without panicking. I also {{enjoy::gerund}} working in a team environment. I {{get along well|رابطه خوبی داشتن}} with my coworkers, communicate clearly, and respect different working styles. Furthermore, my positive attitude {{helps::simple_present}} maintain a friendly atmosphere in the office. In short, having a personality that matches my professional responsibilities makes my work much more enjoyable."
+    },
+    {
+      "q": "In what way has your personality changed over years?",
+      "a": "My personality {{has changed::present_perfect}} significantly over the past ten years as I have grown older. When I {{was::simple_past}} younger, I used to be much more impatient, emotional, and sensitive. I {{cared::simple_past}} too much about what other people thought of me, and I often {{took::simple_past}} minor criticism very personally. Today, I {{am::be}} much more thick-skinned, calm, and grounded. Life experiences and challenges {{have taught::present_perfect}} me to be patient and to accept that things do not always go according to plan. I have also become more independent and confident in making my own decisions. Overall, I think I {{have become::present_perfect}} a wiser and more balanced person."
+    },
+    {
+      "q": "What personality traits do you consider important in a good friend / a boss / a partner?",
+      "a": "In my opinion, different roles require different key personality traits, but honesty and empathy {{are::be}} essential for all of them. In a good friend, loyalty and a good sense of humor {{are::be}} the most important qualities. A true friend {{stands::simple_present}} by you during tough times and {{makes::simple_present}} everyday life more fun. In a boss, fairness, clear communication, and patience {{are::be}} crucial. A good boss {{leads::simple_present}} by example, {{encourages::simple_present}} employees, and {{listens::simple_present}} to feedback instead of only giving orders. Finally, in a romantic partner, emotional maturity and reliability {{are::be}} vital. A partner should be supportive, respectful, and willing to work through problems together."
+    },
+    {
+      "q": "What is one thing that many people don't know about you?",
+      "a": "One thing that many people {{do not::simple_present}} know about me is that I really {{enjoy::gerund}} spending long periods of time completely alone. Because I {{am::be}} polite, friendly, and cooperative at work, people often {{assume::simple_present}} that I am an extrovert who loves constantly socializing. However, in reality, I {{am::be}} an introvert at heart. After a busy week of meetings, my social battery {{is::be}} totally drained. To recharge my energy, I {{love::gerund}} staying at home on Saturday mornings with a hot cup of tea, reading a book, or doing creative writing in complete silence. Most of my coworkers {{would be::be}} surprised by this because they only see my energetic side at the office."
+    },
+    {
+      "q": "Do all of your friends have similar personalities?",
+      "a": "No, my friends definitely {{do not::simple_present}} have similar personalities; they {{are::be}} actually quite diverse. Some of my friends {{are::be}} very outgoing, spontaneous, and adventurous. They {{love::gerund}} traveling to new places, trying risky sports, and going to lively parties on weekends. In contrast, other friends {{are::be}} much more introverted, intellectual, and quiet. They {{prefer::gerund}} having deep one-on-one conversations, visiting museums, or playing board games at home. I really {{appreciate::simple_present}} this variety because each friend {{brings::simple_present}} something special into my life. Having friends with different personalities {{keeps::simple_present}} my social life interesting, rich, and well-balanced."
+    },
+    {
+      "q": "Is your personality more similar to your mother’s or father’s?",
+      "a": "I would say that my personality {{is::be}} much more similar to my mother's personality. My mother {{is::be}} a very gentle, patient, and compassionate person who always {{thinks::simple_present}} of others first. She {{enjoys::gerund}} quiet environments, {{loves::gerund}} reading, and {{takes::simple_present}} care of household details with great care. I {{notice::simple_present}} that I have the exact same tendencies in my daily life. I {{like::gerund}} peace, I {{speak::simple_present}} softly, and I {{am::be}} very sensitive to other people's feelings. On the other hand, my father {{is::be}} much more practical, decisive, and outspoken. While I deeply admire my father's strength, my emotional nature and calmness definitely come from my mother."
+    },
+    {
+      "q": "What is your best personality trait?",
+      "a": "I {{believe::simple_present}} that my best personality trait {{is::be}} my empathy and ability to listen without judging others. In today's busy world, many people {{listen::simple_present}} only to reply, but I {{make::simple_present}} a conscious effort to truly understand how the other person feels. When my friends or coworkers {{are::be}} going through a hard time, they often {{come::simple_present}} to me because they {{know::simple_present}} I provide a safe space. I {{never::simple_present}} interrupt them or give unsolicited advice; I simply listen with patience and care. This trait {{has helped::present_perfect}} me build strong, meaningful relationships throughout my life. Being empathetic {{allows::simple_present}} me to connect with people on a deeper level."
+    },
+    {
+      "q": "Who has the strongest personality in your family? Give examples of his/her behavior.",
+      "a": "In my family, my paternal grandmother definitely {{has::simple_present}} the strongest personality. Even though she {{is::be}} now over seventy-five years old, she {{is::be}} the true leader and backbone of our entire household. She {{is::be}} extremely determined, confident, and traditional. When she {{makes::simple_present}} a decision about a family gathering or a big financial matter, everyone {{respects::simple_present}} her word and {{follows::simple_present}} her advice. She {{is::be}} also remarkably hardworking and disciplined; she still {{wakes::simple_present}} up at six in the morning every day to manage her garden and cook delicious meals. While she {{has::simple_present}} high standards, she also {{has::simple_present}} a huge heart and fiercely {{protects::simple_present}} our family."
+    },
+    {
+      "q": "What makes you happy?",
+      "a": "Many simple, everyday things {{bring::simple_present}} true happiness to my life. First and foremost, spending quality time with the people I love {{makes::simple_present}} me feel genuinely content. Having a relaxed dinner with my family, laughing with my close friends, or drinking tea with my grandparents {{brings::simple_present}} warmth to my heart. In addition, achieving small personal goals {{makes::simple_present}} me very happy. For example, when I {{finish::simple_present}} a challenging task at work or learn a new English grammar rule, I {{feel::simple_present}} a great sense of accomplishment. I also {{find::simple_present}} peace and happiness in nature. For me, happiness {{is::be}} not about expensive things; it {{is::be}} about appreciating simple, peaceful moments."
+    },
+    {
+      "q": "Do you think blood type or birth month can determine your personality?",
+      "a": "Personally, I {{do not::simple_present}} believe that blood type or birth month {{determines::simple_present}} a person's personality. While astrology and blood type theories {{are::be}} fun to read about with friends, there {{is::be}} no real scientific evidence to support them. In my opinion, human personality {{is::be}} shaped by a combination of genetics, family upbringing, education, and life experiences. The way our parents {{raise::simple_present}} us and the challenges we overcome in life {{play::simple_present}} a much bigger role in who we become. Two people born in the same month can have completely opposite personalities. Therefore, while I {{think::simple_present}} reading personality charts is an enjoyable activity, we {{should not::simple_present}} use them to judge people."
+    }
+  ],
+
+  "practice": [
+    {"k": "tap", "q": "I am usually a very ____ person.", "o": ["relaxed", "angry", "stubborn"], "a": "relaxed", "fb": "relaxed یعنی آرام."},
+    {"k": "tap", "q": "When someone lies to my face, I feel ____.", "o": ["disappointed", "happy", "excited"], "a": "disappointed", "fb": "disappointed یعنی ناامید."},
+    {"k": "tap", "q": "My best friend is very ____, he loves making jokes.", "o": ["outgoing", "shy", "quiet"], "a": "outgoing", "fb": "outgoing یعنی اجتماعی و برون‌گرا."},
+    {"k": "tap", "q": "A stubborn person refuses to change their ____.", "o": ["mind", "job", "house"], "a": "mind", "fb": "change their mind یعنی نظرشان را عوض کنند."},
+    {"k": "type", "q": "She ____ (be) very confident.", "a": "is", "fb": "با she از is استفاده می‌کنیم."},
+    {"k": "type", "q": "They ____ (not / like) rude people.", "a": "don't like", "fb": "برای منفی با they از don't استفاده می‌کنیم."},
+    {"k": "type", "q": "I ____ (have) a kind heart.", "a": "have", "fb": "با I از have استفاده می‌کنیم."},
+    {"k": "drag", "w": ["I", "get", "along", "well", "with", "people", "."], "a": "I get along well with people .", "fb": "get along well with یعنی رابطه خوبی داشتن با."},
+    {"k": "drag", "w": ["He", "loves", "making", "jokes", "."], "a": "He loves making jokes .", "fb": "loves + verb-ing برای علاقه استفاده می‌شود."},
+    {"k": "drag", "w": ["She", "is", "very", "reliable", "."], "a": "She is very reliable .", "fb": "فاعل + is + صفت."}
+  ]
+}

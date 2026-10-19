@@ -1,0 +1,134 @@
+{
+  "id": "1d-tv",
+  "title": "TV & Entertainment",
+  "emoji": "📺",
+  "unit": 1,
+  "lesson": "D",
+  "grammar_labels": ["present perfect", "used to"],
+  "grammar_file": "data/grammar/g1d.json",
+
+  "words": {
+    "unwind": "آرام شدن", "traditional": "سنتی", "routine": "روتین، برنامه معمول",
+    "comedy": "کمدی", "documentary": "مستند", "binge-watch": "پشت سر هم تماشا کردن",
+    "cliffhanger": "پایان هیجان‌انگیز", "subtitles": "زیرنویس", "plot": "داستان، طرح",
+    "actor": "بازیگر", "actress": "بازیگر زن", "director": "کارگردان", "celebrity": "سلبریتی",
+    "violence": "خشونت", "sensitive": "حساس", "desensitize": "بی‌احساس کردن",
+    "entertainment": "سرگرمی", "channel": "شبکه", "remote control": "کنترل تلویزیون"
+  },
+
+  "questions": [
+    {
+      "q": "How much time do you spend watching television each day?",
+      "a": "Honestly, I {{do not spend::present_simple}} a lot of time watching traditional television every day. On typical weekdays, I usually {{watch::present_simple}} TV for about one hour in the evening. After I {{finish::present_simple}} my work and eat dinner, I like to sit on the sofa and turn on the television to [[unwind|آرام شدن]]. Usually, I {{watch::present_simple}} the evening news or a short comedy show to relax my mind before bedtime. On weekends, however, my routine {{is::be}} a bit different. If I {{have::present_simple}} free time on Friday, I might {{watch::modal}} television for two or three hours. I often {{watch::present_simple}} a sports match with my brother. In general, I {{try::present_simple}} to limit my screen time because I {{prefer::present_simple}} reading books or spending time with friends."
+    },
+    {
+      "q": "Do you ever watch television when you eat your meals?",
+      "a": "Yes, I sometimes {{watch::present_simple}} television when I eat my meals, but it usually {{depends::present_simple}} on who is with me. When I {{eat::present_simple}} alone on weekdays, I almost always {{turn::present_simple}} on the TV or put a video on my tablet. I usually {{watch::present_simple}} a cooking show or a light travel documentary while having lunch. It {{makes::present_simple}} my mealtime feel more enjoyable. However, when I {{eat::present_simple}} dinner with my parents, we have a clear house rule: we always {{turn::present_simple}} the television off. My parents {{believe::present_simple}} that mealtime is an important opportunity to talk to each other. I {{agree::present_simple}} with them because staring at a screen {{prevents::present_simple}} real conversation."
+    },
+    {
+      "q": "Do you ever watch any foreign TV shows or channels? What do you watch?",
+      "a": "Yes, I {{watch::present_simple}} foreign TV shows quite often, especially English-language series and international documentary channels. For example, I really {{enjoy::present_simple}} watching nature and science programs on channels like National Geographic. The video quality {{is::be}} amazing, and I {{learn::present_simple}} fascinating facts about wildlife and history. In addition, I frequently {{watch::present_simple}} American and British comedy series on streaming platforms. Watching foreign shows {{is::be}} not just fun entertainment for me; it {{is::be}} also one of the best ways to improve my English listening skills. I usually {{turn::present_simple}} on English subtitles so that I can learn new everyday phrases while enjoying an exciting story."
+    },
+    {
+      "q": "Does your family ever watch TV together? What do you often watch together?",
+      "a": "Yes, my family {{watches::present_simple}} television together on weekends. On Friday evenings, we usually {{gather::present_simple}} in the living room after dinner with some tea and fresh fruit. We all {{have::present_simple}} different tastes, so we have to choose something that everyone likes. Most of the time, we {{choose::present_simple}} family comedy shows or popular drama series. We {{love::present_simple}} watching comedy programs because they {{make::present_simple}} all of us laugh together, which {{creates::present_simple}} a warm atmosphere at home. Sometimes, if {{there is::there_is}} a major football match, my father, my brother, and I {{sit::present_simple}} together and watch the game. Watching TV together {{is::be}} a simple family tradition, but it {{helps::present_simple}} us bond."
+    },
+    {
+      "q": "Could you live without TV for a week?",
+      "a": "Yes, I could definitely {{live::modal}} without television for a week without any serious problem. In fact, I {{have done::present_perfect}} it several times before, especially when traveling. In modern life, we {{have::present_simple}} many other ways to stay entertained. If I {{do not::present_simple}} have a television, I can easily {{listen::modal}} to music, {{read::modal}} a good novel, or {{spend::modal}} more time chatting with my loved ones. Furthermore, I can still {{check::modal}} important daily news on my smartphone. I actually {{think::present_simple}} taking a break from TV is very healthy because it {{helps::present_simple}} you clear your mind, {{reduces::present_simple}} stress, and {{gives::present_simple}} you more time for productive hobbies."
+    },
+    {
+      "q": "Where do you watch videos more often? On a phone, computer, or television?",
+      "a": "Nowadays, I {{watch::present_simple}} videos much more often on my smartphone and computer than on a traditional television screen. My phone {{is::be}} always with me, so it is extremely convenient. When I {{am::be}} commuting on the bus, I often {{watch::present_simple}} short educational clips on my phone. When I {{am::be}} at home and {{want::present_simple}} to watch a full movie, I {{prefer::present_simple}} using my laptop because the screen {{is::be}} larger and the sound {{is::be}} clearer. I only {{use::present_simple}} the actual television set when I {{want::present_simple}} to relax in the living room with my family. So, although television {{is::be}} great for shared viewing, my personal devices fit my daily routine much better."
+    },
+    {
+      "q": "Are there any shows on TV that you can’t stand to watch?",
+      "a": "Yes, there are definitely some types of TV shows that I cannot stand to watch at all. First of all, I really {{dislike::present_simple}} reality TV shows that focus on gossip and meaningless arguments. I {{feel::present_simple}} that these programs waste valuable time and do not teach the audience anything useful. Secondly, I cannot stand watching cheap horror movies. When I {{watch::present_simple}} violent scenes, I {{feel::present_simple}} stressed and uncomfortable, which ruins my mood for the rest of the evening. Finally, I {{find::present_simple}} political debate shows very exhausting because the guests often {{shout::present_simple}} over one another instead of having a calm conversation. When these programs {{come::present_simple}} on, I immediately change the channel."
+    },
+    {
+      "q": "How has television changed since you were a child?",
+      "a": "Television {{has changed::present_perfect}} dramatically since I was a child in many different ways. When I {{was::simple_past}} younger, our TV {{was::simple_past}} a big, heavy box with a small screen and only a few local channels. We {{had to::simple_past}} check the newspaper for program schedules, and if you {{missed::simple_past}} your favorite cartoon, you could not watch it again. Today, televisions {{are::be}} ultra-thin smart screens with incredible picture quality and internet connections. We now {{have::present_simple}} streaming services that allow us to watch whatever we want, whenever we want, without waiting. While modern television {{offers::present_simple}} endless variety, I sometimes {{miss::present_simple}} the old days when the whole family waited eagerly to watch one weekly show."
+    },
+    {
+      "q": "Do you watch TV shows in English?",
+      "a": "Yes, I {{watch::present_simple}} TV shows in English very regularly. In fact, most of the series and movies that I choose to watch today {{are::be}} in English. I {{started::simple_past}} doing this a few years ago to practice my language skills, but now it {{has become::present_perfect}} my favorite way to relax. When I {{watch::present_simple}} English shows, I get to hear natural conversational phrases and authentic pronunciation that you cannot easily find in textbooks. At first, it {{was::simple_past}} quite challenging, so I always {{used::simple_past}} English subtitles to help me follow the plot. Over time, my listening comprehension {{has improved::present_perfect}} significantly, and now I {{can::modal}} understand most dialogues easily. It {{is::be}} an enjoyable and practical learning method."
+    },
+    {
+      "q": "Are there any TV series that you like to watch?",
+      "a": "Yes, there are several TV series that I really {{enjoy::present_simple}} watching right now. One of my favorite genres {{is::be}} mystery and crime investigation, so I {{love::present_simple}} shows like Sherlock. I {{find::present_simple}} the clever plots and character development completely fascinating. Another series that I always go back to {{is::be}} The Office. It {{is::be}} a hilarious comedy show about ordinary workers in a paper company. Whenever I {{feel::present_simple}} tired or overwhelmed after a long day at work, watching an episode of this comedy instantly {{lifts::present_simple}} my mood and {{makes::present_simple}} me laugh out loud. I usually {{watch::present_simple}} one or two episodes in the evening. Following a well-written series {{is::be}} wonderful because you feel connected to the characters."
+    },
+    {
+      "q": "Have you seen English series like Friends, Game of Thrones, Lost, or Breaking Bad?",
+      "a": "Yes, I {{have seen::present_perfect}} several of those famous English series, and they are truly outstanding in their own ways. For example, I {{watched::simple_past}} all ten seasons of Friends, and I think it {{is::be}} one of the funniest and most heartwarming shows ever made. It {{is::be}} also fantastic for English learners because the dialogue {{is::be}} natural, everyday speech. I {{have also seen::present_perfect}} Breaking Bad, which is completely different. It {{is::be}} an intense, dramatic story with incredible acting. Every episode {{keeps::present_simple}} you on the edge of your seat. On the other hand, I {{watched::simple_past}} parts of Lost and Game of Thrones, but I {{did not finish::simple_past}} every season. Overall, these shows {{are::be}} famous worldwide for good reasons."
+    },
+    {
+      "q": "Have you ever binge-watched a TV series?",
+      "a": "Yes, I {{have definitely binge-watched::present_perfect}} a TV series before, although I try not to do it very often. The last time I {{did::simple_past}} this was during a long winter holiday. I {{started::simple_past}} watching a thrilling mystery drama series on a Friday evening, intending to watch only one single episode. However, every episode {{ended::simple_past}} with an exciting cliffhanger, and I could not stop myself from clicking the next episode. Before I {{realized::simple_past}} it, I {{had stayed::past_perfect}} awake until three o'clock in the morning and {{watched::simple_past}} five episodes in a row! While it {{was::simple_past}} very thrilling at that moment, I {{felt::simple_past}} exhausted the next day. Now, I {{try::present_simple}} to limit myself to one episode per night."
+    },
+    {
+      "q": "What type of TV shows do you enjoy the most (drama, comedy, news)?",
+      "a": "Among all the different genres, I definitely {{enjoy::present_simple}} comedy shows the most. Life {{can be::modal}} busy and demanding, and after working hard all day, I {{want::present_simple}} entertainment that helps me laugh and relax. Good comedy series {{have::present_simple}} clever jokes and cheerful characters that brighten my mood instantly. Besides comedies, I also {{enjoy::present_simple}} watching informative news programs and nature documentaries. I {{like::present_simple}} staying updated on world events, and documentaries {{give::present_simple}} me deep knowledge about science and animals. However, if I have to choose what to watch on an ordinary evening to unwind, I will always {{choose::modal}} a funny sitcom. Laughing {{is::be}} simply the best medicine after a stressful day."
+    },
+    {
+      "q": "What was your favorite TV show when you were growing up? Why did you like it?",
+      "a": "When I {{was::simple_past}} growing up, my absolute favorite TV show {{was::simple_past}} an animated cartoon series called Tom and Jerry. Every afternoon after coming home from school, I {{ran::simple_past}} to the living room and {{turned::simple_past}} on the television to watch it. I {{loved::simple_past}} it because it {{was::simple_past}} full of energetic action, clever physical humor, and funny chase scenes. Even though the characters never {{spoke::simple_past}} any words, their facial expressions and the classical music {{told::simple_past}} the story perfectly. My brother and I {{used to sit::used_to}} on the floor and laugh uncontrollably at their silly adventures. It {{was::simple_past}} innocent, cheerful, and pure entertainment, and thinking about that show still {{brings::present_simple}} back warm memories of my childhood."
+    },
+    {
+      "q": "Who is your favorite actor or actress, and why do you admire them?",
+      "a": "My favorite actor {{is::be}} Tom Hanks, and I {{have admired::present_perfect}} him for many years. He {{is::be}} an extraordinary actor with incredible talent. He {{can::modal}} play completely different roles with equal brilliance, from hilarious comedic characters to deeply emotional figures in films like Forrest Gump and Cast Away. When he {{is::be}} on screen, his acting {{feels::present_simple}} completely natural and genuine; you forget that he is an actor and truly {{believe::present_simple}} the character. In addition to his acting skills, I {{admire::present_simple}} him because he is known as a humble, kind, and polite gentleman in real life. He {{focuses::present_simple}} on high-quality work and treating others with respect. He {{is::be}} a true professional and role model."
+    },
+    {
+      "q": "What makes a movie successful? Name some successful movies from your country.",
+      "a": "In my opinion, several key elements {{make::present_simple}} a movie truly successful. First, a compelling, well-written story with relatable characters {{is::be}} the most critical foundation. Even with expensive special effects, a film {{fails::present_simple}} if the audience does not care about the characters. Second, strong acting and thoughtful directing {{are::be}} essential to bring the story to life. Finally, a great movie should carry an emotional message that {{stays::present_simple}} with the viewer long after the credits roll. In my country, cinema {{is::be}} famous worldwide for its realistic, human stories. For example, A Separation by Asghar Farhadi {{was::simple_past}} extremely successful internationally and {{won::simple_past}} an Academy Award. Another classic masterpiece {{is::be}} Children of Heaven by Majid Majidi, which {{touched::simple_past}} hearts everywhere."
+    },
+    {
+      "q": "Have you ever watched a movie just because your favorite actor was in it?",
+      "a": "Yes, I {{have definitely watched::present_perfect}} a movie simply because my favorite actor was in the cast. For instance, whenever an actor like Leonardo DiCaprio {{releases::present_simple}} a new film, I {{make::present_simple}} sure to watch it, regardless of the topic. In most cases, talented actors {{choose::present_simple}} their scripts carefully, so their involvement usually {{guarantees::present_simple}} a certain standard of quality. However, this strategy does not always work. A few years ago, I {{watched::simple_past}} a science fiction movie specifically because an actor I really {{liked::simple_past}} had the lead role. Unfortunately, the plot {{was::simple_past}} boring and the dialogue {{was::simple_past}} weak. That experience {{taught::simple_past}} me that a good movie requires strong teamwork, not just one famous face."
+    },
+    {
+      "q": "Can you name an actor who you think is overrated?",
+      "a": "In my personal opinion, I {{think::present_simple}} Nicolas Cage is somewhat overrated, especially in his more recent movies. In his early career, he {{gave::simple_past}} some brilliant performances and {{won::simple_past}} prestigious awards for serious drama films. However, over the past decade, he {{has appeared::present_perfect}} in dozens of low-budget action movies where his acting {{feels::present_simple}} exaggerated and unnatural. He often {{uses::present_simple}} the same dramatic shouting in almost every scene, which {{takes away::present_simple}} from the realism of the story. While he certainly {{has::be}} a loyal fan base, I {{believe::present_simple}} that true greatness {{requires::present_simple}} consistent quality and thoughtful choices, which has not always been the case with his recent projects."
+    },
+    {
+      "q": "If you could meet any actor in person, who would it be?",
+      "a": "If I could meet any actor in person, I would love to {{meet::modal}} Morgan Freeman. He {{is::be}} one of the most respected figures in the history of cinema. I {{have always been captivated::present_perfect}} by his calm presence and his legendary, soothing voice. If I {{had::simple_past}} the chance to sit down and drink a cup of coffee with him, I would not just {{ask::modal}} about his famous films. I would love to {{hear::modal}} his personal philosophy on life, how he {{stayed::simple_past}} patient before finding fame later in adulthood, and what wisdom he {{has gained::present_perfect}} from his long career. He {{seems::present_simple}} like a very wise and kind human being, and having a conversation with him would be an unforgettable experience."
+    },
+    {
+      "q": "If you were offered a role in a movie, would you accept it?",
+      "a": "If I {{were::simple_past}} offered a role in a movie, I think I would {{accept::modal}} it, but only if it were a small, minor role or a fun cameo appearance. Acting {{has never been::present_perfect}} my profession, and I do not have formal training. Standing in front of multiple cameras and a large production crew would probably {{make::modal}} me feel quite nervous. However, I {{am::be}} naturally curious, and I would love to {{experience::modal}} the filmmaking process from behind the scenes. I want to {{see::modal}} how directors instruct the cast and how sets are constructed. It would be a fascinating adventure, provided that I did not have to carry the pressure of a major speaking role!"
+    },
+    {
+      "q": "What was the last news story that really caught your attention?",
+      "a": "The last news story that really {{caught::simple_past}} my attention was an international report about recent breakthroughs in green energy and artificial intelligence. Scientists {{announced::simple_past}} that solar power technology and battery storage {{have become::present_perfect}} much cheaper and more efficient than ever before. This story {{interested::simple_past}} me deeply because environmental issues are urgent challenges. Hearing positive news about clean energy solutions {{gave::simple_past}} me a genuine sense of optimism. In addition, the report {{explained::simple_past}} how modern computer algorithms are helping doctors detect serious illnesses earlier. We {{hear::present_simple}} so many depressing stories in daily news that whenever a story highlights human ingenuity, it truly {{stands::present_simple}} out to me."
+    },
+    {
+      "q": "How do you verify if a news story on TV is true or just a rumor?",
+      "a": "When I {{hear::present_simple}} a shocking news story on television, I never {{accept::present_simple}} it immediately without verification. First, I {{check::present_simple}} whether the television channel is a reputable, established broadcasting network. Reliable outlets clearly {{cite::present_simple}} official sources and verifiable data, whereas unreliable channels often {{rely::present_simple}} on sensational language and unconfirmed claims. Second, I {{cross-check::present_simple}} the story across multiple independent news organizations online. If an event truly {{happened::simple_past}}, several trusted agencies will {{report::modal}} the same fundamental facts. If only one channel {{is::be}} broadcasting the story and no other credible outlet {{mentions::present_simple}} it, it is very likely a rumor. Finally, I {{check::present_simple}} fact-checking websites to ensure images have not been manipulated."
+    },
+    {
+      "q": "Do you think there is too much violence on television?",
+      "a": "Yes, I definitely {{believe::present_simple}} that there {{is::be}} far too much violence on television today. Whether you {{turn::present_simple}} on daily news programs or modern action movies, graphic violence and weapons {{appear::present_simple}} constantly. Producers often {{include::present_simple}} excessive violence simply to shock viewers and boost ratings, but this {{has::simple_present}} negative consequences. Constant exposure to aggressive scenes {{can desensitize::modal}} people, especially young children, making them less empathetic toward real human suffering. It {{can::modal}} also make vulnerable viewers feel overly anxious. While dramatic conflict {{is::be}} a normal part of storytelling, filmmakers should {{focus::modal}} more on intellectual depth and positive moral lessons rather than relying on senseless brutality to capture attention."
+    },
+    {
+      "q": "Do you think TV shows influence people's behavior or opinions?",
+      "a": "Yes, television shows definitely {{have::simple_present}} a powerful influence on how people think and behave. Because we {{spend::present_simple}} hours watching screens, characters and storylines {{shape::present_simple}} our attitudes toward lifestyle, fashion, and important social matters. For instance, when viewers {{see::present_simple}} characters handle personal disagreements with patience and kindness, it {{can::modal}} inspire them to practice those positive habits in their own daily lives. Conversely, shows that {{glorify::present_simple}} materialism or dishonest behavior can {{normalize::modal}} unhealthy attitudes, particularly among impressionable teenagers. Furthermore, television series {{can::modal}} either challenge harmful cultural stereotypes or unintentionally reinforce them. Because stories {{connect::present_simple}} with human emotions so directly, media creators {{have::simple_present}} a major responsibility to produce constructive, thoughtful content."
+    },
+    {
+      "q": "How do you know if a news story is true or fake?",
+      "a": "Knowing whether a news story is genuine or fake {{requires::present_simple}} a careful, critical approach. First, I {{examine::present_simple}} the source. A legitimate news organization {{has::be}} a clear reputation, verifiable editorial standards, and named journalists. If an article {{comes::present_simple}} from an unknown website filled with dramatic headlines and spelling errors, it {{is::be}} almost certainly fake. Second, I {{look::present_simple}} for concrete evidence within the story, such as direct quotes from recognized specialists or verified statistics. If a report only {{states::present_simple}} vague phrases like 'sources say' without providing proof, I {{remain::present_simple}} skeptical. Third, I {{do::present_simple}} a quick search on established fact-checking platforms to see if independent researchers {{have analyzed::present_perfect}} the claim. Until a story {{is verified::present_simple}}, I never {{share::present_simple}} it with family or friends."
+    }
+  ],
+
+  "practice": [
+    {"k": "tap", "q": "I like to watch TV to ____ after a long day.", "o": ["unwind", "work", "study"], "a": "unwind", "fb": "unwind یعنی آرام شدن."},
+    {"k": "tap", "q": "My favorite genre is ____ because it makes me laugh.", "o": ["comedy", "horror", "news"], "a": "comedy", "fb": "comedy یعنی کمدی."},
+    {"k": "tap", "q": "The show ended with a huge ____, so I had to watch the next episode.", "o": ["cliffhanger", "plot", "actor"], "a": "cliffhanger", "fb": "cliffhanger یعنی پایان هیجان‌انگیز."},
+    {"k": "tap", "q": "Some people think there is too much ____ on TV today.", "o": ["violence", "comedy", "music"], "a": "violence", "fb": "violence یعنی خشونت."},
+    {"k": "type", "q": "I ____ (watch) that movie three times. (Present Perfect)", "a": "have watched", "fb": "حال کامل: have + past participle."},
+    {"k": "type", "q": "When I was young, I ____ (watch) cartoons every morning. (Past Simple)", "a": "watched", "fb": "گذشته ساده برای عادت‌های گذشته."},
+    {"k": "type", "q": "She ____ (not / see) the new episode yet. (Present Perfect)", "a": "hasn't seen", "fb": "منفی حال کامل با hasn't."},
+    {"k": "drag", "w": ["I", "have", "seen", "this", "show", "before", "."], "a": "I have seen this show before .", "fb": "حال کامل برای تجربه."},
+    {"k": "drag", "w": ["We", "used", "to", "watch", "TV", "together", "."], "a": "We used to watch TV together .", "fb": "used to برای عادت گذشته."},
+    {"k": "drag", "w": ["The", "plot", "was", "very", "exciting", "."], "a": "The plot was very exciting .", "fb": "گذشته ساده was."}
+  ]
+}

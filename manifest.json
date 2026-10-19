@@ -1,0 +1,22 @@
+{
+  "name": "Touchstone 2 Speaking",
+  "short_name": "Touchstone 2",
+  "description": "A mobile-first speaking app for Touchstone 2.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f6fb",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

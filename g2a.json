@@ -1,0 +1,29 @@
+{
+  "title": "گرامر درس ۲A: افعال Modal و مصدر با -ing",
+  "explanation": [
+    {
+      "heading": "افعال Modal (can / can't)",
+      "text": "افعال Modal مثل <code>can</code> و <code>can't</code> برای بیان <strong>توانایی</strong> یا <strong>عدم توانایی</strong> استفاده می‌شوند. نکته‌ی بسیار مهم این است که بعد از این افعال، فعل به صورت <strong>ساده (بدون to و بدون s)</strong> می‌آید. مثلاً: <code>He can run fast.</code> (او می‌تواند سریع بدود)."
+    },
+    {
+      "heading": "افعال علاقه + Gerund (-ing)",
+      "text": "وقتی می‌خواهیم بگوییم از انجام کاری لذت می‌بریم، یا آن را دوست داریم، از افعالی مثل <code>like, love, enjoy, hate</code> استفاده می‌کنیم. بعد از این افعال، فعل به صورت <strong>اسم مصدر (verb-ing)</strong> می‌آید. مثلاً: <code>I love playing with my cat.</code> (من عاشق بازی کردن با گربه‌ام هستم). <code>She enjoys watching birds.</code> (او از تماشای پرندگان لذت می‌برد)."
+    },
+    {
+      "heading": "نکته‌ی مهم",
+      "text": "بعد از حروف اضافه (مثل at, in, of) هم همیشه از <code>verb-ing</code> استفاده می‌شود. مثلاً: <code>He is good at training dogs.</code> (او در تربیت سگ‌ها خوب است)."
+    }
+  ],
+  "test": [
+    {"k": "tap", "q": "I enjoy ____ with my pet.", "o": ["playing", "to play", "play"], "a": "playing", "fb": "بعد از enjoy از -ing استفاده می‌کنیم."},
+    {"k": "tap", "q": "She can ____ very fast.", "o": ["run", "running", "to run"], "a": "run", "fb": "بعد از can فعل ساده می‌آید."},
+    {"k": "tap", "q": "They love ____ care of animals.", "o": ["taking", "take", "to take"], "a": "taking", "fb": "بعد از love می‌توان از -ing استفاده کرد."},
+    {"k": "tap", "q": "Dogs can't ____ in the house.", "o": ["fly", "flying", "to fly"], "a": "fly", "fb": "بعد از can't فعل ساده می‌آید."},
+    {"k": "type", "q": "He is good at ____ (train) dogs.", "a": "training", "fb": "بعد از حرف اضافه at از -ing استفاده می‌کنیم."},
+    {"k": "type", "q": "I hate ____ (clean) the litter box.", "a": "cleaning", "fb": "بعد از hate از -ing استفاده می‌کنیم."},
+    {"k": "type", "q": "Cats can ____ (see) in the dark.", "a": "see", "fb": "بعد از can فعل ساده."},
+    {"k": "drag", "w": ["I", "enjoy", "watching", "nature", "documentaries", "."], "a": "I enjoy watching nature documentaries .", "fb": "enjoy + verb-ing."},
+    {"k": "drag", "w": ["She", "can", "understand", "her", "cat", "."], "a": "She can understand her cat .", "fb": "can + base verb."},
+    {"k": "drag", "w": ["They", "love", "playing", "with", "their", "dog", "."], "a": "They love playing with their dog .", "fb": "love + verb-ing."}
+  ]
+}

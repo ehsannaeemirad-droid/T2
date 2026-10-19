@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1a-friends",
+    "unit": 1,
+    "lesson": "A",
+    "title": "Friends",
+    "emoji": "👥",
+    "file": "data/lessons/1a-friends.json"
+  },
+  {
+    "id": "1b-personality",
+    "unit": 1,
+    "lesson": "B",
+    "title": "Personality",
+    "emoji": "😊",
+    "file": "data/lessons/1b-personality.json"
+  },
+  {
+    "id": "1c-home",
+    "unit": 1,
+    "lesson": "C",
+    "title": "Home",
+    "emoji": "🏠",
+    "file": "data/lessons/1c-home.json"
+  },
+  {
+    "id": "1d-tv",
+    "unit": 1,
+    "lesson": "D",
+    "title": "TV & Entertainment",
+    "emoji": "📺",
+    "file": "data/lessons/1d-tv.json"
+  },
+  {
+    "id": "2a-animals",
+    "unit": 2,
+    "lesson": "A",
+    "title": "Animals",
+    "emoji": "🐾",
+    "file": "data/lessons/2a-animals.json"
+  },
+  {
+    "id": "2b-food",
+    "unit": 2,
+    "lesson": "B",
+    "title": "Food",
+    "emoji": "🍔",
+    "file": "data/lessons/2b-food.json"
+  },
+  {
+    "id": "2c-job",
+    "unit": 2,
+    "lesson": "C",
+    "title": "Job",
+    "emoji": "💼",
+    "file": "data/lessons/2c-job.json"
+  }
+]
