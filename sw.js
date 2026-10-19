@@ -1,4 +1,4 @@
-const CACHE_NAME = 'touchstone-v3';
+const CACHE_NAME = 'touchstone-v4';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -52,7 +52,7 @@ self.addEventListener('fetch', event => {
   if (isContent) {
     // Network first so a new deploy is visible immediately; fall back to cache offline
     event.respondWith(
-      fetch(req)
+      fetch(req, { cache: 'no-store' })
         .then(putInCache)
         .catch(() => caches.match(req).then(hit => {
           if (hit) return hit;
