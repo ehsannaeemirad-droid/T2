@@ -46,5 +46,13 @@
     "title": "Food",
     "emoji": "🍔",
     "file": "data/lessons/2b-food.json"
+  },
+  {
+    "id": "5a-family",
+    "unit": 5,
+    "lesson": "A",
+    "title": "Family",
+    "emoji": "👨‍👩‍👧‍👦",
+    "file": "data/lessons/5a-family.json"
   }
 ]

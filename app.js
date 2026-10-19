@@ -358,13 +358,17 @@ async function renderGrammar() {
   if (pSession && pSession.mode === 'grammar') return renderPracticeRunner();
 
   if (!state.grammarData) {
+    if (state.lesson.grammar_notes) {
+      return renderGrammarNotes(state.lesson.grammar_notes);
+    }
     if (!state.lesson.grammar_file) {
-      return showPlaceholder('📖', 'برای این درس فایل گرامر تعریف نشده است.');
+      return showPlaceholder('📖', 'گرامر این درس هنوز اضافه نشده است.');
     }
     $('#content').innerHTML = `<div class="placeholder"><span class="icon">⏳</span>در حال بارگذاری گرامر...</div>`;
     
     try {
       const r = await fetch(state.lesson.grammar_file);
+      if (r.status === 404) return showPlaceholder('📖', 'گرامر این درس هنوز اضافه نشده است.');
       if (!r.ok) throw new Error('HTTP ' + r.status);
       state.grammarData = await r.json();
     } catch (e) {
@@ -403,6 +407,21 @@ async function renderGrammar() {
     };
     renderPracticeRunner();
   };
+}
+
+function renderGrammarNotes(notes){
+  const items = Object.values(notes).filter(n => n && (n.label || n.tip));
+  if (!items.length) return showPlaceholder('📖', 'گرامر این درس هنوز اضافه نشده است.');
+
+  $('#content').innerHTML = `<div class="grammar-explain">
+    <h2 class="ge-title">گرامر این درس</h2>
+    ${items.map(n => `
+      <div class="ge-section">
+        <div class="ge-heading">${esc(n.label || '')}</div>
+        <div class="ge-text">${esc(n.tip || '')}</div>
+      </div>
+    `).join('')}
+  </div>`;
 }
 
 /* ============================================================
