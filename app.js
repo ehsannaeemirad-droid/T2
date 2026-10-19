@@ -464,8 +464,8 @@ function renderGrammarCard(dir = 0, animate = false){
       <div class="g-fa">${card.content}</div>
       ${card.examples.length ? `<div class="g-examples">${card.examples.map(ex => `
         <div class="g-ex" data-gspeak="${attr(ex.en)}">
-          <div class="g-ex-en">${esc(ex.en)}</div>
-          <div class="g-ex-fa">${esc(ex.fa || '')}</div>
+          <div class="g-ex-en" dir="ltr">${esc(ex.en)}</div>
+          <div class="g-ex-fa" dir="rtl">${esc(ex.fa || '')}</div>
         </div>`).join('')}</div>` : ''}`;
   } else if (card.type === 'mini') {
     body = `<div class="g-step-label">تست کوتاه</div>
@@ -554,16 +554,17 @@ function grammarItemHTML(item, idx){
   }
 
   const fb = item.answered
-    ? `<div class="p-feedback ${item.correct ? 'ok' : 'no'}">${item.correct ? '✓ درست!' : '✗ جواب درست: ' + esc(item.a)}${item.fb ? `<div class="g-fb-tip">${esc(item.fb)}</div>` : ''}</div>`
+    ? `<div class="p-feedback ${item.correct ? 'ok' : 'no'}">${item.correct ? '✓ درست!' : '✗ جواب درست: <span class="g-ans" dir="ltr">' + esc(item.a) + '</span>'}${item.fb ? `<div class="g-fb-tip">${esc(item.fb)}</div>` : ''}</div>`
     : '';
 
   const prompt = item.k === 'drag'
     ? (item.q ? formatQ(item) : 'کلمات را به ترتیب درست بچین:')
     : formatQ(item);
   const promptClass = item.k === 'drag' && !item.q ? 'p-q g-q g-q-fa' : 'p-q g-q';
+  const promptDir = item.k === 'drag' && !item.q ? 'rtl' : 'ltr';
 
   return `<div class="g-item" data-gitem="${idx}">
-    <div class="${promptClass}">${prompt}</div>
+    <div class="${promptClass}" dir="${promptDir}">${prompt}</div>
     ${body}${fb}
     ${item.answered ? '' : `<button class="btn btn-primary btn-block g-check" data-gcheck="${idx}" disabled>بررسی</button>`}
   </div>`;

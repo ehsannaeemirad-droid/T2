@@ -4,7 +4,7 @@
   "emoji": "🐾",
   "unit": 2,
   "lesson": "A",
-  "grammar_labels": ["modals", "gerund-infinitive"],
+  "grammar_labels": ["modals (can)","like + gerund"],
   "grammar_file": "data/grammar/g2a.json",
 
   "words": {

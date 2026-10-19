@@ -1,53 +1,53 @@
 {
-  "title": "گرامر درس ۳B: آینده با going to و will",
+  "title": "گرامر درس ۳B: جمله‌واره‌های شرطی و زمانی (If / When)",
   "steps": [
     {
       "type": "teach",
-      "title": "be going to برای برنامه‌ها",
-      "content_fa": "وقتی از قبل تصمیم گرفته‌ایم یا برنامه‌ای داریم، از <code>be going to + verb</code> استفاده می‌کنیم: <code>I'm going to visit my family this weekend.</code> همچنین وقتی نشانه‌ای در حال حاضر می‌بینیم که خبر از آینده می‌دهد: <code>Look at those clouds! It's going to rain.</code>",
+      "title": "جمله‌واره‌های شرطی و زمانی: If و When + زمان حال، will + فعل",
+      "content_fa": "وقتی می‌خواهیم بگوییم «اگر فلان اتفاق بیفتد، فلان کار را می‌کنیم» یا «وقتی فلان اتفاق افتاد، فلان کار را می‌کنیم»، جمله را به دو بخش تقسیم می‌کنیم. بخش اول با <code>If</code> (اگر) یا <code>When</code> (وقتی) شروع می‌شود و <strong>زمان حال ساده</strong> دارد؛ بخش دوم با <code>will</code> + فعل ساده ادامه پیدا می‌کند. خیلی مهم است که بعد از if/when فعل را با s نمی‌نویسیم، حتی اگر فاعل he یا she باشد. مثلاً می‌گوییم «If it rains, we will stay home» یا «When she arrives, I will call her». توجه کن که جای will و فعل اصلی عوض نمی‌شود: will همیشه در بخش دوم جمله می‌ماند.",
       "examples": [
-        { "en": "I'm going to start a new course next month.", "fa": "قرار است ماه بعد یک دوره جدید شروع کنم." },
-        { "en": "We're going to move to a new apartment.", "fa": "قرار است به آپارتمان جدیدی اسباب‌کشی کنیم." },
-        { "en": "Look at the sky! It's going to rain.", "fa": "به آسمان نگاه کن! دارد باران می‌آید." }
+        { "en": "If it rains, we will stay home.", "fa": "اگر باران بیاید، خانه می‌مانیم." },
+        { "en": "When I finish work, I will call you.", "fa": "وقتی کارم را تمام کنم، به تو زنگ می‌زنم." },
+        { "en": "If she studies hard, she will pass the exam.", "fa": "اگر سخت درس بخواند، امتحان را قبول می‌شود." }
       ]
     },
     {
       "type": "mini_test",
       "items": [
-        { "k": "tap", "q": "I ____ visit my parents this weekend.", "o": ["am going to", "going to", "will to"], "a": "am going to", "fb": "برنامه از قبل تعیین‌شده: am going to." },
-        { "k": "type", "q": "We ____ (going to) move to a new apartment.", "a": "are going to", "fb": "با we از are going to استفاده می‌کنیم." }
+        { "k": "tap", "q": "If it ____ tomorrow, we will cancel the picnic.", "o": ["rains", "will rain", "raining"], "a": "rains", "fb": "بعد از if از زمان حال ساده استفاده می‌کنیم، نه will." },
+        { "k": "type", "q": "When she ____ (arrive), I will tell her the news.", "a": "arrives", "fb": "بعد از when زمان حال ساده؛ با she فعل arrives." }
       ]
     },
     {
       "type": "teach",
-      "title": "will برای تصمیم لحظه‌ای و پیش‌بینی",
-      "content_fa": "از <code>will + verb</code> برای تصمیمی که <strong>همین حالا</strong> می‌گیریم، پیشنهاد، قول و پیش‌بینی استفاده می‌کنیم: <code>I'll help you with that.</code> / <code>I think it will be sunny tomorrow.</code> شکل منفی آن <code>won't</code> است. برای پیش‌بینی همراه با شاهد و نشانه، going to طبیعی‌تر است.",
+      "title": "تفاوت If و When در موقعیت‌های مختلف",
+      "content_fa": "بسیاری از زبان‌آموزان فکر می‌کنند if و when دقیقاً یکی هستند، اما تفاوت ظریفی دارند. <code>If</code> برای چیزهایی است که <strong>احتمال دارد اتفاق بیفتد یا نیفتد</strong> — شرط واقعی است: «If I have time, I will help you» یعنی شاید وقت داشته باشم، شاید نداشته باشم. اما <code>When</code> برای چیزهایی است که <strong>قطعی است و حتماً اتفاق می‌افتد</strong>: «When the bus arrives, we will get on» یعنی اتوبوس حتماً می‌آید. پس اگر مطمئن نیستی که اتفاق می‌افتد، از if استفاده کن؛ و اگر می‌دانی حتماً می‌افتد (مثل طلوع خورشید یا رسیدن دوستت)، از when. ساختار هر دو یکی است: if/when + حال ساده، will + فعل.",
       "examples": [
-        { "en": "I'll help you carry those bags.", "fa": "کمک می‌کنم آن کیف‌ها را حمل کنی." },
-        { "en": "I think she will love this gift.", "fa": "فکر می‌کنم او این هدیه را دوست خواهد داشت." },
-        { "en": "Don't worry, I won't be late.", "fa": "نگران نباش، دیر نمی‌کنم." }
+        { "en": "If I have time, I will help you.", "fa": "اگر وقت داشته باشم، به تو کمک می‌کنم." },
+        { "en": "When the bus comes, we will get on.", "fa": "وقتی اتوبوس آمد، سوار می‌شویم." },
+        { "en": "If she calls me, I will answer.", "fa": "اگر به من زنگ بزند، جواب می‌دهم." }
       ]
     },
     {
       "type": "mini_test",
       "items": [
-        { "k": "tap", "q": "The phone is ringing. I ____ answer it.", "o": ["will", "am going to", "will to"], "a": "will", "fb": "تصمیم لحظه‌ای با will گرفته می‌شود." },
-        { "k": "type", "q": "I promise I ____ (not / be) late.", "a": "won't be", "fb": "منفی will: won't + فعل ساده." }
+        { "k": "tap", "q": "When the teacher ____ in, everyone stands up.", "o": ["come", "comes", "coming"], "a": "comes", "fb": "وقتی قطعی است؛ با she/he فعل + ing نه، comes با s." },
+        { "k": "type", "q": "If I ____ (see) her tomorrow, I will tell her.", "a": "see", "fb": "بعد از if با I فعل ساده بدون s: see." }
       ]
     },
     {
       "type": "final_test",
       "items": [
-        { "k": "tap", "q": "Look at those clouds! It ____ rain.", "o": ["is going to", "will", "goes to"], "a": "is going to", "fb": "نشانه‌ای در حال حاضر: going to." },
-        { "k": "tap", "q": "I think people ____ live longer in the future.", "o": ["will", "are going to", "going to"], "a": "will", "fb": "پیش‌بینی کلی با will." },
-        { "k": "type", "q": "We ____ (go) to the beach next weekend. We booked a hotel.", "a": "are going to go", "fb": "برنامه قطعی: are going to." },
-        { "k": "type", "q": "I ____ (not / forget) your birthday, I promise.", "a": "won't forget", "fb": "قول منفی: won't forget." },
-        { "k": "type", "q": "She ____ (start) her new job on Monday.", "a": "is going to start", "fb": "برنامه از قبل تعیین‌شده." },
-        { "k": "drag", "w": ["I", "am", "going", "to", "study", "tonight", "."], "a": "I am going to study tonight .", "fb": "be going to + فعل ساده." },
-        { "k": "drag", "w": ["I", "will", "help", "you", "with", "that", "."], "a": "I will help you with that .", "fb": "پیشنهاد لحظه‌ای با will." },
-        { "k": "tap", "q": "A: It's hot in here. B: I ____ open the window.", "o": ["will", "am going to", "would"], "a": "will", "fb": "تصمیم در همان لحظه: will." },
-        { "k": "tap", "q": "They ____ visit us next summer; they already bought tickets.", "o": ["are going to", "will", "might"], "a": "are going to", "fb": "بلیت خریده‌اند، پس برنامه قطعی است." },
-        { "k": "drag", "w": ["She", "won't", "come", "to", "the", "party", "tonight", "."], "a": "She won't come to the party tonight .", "fb": "منفی will: won't + فعل ساده." }
+        { "k": "tap", "q": "If it ____ tomorrow, we will stay at home.", "o": ["rains", "will rain", "rained"], "a": "rains", "fb": "بعد از if همیشه زمان حال ساده می‌آید." },
+        { "k": "tap", "q": "When I ____ home, I will take a shower.", "o": ["get", "gets", "will get"], "a": "get", "fb": "بعد از when با I فعل ساده بدون s." },
+        { "k": "type", "q": "She will call you when she ____ (finish) work.", "a": "finishes", "fb": "بعد از when زمان حال ساده؛ با she finishes." },
+        { "k": "type", "q": "If I ____ (have) enough money, I will buy a car.", "a": "have", "fb": "بعد از if با I فعل ساده بدون s." },
+        { "k": "tap", "q": "If he ____ late, we will miss the train.", "o": ["is", "are", "be"], "a": "is", "fb": "بعد از if زمان حال ساده؛ با he از is استفاده می‌کنیم." },
+        { "k": "tap", "q": "When the film ____, we will leave the cinema.", "o": ["ends", "end", "will end"], "a": "ends", "fb": "بعد از when زمان حال ساده؛ با the film سوم شخص + s." },
+        { "k": "type", "q": "We will stay home if it ____ (snow).", "a": "snows", "fb": "if می‌تواند وسط جمله باشد؛ با it فعل snows." },
+        { "k": "drag", "w": ["If", "it", "rains", "we", "will", "stay", "home", "."], "a": "If it rains we will stay home .", "fb": "If + حال ساده، + will + فعل." },
+        { "k": "tap", "q": "When you ____ me, I will answer the phone.", "o": ["call", "calls", "will call"], "a": "call", "fb": "بعد از when با you فعل ساده بدون s." },
+        { "k": "type", "q": "I will help you if you ____ (need) me.", "a": "need", "fb": "بعد از if با you فعل ساده: need." }
       ]
     }
   ]

@@ -389,6 +389,7 @@ button:disabled{ opacity:.4; cursor:not-allowed; }
 .g-examples { display:flex; flex-direction:column; gap:10px; margin-top:auto; padding-top:18px; }
 .g-ex { background:var(--surface-2); border:1px solid var(--border); border-radius:14px; padding:11px 14px; cursor:pointer; transition:.15s; }
 .g-ex:active { transform:scale(.99); }
+.g-ans { direction:ltr; unicode-bidi:embed; font-weight:700; }
 .g-ex-en { direction:ltr; text-align:left; font-size:14px; font-weight:700; color:var(--text); line-height:1.65; }
 .g-ex-fa { direction:rtl; text-align:right; font-size:12.5px; color:var(--text-soft); line-height:1.8; margin-top:6px; padding-top:6px; border-top:1px dashed var(--border); }
 .g-hint { font-size:12px; font-weight:700; color:var(--text-soft); direction:rtl; text-align:right; margin-bottom:14px; }

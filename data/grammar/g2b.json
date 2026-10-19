@@ -1,53 +1,53 @@
 {
-  "title": "گرامر درس ۲B: قابل‌شمارش و غیرقابل‌شمارش",
+  "title": "گرامر درس ۲B: ضمایر مفعولی و ضمایر نامعین",
   "steps": [
     {
       "type": "teach",
-      "title": "اسم‌های قابل‌شمارش و غیرقابل‌شمارش",
-      "content_fa": "اسم‌های <strong>قابل‌شمارش</strong> شکل جمع می‌گیرند و با عدد می‌آیند: <code>one apple → two apples</code>. اسم‌های <strong>غیرقابل‌شمارش</strong> جمع نمی‌شوند و با عدد نمی‌آیند: <code>water, rice, bread, milk</code>. برای شمارش آن‌ها از واحد استفاده می‌کنیم: <code>a glass of water</code>، <code>a loaf of bread</code>.",
+      "title": "ضمایر مفعولی: me, you, him, her, it, us, them",
+      "content_fa": "وقتی کسی یا چیزی <strong>گیرنده کار</strong> است، یعنی بعد از فعل یا حرف اضافه می‌آید، به جای ضمیر فاعلی از <strong>ضمیر مفعولی</strong> استفاده می‌کنیم. این ضمایر عبارتند از: me (مرا/من را)، you (تو را)، him (او را - مذکر)، her (او را - مؤنث)، it (آن را)، us (ما را) و them (آن‌ها را). مثلاً به جای «I saw I» می‌گوییم «I saw me» نه، درستش این است: «He saw me» یعنی او مرا دید. یک راه ساده برای تشخیص: اگر جمله را با who? بپرسید، جواب ضمیر فاعلی است؛ اگر با whom? جواب، مفعولی.",
       "examples": [
-        { "en": "I need two apples.", "fa": "من دو سیب لازم دارم." },
-        { "en": "There is some water in the fridge.", "fa": "کمی آب در یخچال هست." },
-        { "en": "Can I have a glass of milk?", "fa": "می‌توانم یک لیوان شیر داشته باشم؟" }
+        { "en": "Please call me tonight.", "fa": "لطفاً امشب به من زنگ بزن." },
+        { "en": "I saw him at the station.", "fa": "من او (مرد) را در ایستگاه دیدم." },
+        { "en": "She loves them very much.", "fa": "او آن‌ها را خیلی دوست دارد." }
       ]
     },
     {
       "type": "mini_test",
       "items": [
-        { "k": "tap", "q": "There ____ some water in the bottle.", "o": ["is", "are", "be"], "a": "is", "fb": "water غیرقابل‌شمارش است، پس is می‌آید." },
-        { "k": "type", "q": "There are three ____ (apple) on the table.", "a": "apples", "fb": "apple قابل‌شمارش است و جمع می‌شود." }
+        { "k": "tap", "q": "My friend visited ____ yesterday.", "o": ["I", "me", "my"], "a": "me", "fb": "بعد از فعل بازدید، گیرنده کار است؛ پس me." },
+        { "k": "type", "q": "I spoke to ____ at the party. (he)", "a": "him", "fb": "بعد از حرف اضافه to از ضمیر مفعولی him استفاده می‌کنیم." }
       ]
     },
     {
       "type": "teach",
-      "title": "کمیت‌نماها: some, any, much, many",
-      "content_fa": "از <code>some</code> در جملات مثبت و از <code>any</code> در منفی و سوالی استفاده می‌کنیم: <code>We have some eggs.</code> / <code>We don't have any eggs.</code> برای اسم‌های قابل‌شمارش جمع از <code>many</code> و <code>a few</code> و برای غیرقابل‌شمارش از <code>much</code> و <code>a little</code> استفاده می‌کنیم: <code>How many eggs?</code> / <code>How much rice?</code>",
+      "title": "ضمایر نامعین: everyone, nobody, somebody + فعل مفرد",
+      "content_fa": "ضمایر نامعین مثل <code>everyone</code> (همه)، <code>nobody</code> (هیچ‌کس)، <code>somebody</code> (کسی)، <code>everybody</code> و <code>anyone</code> به ظاهر جمع معنی می‌دهند، اما در گرامر انگلیسی <strong>مفرد</strong> هستند. یعنی فعلی که بعد از آن‌ها می‌آید همیشه s می‌گیرد: می‌گوییم «Everyone is ready» و «Nobody knows the answer»، نه «Everyone are» یا «Nobody know». حتی وقتی معنی «هیچ‌کس» می‌دهد هم nobody مفرد است و فعل با s می‌آید. این نکته یکی از متداول‌ترین اشتباهات در امتحان‌هاست، پس حواستان باشد!",
       "examples": [
-        { "en": "How many eggs do we need?", "fa": "چند تخم‌مرغ لازم داریم؟" },
-        { "en": "There is only a little milk left.", "fa": "فقط کمی شیر مانده است." },
-        { "en": "We don't have any bread.", "fa": "ما نان نداریم." }
+        { "en": "Everyone is ready for the exam.", "fa": "همه برای امتحان آماده‌اند." },
+        { "en": "Nobody knows the answer.", "fa": "هیچ‌کس جواب را نمی‌داند." },
+        { "en": "Somebody is at the door.", "fa": "کسی دم در است." }
       ]
     },
     {
       "type": "mini_test",
       "items": [
-        { "k": "tap", "q": "How ____ eggs do we need?", "o": ["many", "much", "any"], "a": "many", "fb": "eggs قابل‌شمارش است، پس many." },
-        { "k": "type", "q": "There is only a ____ milk left.", "a": "little", "fb": "milk غیرقابل‌شمارش است، پس a little." }
+        { "k": "tap", "q": "Everyone ____ happy about the result.", "o": ["is", "are", "am"], "a": "is", "fb": "everyone مفرد است، پس با is می‌آید." },
+        { "k": "type", "q": "Nobody ____ (know) my new address.", "a": "knows", "fb": "nobody مفرد است؛ فعل با s می‌گیرد: knows." }
       ]
     },
     {
       "type": "final_test",
       "items": [
-        { "k": "tap", "q": "How ____ sugar do you take?", "o": ["much", "many", "few"], "a": "much", "fb": "sugar غیرقابل‌شمارش است." },
-        { "k": "tap", "q": "I'd like ____ apples, please.", "o": ["a few", "a little", "much"], "a": "a few", "fb": "apples جمع و قابل‌شمارش است." },
-        { "k": "type", "q": "There ____ (be) some rice in the bowl.", "a": "is", "fb": "rice غیرقابل‌شمارش است." },
-        { "k": "type", "q": "We don't have ____ milk.", "a": "any", "fb": "در جمله منفی از any استفاده می‌کنیم." },
-        { "k": "type", "q": "I need two ____ (tomato) for the salad.", "a": "tomatoes", "fb": "tomato جمع می‌شود: tomatoes." },
-        { "k": "drag", "w": ["How", "many", "apples", "do", "we", "need", "?"], "a": "How many apples do we need ?", "fb": "How many + اسم جمع قابل‌شمارش." },
-        { "k": "drag", "w": ["There", "is", "a", "little", "cheese", "in", "the", "fridge", "."], "a": "There is a little cheese in the fridge .", "fb": "a little + غیرقابل‌شمارش." },
-        { "k": "tap", "q": "There isn't ____ bread in the kitchen.", "o": ["any", "some", "many"], "a": "any", "fb": "جمله منفی است، پس any." },
-        { "k": "tap", "q": "She has ____ friends in this city.", "o": ["a few", "a little", "much"], "a": "a few", "fb": "friends جمع است." },
-        { "k": "drag", "w": ["I", "would", "like", "some", "water", "."], "a": "I would like some water .", "fb": "در جمله مثبت از some استفاده می‌کنیم." }
+        { "k": "tap", "q": "She gave the book to ____.", "o": ["he", "him", "his"], "a": "him", "fb": "بعد از to از ضمیر مفعولی him استفاده می‌کنیم." },
+        { "k": "tap", "q": "I met ____ at the conference.", "o": ["she", "her", "hers"], "a": "her", "fb": "گیرنده فعل meet است؛ پس her." },
+        { "k": "type", "q": "Can you help ____ with this, please? (I)", "a": "me", "fb": "بعد از help از me استفاده می‌کنیم: help me." },
+        { "k": "tap", "q": "____ is knocking at the door.", "o": ["Nobody", "Somebody", "Everybody"], "a": "Somebody", "fb": "Somebody یعنی کسی؛ وقتی صدایی می‌شنویم از آن استفاده می‌کنیم." },
+        { "k": "tap", "q": "____ knows about the surprise party!", "o": ["Nobody", "Somebody", "Anybody"], "a": "Nobody", "fb": "Nobody مفرد است و یعنی هیچ‌کس خبر ندارد." },
+        { "k": "type", "q": "We invited ____ to the wedding. (they)", "a": "them", "fb": "ضمیر مفعولی they شکل them است." },
+        { "k": "tap", "q": "My parents love ____ very much.", "o": ["me", "I", "my"], "a": "me", "fb": "بعد از فعل love، me یعنی مرا دوست دارند." },
+        { "k": "drag", "w": ["Everybody", "is", "here", "."], "a": "Everybody is here .", "fb": "everybody مفرد است؛ با is می‌آید." },
+        { "k": "type", "q": "I don't know ____. (she)", "a": "her", "fb": "ضمیر مفعولی she شکل her است." },
+        { "k": "drag", "w": ["Nobody", "knows", "the", "answer", "."], "a": "Nobody knows the answer .", "fb": "nobody مفرد + فعل knows با s." }
       ]
     }
   ]

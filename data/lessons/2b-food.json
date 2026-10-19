@@ -4,7 +4,7 @@
   "emoji": "🍔",
   "unit": 2,
   "lesson": "B",
-  "grammar_labels": ["countable", "uncountable", "quantifiers"],
+  "grammar_labels": ["object pronouns","indefinite pronouns"],
   "grammar_file": "data/grammar/g2b.json",
 
   "words": {

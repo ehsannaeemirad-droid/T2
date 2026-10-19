@@ -1,53 +1,53 @@
 {
-  "title": "گرامر درس ۲A: افعال کمکی و مصدر",
+  "title": "گرامر درس ۲A: افعال کمکی can و افعال علاقه",
   "steps": [
     {
       "type": "teach",
-      "title": "افعال کمکی: can, should, must",
-      "content_fa": "افعال کمکی مثل <code>can</code>، <code>should</code> و <code>must</code> بعد از فاعل می‌آیند و بعد از آن‌ها فعل <strong>بدون to و بدون s</strong> قرار می‌گیرد: <code>You should get more sleep.</code> این افعال s سوم‌شخص نمی‌گیرند و برای منفی، <code>not</code> بعد از آن‌ها می‌آید: <code>Dogs can't fly.</code>",
+      "title": "فعال‌های کمکی: can / can't",
+      "content_fa": "وقتی می‌خواهیم بگوییم کسی <strong>می‌تواند</strong> یا <strong>نمی‌تواند</strong> کاری را انجام دهد، از فعل کمکی can استفاده می‌کنیم. نکته مهم این است که بعد از can همیشه فعل <strong>بدون to و بدون s</strong> می‌آید؛ یعنی می‌گوییم «She can swim» نه «She can swims». برای منفی کردن می‌گوییم can't (cannot) و برای سوال کافی است can را ابتدای جمله بیاوریم. این فعل برای توانایی‌ها، اجازه گرفتن و درخواست محترمانه به کار می‌رود.",
       "examples": [
-        { "en": "You should get more sleep.", "fa": "بهتر است بیشتر بخوابی." },
-        { "en": "Dogs can be dangerous.", "fa": "سگ‌ها می‌توانند خطرناک باشند." },
-        { "en": "We must protect wild animals.", "fa": "ما باید از حیوانات وحشی محافظت کنیم." }
+        { "en": "I can speak three languages.", "fa": "من می‌توانم به سه زبان صحبت کنم." },
+        { "en": "She can't drive a car.", "fa": "او نمی‌تواند رانندگی کند." },
+        { "en": "Can you help me, please?", "fa": "لطفاً می‌توانی به من کمک کنی؟" }
       ]
     },
     {
       "type": "mini_test",
       "items": [
-        { "k": "tap", "q": "You ____ see a doctor.", "o": ["should", "shoulds", "to should"], "a": "should", "fb": "افعال کمکی s نمی‌گیرند." },
-        { "k": "type", "q": "Dogs ____ (can) be dangerous.", "a": "can", "fb": "بعد از فاعل، فعل کمکی بدون تغییر می‌آید." }
+        { "k": "tap", "q": "She ____ swim, but she can't drive.", "o": ["can", "cans", "can to"], "a": "can", "fb": "بعد از can فعل بدون s می‌آید: can swim." },
+        { "k": "type", "q": "I ____ (can / speak) English very well.", "a": "can speak", "fb": "بعد از can فعل را بدون to و بدون تغییر می‌نویسیم." }
       ]
     },
     {
       "type": "teach",
-      "title": "فعل + ing یا فعل + to",
-      "content_fa": "بعضی فعل‌ها با <code>-ing</code> می‌آیند: <code>enjoy</code>، <code>love</code>، <code>hate</code>، <code>like</code> (برای لذت بردن): <code>I enjoy watching birds.</code> بعضی فعل‌ها با <code>to + verb</code> می‌آیند: <code>want</code>، <code>decide</code>، <code>hope</code>، <code>plan</code>: <code>She wants to adopt a dog.</code>",
+      "title": "افعال علاقه + اسم مصدر (like / love / enjoy + -ing)",
+      "content_fa": "وقتی می‌خواهیم درباره کارهایی که دوست داریم صحبت کنیم، بعد از افعالی مثل <code>like</code>، <code>love</code>، <code>enjoy</code> و <code>hate</code> از اسم مصدر یعنی فعل + ing استفاده می‌کنیم. مثلاً بعد از love می‌نویسیم «listening» نه «listen» و نه «to listen». توجه کنیم که enjoy دقیقاً مثل like عمل می‌کند و همیشه ing می‌گیرد. این ساختار برای صحبت درباره سرگرمی‌ها و علایق روزمره عالی است.",
       "examples": [
-        { "en": "I enjoy watching birds.", "fa": "از تماشای پرنده‌ها لذت می‌برم." },
-        { "en": "She wants to adopt a dog.", "fa": "او می‌خواهد یک سگ به سرپرستی بگیرد." },
-        { "en": "We decided to visit the zoo.", "fa": "ما تصمیم گرفتیم به باغ‌وحش برویم." }
+        { "en": "I love listening to music.", "fa": "من عاشق گوش دادن به موسیقی هستم." },
+        { "en": "She enjoys reading books.", "fa": "او از خواندن کتاب لذت می‌برد." },
+        { "en": "We like playing soccer on Fridays.", "fa": "ما پنجشنبه‌ها فوتبال بازی کردن را دوست داریم." }
       ]
     },
     {
       "type": "mini_test",
       "items": [
-        { "k": "tap", "q": "I enjoy ____ photos of animals.", "o": ["taking", "take", "to take"], "a": "taking", "fb": "enjoy با فعل + ing می‌آید." },
-        { "k": "type", "q": "She wants ____ (adopt) a dog.", "a": "to adopt", "fb": "want با to + فعل می‌آید." }
+        { "k": "tap", "q": "I enjoy ____ TV series in the evening.", "o": ["watch", "watching", "to watch"], "a": "watching", "fb": "بعد از enjoy همیشه فعل + ing می‌آید." },
+        { "k": "type", "q": "They like ____ (dance) at parties.", "a": "dancing", "fb": "بعد از like از اسم مصدر (dance + ing) استفاده می‌کنیم." }
       ]
     },
     {
       "type": "final_test",
       "items": [
-        { "k": "tap", "q": "You ____ feed wild animals.", "o": ["shouldn't", "don't should", "not should"], "a": "shouldn't", "fb": "منفی افعال کمکی با n't ساخته می‌شود." },
-        { "k": "tap", "q": "He ____ swim very well.", "o": ["can", "cans", "can to"], "a": "can", "fb": "can هیچ‌وقت s نمی‌گیرد." },
-        { "k": "type", "q": "We ____ (must) protect the environment.", "a": "must", "fb": "must بدون تغییر می‌آید." },
-        { "k": "type", "q": "I love ____ (watch) animal documentaries.", "a": "watching", "fb": "love با فعل + ing می‌آید." },
-        { "k": "type", "q": "They decided ____ (visit) the zoo.", "a": "to visit", "fb": "decide با to + فعل می‌آید." },
-        { "k": "drag", "w": ["You", "should", "be", "careful", "with", "dogs", "."], "a": "You should be careful with dogs .", "fb": "بعد از should فعل ساده می‌آید." },
-        { "k": "drag", "w": ["She", "enjoys", "playing", "with", "her", "cat", "."], "a": "She enjoys playing with her cat .", "fb": "enjoy + فعل ing." },
-        { "k": "tap", "q": "I hope ____ you at the party.", "o": ["to see", "seeing", "see"], "a": "to see", "fb": "hope با to + فعل می‌آید." },
-        { "k": "tap", "q": "Cats ____ be very independent.", "o": ["can", "can to", "cans"], "a": "can", "fb": "can + فعل ساده." },
-        { "k": "drag", "w": ["We", "must", "not", "feed", "the", "animals", "."], "a": "We must not feed the animals .", "fb": "منفی must: must not + فعل ساده." }
+        { "k": "tap", "q": "I can ____ English and Persian.", "o": ["speak", "speaks", "speaking"], "a": "speak", "fb": "بعد از can فعل ساده بدون s می‌آید." },
+        { "k": "tap", "q": "She can't ____ heavy things.", "o": ["lift", "lifts", "lifting"], "a": "lift", "fb": "بعد از can't هم فعل ساده بدون to می‌آید." },
+        { "k": "type", "q": "She can't ____ (drive).", "a": "drive", "fb": "بعد از can/can't فعل بدون to استفاده می‌شود." },
+        { "k": "tap", "q": "Do you enjoy ____ books?", "o": ["read", "reading", "to read"], "a": "reading", "fb": "بعد از enjoy از فعل + ing استفاده می‌کنیم." },
+        { "k": "tap", "q": "He doesn't like ____ up early.", "o": ["get", "gets", "getting"], "a": "getting", "fb": "بعد از like فعل + ing می‌آید: getting up." },
+        { "k": "type", "q": "I love ____ (play) football.", "a": "playing", "fb": "love هم مثل like بعد از خودش ing می‌گیرد." },
+        { "k": "drag", "w": ["I", "can", "speak", "English", "well", "."], "a": "I can speak English well .", "fb": "فاعل + can + فعل ساده." },
+        { "k": "tap", "q": "Can she ____ the piano?", "o": ["play", "plays", "playing"], "a": "play", "fb": "در سوال با can فعل ساده بدون s می‌آید." },
+        { "k": "type", "q": "They enjoy ____ (listen) to podcasts.", "a": "listening", "fb": "بعد از enjoy از اسم مصدر استفاده می‌کنیم." },
+        { "k": "drag", "w": ["She", "can't", "swim", "."], "a": "She can't swim .", "fb": "منفی توانایی: subject + can't + verb." }
       ]
     }
   ]

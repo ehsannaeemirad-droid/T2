@@ -1,53 +1,19 @@
 {
-  "title": "گرامر درس ۱C: there is و there are",
+  "title": "آزمون جامع درس ۱C: مرور گرامر ۱A و ۱B",
   "steps": [
-    {
-      "type": "teach",
-      "title": "معرفی چیزی در یک مکان",
-      "content_fa": "وقتی می‌خواهیم بگوییم چیزی <strong>وجود دارد</strong> یا در جایی هست، از <code>there is</code> و <code>there are</code> استفاده می‌کنیم. برای اسم مفرد یا غیرقابل‌شمارش <code>there is</code> و برای اسم جمع <code>there are</code> می‌آید: <code>There is a park near my house.</code> / <code>There are two bedrooms upstairs.</code>",
-      "examples": [
-        { "en": "There is a small balcony.", "fa": "یک بالکن کوچک وجود دارد." },
-        { "en": "There are three bedrooms.", "fa": "سه اتاق خواب وجود دارد." },
-        { "en": "There is some sunlight in the morning.", "fa": "صبح‌ها کمی نور خورشید می‌آید." }
-      ]
-    },
-    {
-      "type": "mini_test",
-      "items": [
-        { "k": "tap", "q": "____ a park near my house.", "o": ["There is", "There are", "There have"], "a": "There is", "fb": "park مفرد است، پس there is می‌آید." },
-        { "k": "type", "q": "____ two bedrooms upstairs.", "a": "There are", "fb": "bedrooms جمع است، پس there are می‌آید." }
-      ]
-    },
-    {
-      "type": "teach",
-      "title": "منفی و سوالی با there is / there are",
-      "content_fa": "برای منفی کردن، <code>not</code> را بعد از is/are می‌آوریم: <code>There isn't a mall near here.</code> و برای سوال، فعل را به اول جمله می‌بریم: <code>Is there a gym nearby?</code> — <code>Yes, there is.</code> در جملات منفی و سوالی معمولاً از <code>any</code> استفاده می‌کنیم: <code>Are there any parks?</code>",
-      "examples": [
-        { "en": "There isn't a mall near here.", "fa": "اینجا نزدیک مرکز خرید نیست." },
-        { "en": "Is there a gym nearby?", "fa": "این نزدیکی باشگاه هست؟" },
-        { "en": "Are there any parks in your neighborhood?", "fa": "در محله شما پارکی هست؟" }
-      ]
-    },
-    {
-      "type": "mini_test",
-      "items": [
-        { "k": "tap", "q": "There ____ a mall in my neighborhood.", "o": ["isn't", "aren't", "not"], "a": "isn't", "fb": "mall مفرد است: there isn't." },
-        { "k": "type", "q": "____ there any parks near your home?", "a": "Are", "fb": "parks جمع است، پس Are there می‌آید." }
-      ]
-    },
     {
       "type": "final_test",
       "items": [
-        { "k": "tap", "q": "____ a big kitchen in my apartment.", "o": ["There is", "There are", "There have"], "a": "There is", "fb": "kitchen مفرد است." },
-        { "k": "tap", "q": "____ many shops on this street.", "o": ["There is", "There are", "It is"], "a": "There are", "fb": "shops جمع است." },
-        { "k": "type", "q": "____ a balcony on the third floor.", "a": "There is", "fb": "balcony مفرد است." },
-        { "k": "type", "q": "____ there any chairs in the living room?", "a": "Are", "fb": "chairs جمع است، پس Are there." },
-        { "k": "type", "q": "There ____ (not / be) a gym in my building.", "a": "isn't", "fb": "gym مفرد است: there isn't." },
-        { "k": "drag", "w": ["There", "is", "a", "park", "near", "my", "house", "."], "a": "There is a park near my house .", "fb": "ترتیب: There is + اسم مفرد + مکان." },
-        { "k": "drag", "w": ["There", "are", "two", "bedrooms", "upstairs", "."], "a": "There are two bedrooms upstairs .", "fb": "با اسم جمع از there are استفاده می‌کنیم." },
-        { "k": "tap", "q": "Is there a supermarket here? — Yes, there ____.", "o": ["is", "are", "has"], "a": "is", "fb": "پاسخ کوتاه با is است." },
-        { "k": "tap", "q": "Are there ____ restaurants nearby?", "o": ["any", "some", "a"], "a": "any", "fb": "در سوال از any استفاده می‌کنیم." },
-        { "k": "drag", "w": ["There", "isn't", "a", "mall", "near", "here", "."], "a": "There isn't a mall near here .", "fb": "منفی: There isn't + اسم مفرد." }
+        { "k": "tap", "q": "I ____ a teacher.", "o": ["am", "is", "are"], "a": "am", "fb": "با I همیشه از am استفاده می‌کنیم." },
+        { "k": "tap", "q": "My friends ____ from Iran.", "o": ["am", "is", "are"], "a": "are", "fb": "My friends جمع است، پس با are می‌آید." },
+        { "k": "tap", "q": "A: I play soccer. B: I ____ too.", "o": ["do", "does", "am"], "a": "do", "fb": "برای موافقت با جمله مثبت از do + too استفاده می‌کنیم." },
+        { "k": "tap", "q": "A: She doesn't smoke. B: I don't ____.", "o": ["either", "too", "smoke"], "a": "either", "fb": "بعد از جمله منفی از either استفاده می‌کنیم، نه too." },
+        { "k": "type", "q": "He ____ (work) in a bank.", "a": "works", "fb": "با he/she/it فعل در حال ساده s می‌گیرد." },
+        { "k": "type", "q": "We ____ (not / watch) TV every day.", "a": "don't watch", "fb": "برای منفی کردن فعل در I/you/we/they از don't استفاده می‌کنیم." },
+        { "k": "tap", "q": "A: I'm tired. B: I am ____.", "o": ["either", "too", "tired"], "a": "too", "fb": "too را برای موافقت با جمله مثبت به کار می‌بریم." },
+        { "k": "drag", "w": ["She", "is", "a", "good", "teacher", "."], "a": "She is a good teacher .", "fb": "ترتیب جمله: فاعل + is + اسم/صفت." },
+        { "k": "tap", "q": "____ your brother play tennis?", "o": ["Do", "Does", "Is"], "a": "Does", "fb": "برای سوال با he/she/it از Does استفاده می‌کنیم." },
+        { "k": "type", "q": "I ____ (not / like) cold coffee.", "a": "don't like", "fb": "منفی در حال ساده با I: don't + فعل ساده." }
       ]
     }
   ]

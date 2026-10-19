@@ -65,7 +65,9 @@ function validateGrammar(g, file){
         items.forEach((item, ii) => checkItem(item, `${where} item ${ii}`));
       }
     });
-    if (!teaches) fail(`${file}: no teach cards`);
+    // Accumulative review files (Units C/D) are a single final_test step with no teach cards.
+    const accumulative = g.steps.length === 1 && g.steps[0].type === 'final_test';
+    if (!teaches && !accumulative) fail(`${file}: no teach cards (only a single final_test step may omit them)`);
     if (finals !== 10) fail(`${file}: final_test should have 10 items (has ${finals})`);
     return;
   }

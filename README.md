@@ -83,9 +83,15 @@ flattens `steps` into cards and shows Prev/Next plus touch swiping:
 - Item kinds are `tap`, `type` and `drag`; every item needs `fb` (feedback shown
   after answering). Drag items can omit `q` and get a generic reorder prompt.
 - Legacy files with `explanation[]` + `test[]` still load, but new content should use `steps`.
+- **Accumulative review files**: Units C and D introduce no new grammar in the book,
+  so `g1c`, `g1d`, `g2c`, `g2d`, `g3c` and `g3d` contain a single `final_test` step
+  (10 items reviewing the A and B grammar of that unit) and no teach cards.
+- English text renders `dir="ltr"` aligned left; Farsi renders `dir="rtl"` aligned right.
 
 Twelve grammar files cover Units 1–3 (`g1a`–`g3d`). Six are referenced by existing
-lessons; the rest are ready for lessons that have not been written yet.
+lessons; the accumulative tests for C/D lessons are wired through `grammar_file`
+where those lessons exist, and the rest are ready for lessons that have not been
+written yet.
 
 ## Content audit
 
