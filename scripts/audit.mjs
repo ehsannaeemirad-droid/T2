@@ -7,6 +7,8 @@ import { join } from 'node:path';
 const ROOT = process.cwd();
 const TOPICS = join(ROOT, 'data', 'topics.json');
 const LESSONS_DIR = join(ROOT, 'data', 'lessons');
+const GRAMMAR_DIR = join(ROOT, 'data', 'grammar');
+const validatedGrammar = new Set();
 
 const errors = [];
 const warnings = [];
@@ -116,6 +118,7 @@ for (const [i, t] of (topics || []).entries()) {
     } else {
       const g = await readJson(join(ROOT, lesson.grammar_file), lesson.grammar_file);
       if (g) validateGrammar(g, lesson.grammar_file);
+      validatedGrammar.add(lesson.grammar_file);
     }
   } else if (!lesson.grammar_notes) {
     warn(`${t.file}: no grammar_file or grammar_notes (Grammar tab shows a placeholder)`);
@@ -132,10 +135,24 @@ for (const file of lessonFiles) {
   if (!referenced.has(file)) warn(`data/lessons/${file} is not listed in data/topics.json`);
 }
 
+// Validate every grammar file, including staged ones no lesson references yet.
+let grammarFiles = [];
+try {
+  grammarFiles = (await readdir(GRAMMAR_DIR)).filter((f) => f.endsWith('.json'));
+} catch {
+  fail('data/grammar/ directory is missing');
+}
+for (const file of grammarFiles) {
+  const rel = `data/grammar/${file}`;
+  if (validatedGrammar.has(rel)) continue;
+  const g = await readJson(join(GRAMMAR_DIR, file), rel);
+  if (g) validateGrammar(g, rel);
+}
+
 const label = (list) => list.map((m) => `  - ${m}`).join('\n');
 if (warnings.length) console.log(`\n${warnings.length} warning(s):\n${label(warnings)}`);
 if (errors.length) {
   console.error(`\n${errors.length} error(s):\n${label(errors)}\n`);
   process.exit(1);
 }
-console.log(`\nOK — ${seen.size} topics, ${lessonFiles.length} lesson files, 0 errors, ${warnings.length} warning(s).`);
+console.log(`\nOK — ${seen.size} topics, ${lessonFiles.length} lesson files, ${grammarFiles.length} grammar files, 0 errors, ${warnings.length} warning(s).`);
