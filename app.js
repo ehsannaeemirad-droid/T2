@@ -6,6 +6,23 @@ const $$ = s => document.querySelectorAll(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
 const attr = s => String(s ?? '').replace(/"/g, '&quot;');
 
+/* Minimal stroke icons used inside rendered screens */
+const svg = (d, w = 18) => `<svg viewBox="0 0 24 24" width="${w}" height="${w}" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const ICONS = {
+  clock:  svg('<circle cx="12" cy="12" r="8.4"/><path d="M12 7.6V12l3 1.8"/>'),
+  flame:  svg('<path d="M12 3s5 4.2 5 8.6a5 5 0 0 1-10 0C7 8.6 12 3 12 3Z"/><path d="M12 20.4a2.6 2.6 0 0 0 2.6-2.6c0-1.6-2.6-4-2.6-4s-2.6 2.4-2.6 4A2.6 2.6 0 0 0 12 20.4Z"/>'),
+  cards:  svg('<rect x="3.4" y="7.6" width="12" height="12.6" rx="2.4"/><path d="M7.4 4.8h9.2a3 3 0 0 1 3 3v8.2"/>'),
+  chart:  svg('<path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15.5V11"/><path d="M12.5 15.5V7.5"/><path d="M17 15.5v-3"/>', 16),
+  arrow:  svg('<path d="M15 6l-6 6 6 6"/>', 16),
+  play:   svg('<path d="M9 6.5v11l9-5.5-9-5.5Z"/>', 16),
+  refresh: svg('<path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/>', 16),
+  book:   svg('<path d="M12 6.5C10.6 5 8.6 4.4 6 4.4c-1 0-1.9.1-2.5.3v13.6c.6-.2 1.5-.3 2.5-.3 2.6 0 4.6.6 6 2.1"/><path d="M12 6.5c1.4-1.5 3.4-2.1 6-2.1 1 0 1.9.1 2.5.3v13.6c-.6-.2-1.5-.3-2.5-.3-2.6 0-4.6.6-6 2.1"/><path d="M12 6.5v13.6"/>', 22),
+  links:  svg('<path d="M10 13.6a3.6 3.6 0 0 0 5.1 0l2.6-2.6a3.6 3.6 0 0 0-5.1-5.1l-1.2 1.2"/><path d="M14 10.4a3.6 3.6 0 0 0-5.1 0l-2.6 2.6a3.6 3.6 0 0 0 5.1 5.1l1.2-1.2"/>', 22),
+  audio:  svg('<path d="M4 14.5v-5a1.5 1.5 0 0 1 1.5-1.5h2.2L12 4.4v15.2L7.7 16H5.5A1.5 1.5 0 0 1 4 14.5Z"/><path d="M16 8.6a4.6 4.6 0 0 1 0 6.8"/><path d="M18.6 6a8 8 0 0 1 0 12"/>', 22),
+  close:  svg('<path d="M6.5 6.5l11 11"/><path d="M17.5 6.5l-11 11"/>', 17),
+  alert:  svg('<path d="M12 4.5 21 19.5H3L12 4.5Z"/><path d="M12 10v4.2"/><path d="M12 17h.01"/>', 34)
+};
+
 const THEMES = {
   auto:     { name:'خودکار', swatch:['#f4f6fb','#4f46e5','#0f1524'] },
   midnight: { name:'نیمه‌شب', swatch:['#1a2138','#f59e0b','#f1f5f9'] },
@@ -115,49 +132,98 @@ async function boot(){
       const lastId = localStorage.getItem('ts2_last_lesson') || state.topics[0].id;
       await loadLesson(lastId, false);
     }
+    setActiveTab(state.tab);
+    requestAnimationFrame(moveTabPill);
   } catch (e){
-    $('#content').innerHTML = `<div class="placeholder"><span class="icon">⚠️</span>فایل topics.json لود نشد.<br><small>${esc(e.message)}</small></div>`;
+    showErrorState('فهرست درس‌ها لود نشد', `دسترسی به فایل topics.json ممکن نشد (${e.message}). اتصال اینترنت را بررسی کنید.`, 'تلاش دوباره', () => boot());
   }
 }
 
 async function loadLesson(id, switchTab = true){
   const meta = state.topics.find(t => t.id === id);
-  if (!meta) return;
-  const r = await fetch(meta.file);
-  state.lesson = await r.json();
-  state.grammarData = null; // reset on lesson change
-  state.gCards = null;
-  state.gIndex = 0;
-  localStorage.setItem('ts2_last_lesson', id);
-  renderHeader();
-  if (switchTab){ state.tab = 'speaking'; setActiveTab('speaking'); }
-  renderTab(state.tab);
+  if (!meta) return showErrorState('درس پیدا نشد', 'این درس در فهرست درس‌ها وجود ندارد.', 'بازگشت به خانه', () => switchTabTo('home'));
+  try {
+    const r = await fetch(meta.file);
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+    if (!data || !Array.isArray(data.questions)) throw new Error('ساختار فایل درس معتبر نیست');
+    state.lesson = data;
+    state.grammarData = null; // reset on lesson change
+    state.gCards = null;
+    state.gIndex = 0;
+    localStorage.setItem('ts2_last_lesson', id);
+    renderHeader();
+    if (switchTab) switchTabTo('speaking');
+    else renderTab(state.tab);
+  } catch (e){
+    state.lesson = null;
+    state.grammarData = null;
+    state.gCards = null;
+    showErrorState('درس بارگذاری نشد', `فایل «${meta.title}» در دسترس نیست یا خراب است.`, 'تلاش دوباره', () => loadLesson(id, switchTab));
+  }
 }
 
 function renderHeader(){
   const L = state.lesson;
-  if (!L) return;
-  $('#hdEmoji').textContent = L.emoji || '📘';
-  $('#hdTitle').textContent = L.title || '';
-  $('#hdSub').textContent = `Unit ${L.unit} · Lesson ${L.lesson}`;
+  $('#hdEmoji').textContent = L?.emoji || '📘';
+  const title = $('#hdTitle'), sub = $('#hdSub');
+  title.textContent = L?.title || 'درس‌ها';
+  title.setAttribute('dir', 'ltr');
+  sub.textContent = L ? `درس ${L.unit} · ${L.lesson}` : 'درس را انتخاب کنید';
+  sub.setAttribute('dir', 'rtl');
 }
 
 /* ============================================================
    ROUTING
    ============================================================ */
-function setActiveTab(name){ $$('#tabs button').forEach(b => b.classList.toggle('active', b.dataset.tab === name)); }
-$$('#tabs button').forEach(b => {
-  b.onclick = () => {
-    state.tab = b.dataset.tab;
-    if (state.tab !== 'cards') review = null;
-    if (state.tab !== 'practice' && state.tab !== 'grammar') pSession = null;
-    setActiveTab(state.tab); renderTab(state.tab);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function haptic(ms = 8){ try { if (!reduceMotion && navigator.vibrate) navigator.vibrate(ms); } catch (e) {} }
+
+function moveTabPill(){
+  const pill = $('#tabPill'), active = $('#tabs .tab.is-active');
+  if (!pill || !active) return;
+  pill.style.width = `${active.offsetWidth}px`;
+  pill.style.transform = `translateX(${active.offsetLeft}px)`;
+}
+
+function setActiveTab(name){
+  $$('#tabs .tab').forEach(b => {
+    const on = b.dataset.tab === name;
+    b.classList.toggle('is-active', on);
+    b.setAttribute('aria-selected', on ? 'true' : 'false');
+  });
+  moveTabPill();
+}
+window.addEventListener('resize', () => requestAnimationFrame(moveTabPill));
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => moveTabPill());
+function switchTabTo(name, opts = {}){
+  if (!name) return;
+  state.tab = name;
+  if (name !== 'cards') review = null;
+  cancelAdvance();
+  if (name !== 'practice' && name !== 'grammar') pSession = null;
+  setActiveTab(name);
+  renderTab(name);
+  if (opts.scroll !== false) window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+}
+$$('#tabs .tab').forEach(b => {
+  b.onclick = () => switchTabTo(b.dataset.tab);
 });
 function renderTab(name){
   const R = { home: renderHome, speaking: renderQuestions, grammar: renderGrammar, cards: renderCards, practice: renderPractice }[name];
   if (R) R();
+}
+
+/* Friendly, non-crashing error screen with a retry action */
+function showErrorState(title, hint, actionLabel, onAction){
+  $('#content').innerHTML = `<div class="error-state screen">
+    <div class="error-icon">${ICONS.alert}</div>
+    <div class="error-title">${esc(title)}</div>
+    <div class="error-hint">${esc(hint)}</div>
+    <button class="btn btn-primary btn-block" id="errRetry">${esc(actionLabel)}</button>
+  </div>`;
+  const btn = $('#errRetry');
+  if (btn && onAction) btn.onclick = () => { haptic(5); onAction(); };
 }
 
 /* ============================================================
@@ -168,36 +234,37 @@ function renderHome(){
   const today = getTodayStr(), timeToday = formatTime(timeLog[today] || 0);
   const streak = getStreak(), due = dueCount(), L = state.lesson;
 
-  let html = '';
+  let html = '<div class="screen">';
   if (L) {
     html += `<button class="continue-card" data-continue="1">
       <span class="cc-label">ادامه یادگیری</span>
       <div class="cc-title">${esc(L.emoji)} ${esc(L.title)}</div>
-      <span class="cc-btn">رفتن به سوالات ←</span>
+      <span class="cc-btn">ادامه بده ${ICONS.arrow}</span>
     </button>`;
   }
   html += `<div class="dash-grid">
-    <div class="dash-box"><div class="dash-icon">⏱</div><div class="dash-val" id="dashTimeToday">${timeToday}</div><div class="dash-lbl">مطالعه امروز</div></div>
-    <div class="dash-box"><div class="dash-icon">🔥</div><div class="dash-val">${streak} روز</div><div class="dash-lbl">زنجیره</div></div>
-    <div class="dash-box" style="cursor:pointer" data-go="cards"><div class="dash-icon">🎴</div><div class="dash-val">${due} کارت</div><div class="dash-lbl">مرور امروز</div></div>
+    <div class="dash-box"><div class="dash-icon">${ICONS.clock}</div><div class="dash-val" id="dashTimeToday">${timeToday}</div><div class="dash-lbl">مطالعه امروز</div></div>
+    <div class="dash-box"><div class="dash-icon">${ICONS.flame}</div><div class="dash-val">${streak} روز</div><div class="dash-lbl">زنجیره</div></div>
+    <div class="dash-box" data-go="cards"><div class="dash-icon">${ICONS.cards}</div><div class="dash-val">${due} کارت</div><div class="dash-lbl">مرور امروز</div></div>
   </div>
-  <button class="btn btn-ghost btn-block" id="openStats" style="margin-bottom:22px">📊 مشاهده آمار کامل</button>
+  <button class="btn btn-ghost btn-block" id="openStats">${ICONS.chart} مشاهده آمار کامل</button>
   <div class="home-section"><h2>درس‌ها</h2>`;
 
   state.topics.forEach(t => {
     const active = L?.id === t.id ? ' active' : '';
     html += `<button class="lesson-row${active}" data-lesson="${esc(t.id)}">
       <span class="lesson-emoji">${esc(t.emoji || '📘')}</span>
-      <div class="lesson-body"><div class="lesson-title">${esc(t.title)}</div><div class="lesson-sub">Unit ${t.unit} · Lesson ${t.lesson}</div></div>
+      <div class="lesson-body"><div class="lesson-title" dir="ltr">${esc(t.title)}</div><div class="lesson-sub" dir="rtl">درس ${t.unit} · ${t.lesson}</div></div>
     </button>`;
   });
-  html += `</div>`;
+  html += `</div></div>`;
   $('#content').innerHTML = html;
+  haptic(4);
 
   if ($('#openStats')) $('#openStats').onclick = openStats;
   const cBtn = $('[data-continue]');
-  if (cBtn) cBtn.onclick = () => { state.tab = 'speaking'; setActiveTab('speaking'); renderTab('speaking'); };
-  $$('[data-go]').forEach(el => { el.onclick = () => { state.tab = el.dataset.go; setActiveTab(el.dataset.go); renderTab(el.dataset.go); }; });
+  if (cBtn) cBtn.onclick = () => switchTabTo('speaking');
+  $$('[data-go]').forEach(el => { el.onclick = () => switchTabTo(el.dataset.go); });
   $$('[data-lesson]').forEach(b => { b.onclick = () => loadLesson(b.dataset.lesson); });
 }
 
@@ -233,43 +300,57 @@ function renderQuestions(){
   qAnimDir = 'left';
 
   $('#content').innerHTML = `
-    <div class="q-carousel">
+    <div class="q-carousel screen">
       <div class="q-top-bar">
         <div class="q-counter" id="qCounter">1 / ${qs.length}</div>
-        <button class="btn btn-ghost btn-sm" data-speak-q>🔊 پرسش</button>
+        <button class="btn btn-ghost btn-sm" data-speak-q>${ICONS.play} پرسش</button>
       </div>
       <div class="q-prog-track"><i class="q-prog-fill" id="qProg" style="width: ${100/qs.length}%"></i></div>
-      
       <div class="q-card-single" id="qCardContainer">
-        <h2 class="q-single-title" id="qTitle"></h2>
-        <div class="q-single-answer" id="qAnswer" hidden></div>
-        <div style="margin-top:auto; padding-top:24px;">
+        <h2 class="q-single-title" id="qTitle" dir="ltr"></h2>
+        <div class="q-single-answer" id="qAnswer" data-open="false" dir="ltr" hidden></div>
+        <div class="q-reveal-wrap">
           <button class="btn btn-primary btn-block" id="qRevealBtn">نمایش پاسخ</button>
         </div>
       </div>
-
       <div class="q-nav-bar">
-        <button class="btn btn-ghost" id="qPrev">→ قبلی</button>
-        <button class="btn btn-ghost" id="qNext">بعدی ←</button>
+        <button class="btn btn-ghost" id="qPrev">قبلی</button>
+        <button class="btn btn-ghost" id="qNext">بعدی</button>
       </div>
     </div>`;
 
   drawSingleQ(false);
 
+  // Snappy horizontal swipe with live drag feedback
   const card = $('#qCardContainer');
-  let startX = 0, startY = 0;
-  card.addEventListener('touchstart', e => {
-    startX = e.changedTouches[0].screenX;
-    startY = e.changedTouches[0].screenY;
+  let startX = 0, startY = 0, dragging = false, dx = 0;
+  card.addEventListener('pointerdown', e => {
+    if (e.target.closest('button')) return;
+    dragging = true; startX = e.clientX; startY = e.clientY; dx = 0;
+    card.classList.add('dragging');
   }, { passive: true });
-  card.addEventListener('touchend', e => {
-    const dx = e.changedTouches[0].screenX - startX;
-    const dy = e.changedTouches[0].screenY - startY;
-    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
-      if (dx > 60) navQ(-1);
-      if (dx < -60) navQ(1);
+  card.addEventListener('pointermove', e => {
+    if (!dragging) return;
+    dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    if (Math.abs(dy) > Math.abs(dx) + 10){ dragging = false; card.classList.remove('dragging'); card.style.transform = ''; card.style.opacity = ''; return; }
+    card.style.transform = `translateX(${dx * .55}px)`;
+    card.style.opacity = String(Math.max(.6, 1 - Math.abs(dx) / 560));
+  }, { passive: true });
+  const endDrag = () => {
+    if (!dragging) return;
+    dragging = false;
+    card.classList.remove('dragging');
+    card.style.transform = ''; card.style.opacity = '';
+    if (Math.abs(dx) > 72){
+      haptic(8);
+      if (dx > 0) navQ(-1); else navQ(1);
     }
-  }, { passive: true });
+    dx = 0;
+  };
+  card.addEventListener('pointerup', endDrag, { passive: true });
+  card.addEventListener('pointercancel', endDrag, { passive: true });
+  card.addEventListener('pointerleave', endDrag, { passive: true });
 
   $('#qRevealBtn').onclick = () => {
     qRevealed = !qRevealed;
@@ -302,11 +383,19 @@ function drawSingleQ(isNav = false, toggleAns = false) {
   
   const ansEl = $('#qAnswer');
   if (qRevealed) {
-    ansEl.innerHTML = parseAnswer(q.a);
+    ansEl.innerHTML = `<div class="qa-inner">${parseAnswer(q.a)}
+      <div id="sentTr" class="sent-tr" dir="rtl" hidden></div>
+      <button id="trBtn" dir="rtl" class="btn btn-ghost btn-block tr-btn">🌐 ترجمه متن</button></div>`;
     ansEl.hidden = false;
+    ansEl.dataset.open = 'false';
+    void ansEl.offsetHeight; // flush styles so the reveal transitions
+    ansEl.dataset.open = 'true';
+    $('#trBtn').onclick = () => { haptic(4); toggleTranslate(q.a); };
     $('#qRevealBtn').textContent = 'بستن پاسخ';
     $('#qRevealBtn').className = 'btn btn-ghost btn-block';
+    haptic(6);
   } else {
+    ansEl.dataset.open = 'false';
     ansEl.innerHTML = '';
     ansEl.hidden = true;
     $('#qRevealBtn').textContent = 'نمایش پاسخ';
@@ -325,6 +414,54 @@ function drawSingleQ(isNav = false, toggleAns = false) {
 }
 
 function showPlaceholder(icon, text){ $('#content').innerHTML = `<div class="placeholder"><span class="icon">${icon}</span>${text}</div>`; }
+
+/* --- Sentence-level parsing for sample answers ---
+   Raw answer is a run of sentences. Each sentence may contain {{grammar}}
+   highlights and [[English|فارسی]] chunks. We split on sentence enders while
+   keeping the terminator, so each sentence is a self-contained unit. */
+function splitSentences(text){
+  const parts = [];
+  let cur = '';
+  for (const ch of String(text || '')){
+    cur += ch;
+    if (ch === '.' || ch === '!' || ch === '?') { parts.push(cur); cur = ''; }
+  }
+  if (cur.trim()) parts.push(cur);
+  return parts.map(s => s.trim()).filter(Boolean);
+}
+
+// Plain English of a sentence with all {{}} / [[]] markup resolved to words.
+function sentenceEnglish(raw){
+  return String(raw || '')
+    .replace(/\{\{([^}]+?)(?:::[^}]+)?\}\}/g, '$1')
+    .replace(/\[\[([^\]|]+?)\|[^\]]+?\]\]/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+// Gloss of a sentence built from its inline [[English|فارسی]] chunks, if any.
+function chunkGloss(raw){
+  const inline = [];
+  const re = /\[\[([^\]|]+?)\|([^\]]+?)\]\]/g;
+  let m;
+  while ((m = re.exec(raw)) !== null) inline.push(m[2]);
+  return inline.length ? inline.join('، ') : null;
+}
+
+function sentenceCache(){ try { return JSON.parse(localStorage.getItem('ts2_sent_cache') || '{}'); } catch { return {}; } }
+function cacheSentence(en, fa){
+  const cache = sentenceCache();
+  cache[en] = fa;
+  try { localStorage.setItem('ts2_sent_cache', JSON.stringify(cache)); } catch {}
+}
+
+async function ensureSentenceTranslation(en){
+  const known = sentenceCache()[en];
+  if (known) return known;
+  const fa = await fetchTranslation(en);
+  if (fa) cacheSentence(en, fa);
+  return fa;
+}
 
 function parseAnswer(text){
   const tokens = [];
@@ -345,13 +482,101 @@ function parseAnswer(text){
   }).join('');
 }
 
+// Nearest [.!?] scanning one direction from index i; returns bound or sentStart/sentEnd.
+function scanBound(text, i, dir, sentStart, sentEnd){
+  for (let j = i; j >= sentStart && j < sentEnd; j += dir){
+    if ('.!?'.includes(text[j])) return j;
+  }
+  return dir < 0 ? sentStart - 1 : sentEnd;
+}
+
+// Resolve the full sentence (bounded by [.!?]) around the tapped word inside an answer.
+function sentenceAround(el){
+  const host = el.closest('.q-single-answer');
+  if (!host) return '';
+  const text = host.textContent.replace(/\s+/g, ' ').trim();
+  const word = el.textContent.trim();
+  const pos = text.indexOf(word);
+  if (pos < 0) return text;
+  const wordEnd = pos + word.length;
+  const sentStart = scanBound(text, pos - 1, -1, 0, text.length) + 1;
+  const sentEnd = scanBound(text, wordEnd, 1, 0, text.length);
+  return text.slice(sentStart, sentEnd + 1).trim();
+}
+
+// Tap a word twice quickly → whole sentence meaning. A single tap still opens the
+// word sheet, but only after a short delay so the second tap can cancel it.
+let _tapTimer = null, _tapWord = null;
+function tapWord(w){
+  if (_tapWord === w && _tapTimer){
+    clearTimeout(_tapTimer); _tapTimer = null; _tapWord = null;
+    showSentenceMeaning(w);
+    return;
+  }
+  clearTimeout(_tapTimer);
+  _tapWord = w;
+  _tapTimer = setTimeout(() => {
+    _tapTimer = null; _tapWord = null;
+    openWord(w.textContent.trim());
+  }, 300);
+}
+
+async function showSentenceMeaning(w){
+  const en = sentenceAround(w);
+  if (!en) return;
+  const cache = JSON.parse(localStorage.getItem('ts2_sent_cache') || '{}');
+  const known = cache[en];
+  openSheet(`
+    <div class="sheet-head"><div class="sheet-label">جمله</div><div class="sheet-word" dir="ltr">${esc(en)}</div></div>
+    <div class="sheet-meaning" id="sentFa" dir="rtl">${known ? esc(known) : '<span style="color:var(--text-soft);font-size:13px">در حال دریافت ترجمه...</span>'}</div>
+    <div class="sheet-actions">
+      <button class="btn btn-ghost" id="sentSpeak">🔊 شنیدن</button>
+      <button class="btn btn-ghost" id="sentSave">＋ ذخیره</button>
+    </div>`, 'sent');
+  $('#sentSpeak').onclick = () => speak(en);
+  $('#sentSave').onclick = () => { addCard(en, known || ''); closeSheet(); };
+  if (!known){
+    const fa = await ensureSentenceTranslation(en);
+    const el = $('#sentFa');
+    if (!el) return;
+    if (fa){ el.textContent = fa; const b = $('#sentSave'); b.onclick = () => { addCard(en, fa); closeSheet(); }; }
+    else el.innerHTML = '<span style="color:var(--danger);font-size:13px">ترجمه‌ای پیدا نشد.</span>';
+  }
+}
+
+// Translate the whole answer: reuse inline chunk translations where present,
+// fall back to the translation API per sentence. Toggles the block on/off.
+async function toggleTranslate(raw){
+  const box = $('#sentTr'), btn = $('#trBtn');
+  if (!box) return;
+  if (!box.hidden){ box.hidden = true; box.innerHTML = ''; if (btn) btn.classList.remove('on'); return; }
+
+  box.hidden = false; if (btn) btn.classList.add('on');
+  const sentences = splitSentences(raw);
+  box.innerHTML = `<div class="sent-tr-head">ترجمه کل متن</div>` +
+    sentences.map((_, i) => `<div class="sent-tr-item" id="stItem${i}"><span class="sent-tr-loading">...</span></div>`).join('');
+
+  // One sentence at a time so text appears as it arrives; full-sentence
+  // translation first, the inline chunk gloss only as a fallback.
+  for (let i = 0; i < sentences.length; i++){
+    if ($('#sentTr') !== box) return; // user navigated away mid-fetch
+    const en = sentenceEnglish(sentences[i]);
+    let fa = await ensureSentenceTranslation(en);
+    if (!fa) fa = chunkGloss(sentences[i]);
+    const slot = document.getElementById(`stItem${i}`);
+    if (!slot) return;
+    slot.textContent = fa || '—';
+    if (!fa) slot.classList.add('muted');
+  }
+}
+
 document.addEventListener('click', e => {
   const g = e.target.closest('.grammar');
   if (g){ openGrammar(g.dataset.key, g.dataset.phrase); return; }
   const c = e.target.closest('.chunk');
   if (c){ openChunk(c.textContent.trim(), c.dataset.fa); return; }
   const w = e.target.closest('.w');
-  if (w){ openWord(w.textContent.trim()); return; }
+  if (w){ tapWord(w); return; }
 });
 
 /* ============================================================
@@ -461,7 +686,7 @@ function renderGrammarCard(dir = 0, animate = false){
   let body = '';
   if (card.type === 'teach') {
     body = `<div class="g-step-label">${esc(card.title)}</div>
-      <div class="g-fa">${card.content}</div>
+      <div class="g-fa" dir="rtl">${card.content}</div>
       ${card.examples.length ? `<div class="g-examples">${card.examples.map(ex => `
         <div class="g-ex" data-gspeak="${attr(ex.en)}">
           <div class="g-ex-en" dir="ltr">${esc(ex.en)}</div>
@@ -484,7 +709,7 @@ function renderGrammarCard(dir = 0, animate = false){
   const anim = animate ? (dir < 0 ? ' slide-right' : ' slide-left') : '';
 
   $('#content').innerHTML = `
-    <div class="g-carousel">
+    <div class="g-carousel screen">
       <div class="g-top-bar">
         <div class="g-counter">${i + 1} / ${total}</div>
         <div class="g-badge g-badge-${card.type}">${badge}</div>
@@ -508,23 +733,39 @@ function renderGrammarCard(dir = 0, animate = false){
       state.gIndex = 0;
       renderGrammarCard(0, false);
     };
-    $('#gToSpeaking').onclick = () => {
-      state.tab = 'speaking';
-      setActiveTab('speaking');
-      renderTab('speaking');
-    };
+    $('#gToSpeaking').onclick = () => switchTabTo('speaking');
   }
 
+  // Pointer swipe with live drag feedback (touch + mouse/pen)
   const gc = $('#gCard');
-  let sx = 0, sy = 0;
-  gc.addEventListener('touchstart', e => { sx = e.changedTouches[0].screenX; sy = e.changedTouches[0].screenY; }, { passive:true });
-  gc.addEventListener('touchend', e => {
-    const dx = e.changedTouches[0].screenX - sx;
-    const dy = e.changedTouches[0].screenY - sy;
-    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
-      if (dx > 0) grammarGo(-1); else grammarGo(1);
+  let sx = 0, sy = 0, gdx = 0, gdragging = false;
+  gc.addEventListener('pointerdown', e => {
+    if (e.target.closest('button, input, a')) return;
+    gdragging = true; sx = e.clientX; sy = e.clientY; gdx = 0;
+    gc.classList.add('dragging');
+  }, { passive: true });
+  gc.addEventListener('pointermove', e => {
+    if (!gdragging) return;
+    gdx = e.clientX - sx;
+    const dy = e.clientY - sy;
+    if (Math.abs(dy) > Math.abs(gdx) + 10){ gdragging = false; gc.classList.remove('dragging'); gc.style.transform = ''; gc.style.opacity = ''; return; }
+    gc.style.transform = `translateX(${gdx * .5}px)`;
+    gc.style.opacity = String(Math.max(.6, 1 - Math.abs(gdx) / 600));
+  }, { passive: true });
+  const gEnd = () => {
+    if (!gdragging) return;
+    gdragging = false;
+    gc.classList.remove('dragging');
+    gc.style.transform = ''; gc.style.opacity = '';
+    if (Math.abs(gdx) > 70){
+      haptic(8);
+      if (gdx > 0) grammarGo(-1); else grammarGo(1);
     }
-  }, { passive:true });
+    gdx = 0;
+  };
+  gc.addEventListener('pointerup', gEnd, { passive: true });
+  gc.addEventListener('pointercancel', gEnd, { passive: true });
+  gc.addEventListener('pointerleave', gEnd, { passive: true });
 }
 
 function grammarGo(dir){
@@ -544,10 +785,10 @@ function grammarItemHTML(item, idx){
       let cls = 'p-opt';
       if (item.answered) { if (o === item.a) cls += ' correct'; else if (o === item.selected) cls += ' wrong'; }
       else if (o === item.selected) cls += ' selected';
-      return `<button class="${cls}" data-gopt="${attr(o)}" ${item.answered ? 'disabled' : ''}>${esc(o)}</button>`;
+      return `<button class="${cls}" dir="ltr" data-gopt="${attr(o)}" ${item.answered ? 'disabled' : ''}>${esc(o)}</button>`;
     }).join('')}</div>`;
   } else if (item.k === 'type') {
-    body = `<input class="p-input g-input" id="gInput-${idx}" type="text" value="${item.answered || item.userAnswer ? attr(item.userAnswer) : ''}" placeholder="Type your answer..." autocomplete="off" spellcheck="false" ${item.answered ? 'disabled' : ''}>`;
+    body = `<input class="p-input g-input" dir="ltr" id="gInput-${idx}" type="text" value="${item.answered || item.userAnswer ? attr(item.userAnswer) : ''}" placeholder="پاسخ را بنویس..." autocomplete="off" spellcheck="false" ${item.answered ? 'disabled' : ''}>`;
   } else if (item.k === 'drag') {
     body = `<div class="p-drop${item.answered ? (item.correct ? ' correct' : ' wrong') : ''}">${item._drop.map((w, i) => `<button class="p-word in-drop" data-gdrop="${i}" ${item.answered ? 'disabled' : ''}>${esc(w)}</button>`).join('')}</div>
       <div class="p-bank">${item._bank.map((w, i) => item._drop.includes(w) ? `<span class="p-word" style="visibility:hidden">${esc(w)}</span>` : `<button class="p-word" data-gbank="${i}" ${item.answered ? 'disabled' : ''}>${esc(w)}</button>`).join('')}</div>`;
@@ -592,6 +833,7 @@ function bindGrammarCard(card){
       b.onclick = () => {
         item.selected = b.dataset.gopt;
         root.querySelectorAll('[data-gopt]').forEach(x => x.classList.toggle('selected', x === b));
+        haptic(6);
         enable();
       };
     });
@@ -641,6 +883,7 @@ function checkGrammarItem(card, idx){
 
   item.answered = true;
   item.correct = ok;
+  haptic(ok ? 14 : 22);
   if (ok) speak(item.a);
   renderGrammarCard(0, false);
 }
@@ -668,11 +911,22 @@ function renderPractice(){
   if (pSession) return renderPracticeRunner();
 
   $('#content').innerHTML = `
-    <div class="hint" style="background:var(--brand-soft);color:var(--brand-dark);padding:12px;border-radius:12px;font-size:12.5px;margin-bottom:16px;font-weight:700">یک تمرین را انتخاب کن:</div>
-    <div class="p-grid">
-      <div class="p-card" data-mode="words"><span class="icon">📚</span><div class="name">لغات (کلمات)</div><div class="sub">${(state.lesson.practice||[]).length} سوال</div></div>
-      <div class="p-card" data-mode="match"><span class="icon">🔗</span><div class="name">تطبیق لغات</div><div class="sub">بازی حافظه</div></div>
-      <div class="p-card" data-mode="listen"><span class="icon">🎧</span><div class="name">گوش کن</div><div class="sub">تمرین شنیداری</div></div>
+    <div class="screen">
+      <div class="home-section" style="margin-top:2px"><h2>یک تمرین را انتخاب کن</h2></div>
+      <div class="p-grid">
+        <button class="p-card" data-mode="words">
+          <span class="icon">${ICONS.book}</span>
+          <span class="p-card-text"><span class="name">لغات</span><span class="sub">${(state.lesson.practice||[]).length} سوال</span></span>
+        </button>
+        <button class="p-card" data-mode="match">
+          <span class="icon">${ICONS.links}</span>
+          <span class="p-card-text"><span class="name">تطبیق لغات</span><span class="sub">بازی حافظه</span></span>
+        </button>
+        <button class="p-card" data-mode="listen">
+          <span class="icon">${ICONS.audio}</span>
+          <span class="p-card-text"><span class="name">گوش کن</span><span class="sub">تمرین شنیداری</span></span>
+        </button>
+      </div>
     </div>`;
 
   $$('[data-mode]').forEach(c => {
@@ -727,15 +981,15 @@ function renderPracticeRunner(){
     body = `<div style="text-align:center;margin-bottom:20px"><button class="btn btn-primary" id="playSound" style="padding:16px 30px;border-radius:50%;font-size:24px">🔊</button></div>
       <div class="p-options">${item.options.map(o => {
         let cls = 'p-opt'; if (s.answered) { if (o === item.answer) cls += ' correct'; else if (o === s.selected) cls += ' wrong'; }
-        return `<button class="${cls}" data-opt="${attr(o)}" ${s.answered ? 'disabled' : ''}>${esc(o)}</button>`;
+        return `<button class="${cls}" dir="ltr" data-opt="${attr(o)}" ${s.answered ? 'disabled' : ''}>${esc(o)}</button>`;
       }).join('')}</div>`;
   } else if (item.k === 'tap') {
     body = `<div class="p-options">${item._options.map(o => {
       let cls = 'p-opt'; if (s.answered){ if (o === item.a) cls += ' correct'; else if (o === s.selected) cls += ' wrong'; }
-      return `<button class="${cls}" data-opt="${attr(o)}" ${s.answered ? 'disabled' : ''}>${esc(o)}</button>`;
+      return `<button class="${cls}" dir="ltr" data-opt="${attr(o)}" ${s.answered ? 'disabled' : ''}>${esc(o)}</button>`;
     }).join('')}</div>`;
   } else if (item.k === 'type') {
-    body = `<input class="p-input" id="pInput" type="text" value="${s.answered ? attr(s.userAnswer) : ''}" placeholder="Type your answer..." autocomplete="off" spellcheck="false" ${s.answered ? 'disabled' : ''}>`;
+    body = `<input class="p-input" dir="ltr" id="pInput" type="text" value="${s.answered ? attr(s.userAnswer) : ''}" placeholder="پاسخ را بنویس..." autocomplete="off" spellcheck="false" ${s.answered ? 'disabled' : ''}>`;
   } else if (item.k === 'drag') {
     body = `<div class="p-drop${s.answered ? (s.correct ? ' correct' : ' wrong') : ''}" id="pDrop">${item._drop.map((w, i) => `<button class="p-word in-drop" data-drop-idx="${i}" ${s.answered ? 'disabled' : ''}>${esc(w)}</button>`).join('')}</div>
       <div class="p-bank" id="pBank">${item._bank.map((w, i) => item._drop.includes(w) ? `<span class="p-word" style="visibility:hidden">${esc(w)}</span>` : `<button class="p-word" data-bank-idx="${i}" ${s.answered ? 'disabled' : ''}>${esc(w)}</button>`).join('')}</div>`;
@@ -748,30 +1002,29 @@ function renderPracticeRunner(){
   }
 
   $('#content').innerHTML = `
-    <div class="p-runner">
-      <div class="p-top"><div class="p-counter">${title} · ${s.index + 1} از ${s.items.length}</div><button class="p-exit" id="pExit">✕</button></div>
+    <div class="p-runner screen">
+      <div class="p-top"><div class="p-counter">${title} · ${s.index + 1} از ${s.items.length}</div><button class="p-exit" id="pExit" aria-label="خروج">${ICONS.close}</button></div>
       <div class="p-progress"><i style="width:${pct}%"></i></div>
-      ${s.mode !== 'listen' ? `<div class="p-q">${formatQ(item)}</div>` : `<div style="height:10px"></div>`}
+      ${s.mode !== 'listen' ? `<div class="p-q" dir="ltr">${formatQ(item)}</div>` : `<div style="height:10px"></div>`}
       ${body}${feedback}
       <div class="p-actions">${s.answered ? `<button class="btn btn-primary btn-block" id="pNext">${s.index + 1 >= s.items.length ? 'پایان' : 'سوال بعدی'}</button>` : `<button class="btn btn-primary btn-block" id="pCheck" disabled>بررسی</button>`}</div>
     </div>`;
 
   if (s.mode === 'listen' && !s.answered) { setTimeout(() => speak(item.answer), 300); $('#playSound').onclick = () => speak(item.answer); }
-  if (s.answered){ $('#pNext').onclick = () => { s.index++; s.answered = false; s.selected = null; s.userAnswer = ''; renderPracticeRunner(); }; }
+  if (s.answered){ $('#pNext').onclick = () => { s.index++; s.answered = false; s.selected = null; s.userAnswer = ''; renderPracticeRunner(); }; if (s.correct) scheduleAdvance(); }
   else { bindPracticeInputs(item); }
   
   // Route exit button based on context
   $('#pExit').onclick = () => { 
+    cancelAdvance();
     pSession = null; 
     if (s.mode === 'grammar') renderGrammar(); else renderPractice(); 
   };
 }
-function formatQ(item){ return esc(item.q).replace(/____/g, '<span class="blank">____</span>'); }
-
 function bindPracticeInputs(item){
   const s = pSession;
   if (s.mode === 'listen' || item.k === 'tap'){
-    $$('[data-opt]').forEach(b => { b.onclick = () => { s.selected = b.dataset.opt; $$('[data-opt]').forEach(x => x.classList.toggle('selected', x === b)); $('#pCheck').disabled = false; }; });
+    $$('[data-opt]').forEach(b => { b.onclick = () => { s.selected = b.dataset.opt; haptic(5); $$('[data-opt]').forEach(x => x.classList.toggle('selected', x === b)); $('#pCheck').disabled = false; }; });
   } else if (item.k === 'type'){
     const inp = $('#pInput');
     inp.oninput = () => { $('#pCheck').disabled = !inp.value.trim(); };
@@ -784,7 +1037,24 @@ function bindPracticeInputs(item){
   $('#pCheck').onclick = checkPractice;
 }
 
+function formatQ(item){ return esc(item.q).replace(/____/g, '<span class="blank">____</span>'); }
+
+// Auto-advance after a correct answer in the Exercise tab: the ✓ feedback stays
+// on screen briefly, then we move to the next question (or the summary).
+let _advTimer = null;
+function scheduleAdvance(){
+  clearTimeout(_advTimer);
+  _advTimer = setTimeout(() => {
+    const s = pSession;
+    if (!s || !s.correct) return;           // user may have navigated away
+    s.index++; s.answered = false; s.selected = null; s.userAnswer = '';
+    renderPracticeRunner();
+  }, 1300);
+}
+function cancelAdvance(){ clearTimeout(_advTimer); _advTimer = null; }
+
 function checkPractice(){
+  cancelAdvance();
   const s = pSession, item = s.items[s.index];
   let ok = false, correctAnswer = '';
   if (s.mode === 'listen') { correctAnswer = item.answer; ok = s.selected === item.answer; }
@@ -793,6 +1063,7 @@ function checkPractice(){
   else if (item.k === 'drag') { correctAnswer = item.a; s.userAnswer = item._drop.join(' '); ok = s.userAnswer.replace(/\s+/g, ' ').trim().toLowerCase() === correctAnswer.replace(/\s+/g, ' ').trim().toLowerCase(); }
 
   s.answered = true; s.correct = ok;
+  haptic(ok ? 12 : 26);
   if (ok) { s.score++; speak(correctAnswer); trackCompletion(); }
   renderPracticeRunner();
 }
@@ -801,12 +1072,12 @@ function renderMatchUI() {
   const s = pSession;
   if (s.matched === s.matchPairs) return renderPracticeSummary();
   const pct = Math.round(s.matched / s.matchPairs * 100);
-  const leftHtml = s.left.map(x => `<div class="match-item ltr${x.done ? ' done' : (s.selLeft && s.selLeft.id === x.id ? ' sel' : '')}" data-side="l" data-id="${esc(x.id)}">${esc(x.text)}</div>`).join('');
-  const rightHtml = s.right.map(x => `<div class="match-item rtl${x.done ? ' done' : (s.selRight && s.selRight.id === x.id ? ' sel' : '')}" data-side="r" data-id="${esc(x.id)}">${esc(x.text)}</div>`).join('');
+  const leftHtml = s.left.map(x => `      <div class="match-item ltr${x.done ? ' done' : (s.selLeft && s.selLeft.id === x.id ? ' sel' : '')}" dir="ltr" data-side="l" data-id="${esc(x.id)}">${esc(x.text)}</div>`).join('');
+  const rightHtml = s.right.map(x => `<div class="match-item rtl${x.done ? ' done' : (s.selRight && s.selRight.id === x.id ? ' sel' : '')}" dir="rtl" data-side="r" data-id="${esc(x.id)}">${esc(x.text)}</div>`).join('');
 
   $('#content').innerHTML = `
     <div class="p-runner">
-      <div class="p-top"><div class="p-counter">تطبیق لغات</div><button class="p-exit" id="pExit">✕</button></div>
+      <div class="p-top"><div class="p-counter">تطبیق لغات</div><button class="p-exit" id="pExit" aria-label="خروج">${ICONS.close}</button></div>
       <div class="p-progress"><i style="width:${pct}%"></i></div>
       <div class="match-grid">
         <div style="display:flex;flex-direction:column;gap:10px">${leftHtml}</div>
@@ -844,12 +1115,12 @@ function renderPracticeSummary(){
   const msg = pct === 100 ? 'عالی بود! 🎉' : pct >= 70 ? 'خیلی خوب بود! 👏' : 'ادامه بده، بهتر می‌شی. 💪';
 
   $('#content').innerHTML = `
-    <div class="p-summary">
-      <div style="font-size:44px;margin-bottom:8px">${pct >= 70 ? '🏆' : '📘'}</div>
+    <div class="p-summary screen">
+      <div class="g-summary-emoji">${pct >= 70 ? '🏆' : '📘'}</div>
       <div class="big">${score} / ${total}</div>
-      <div style="font-size:14px;color:var(--text-soft);margin-bottom:6px">${pct}%</div>
-      <div style="font-size:15px;font-weight:800;color:var(--text);margin-bottom:22px">${msg}</div>
-      <button class="btn btn-primary btn-block" id="pBack" style="margin-bottom:10px">دوباره</button>
+      <div class="g-score-sub">${pct}% درست</div>
+      <div class="g-score-msg">${msg}</div>
+      <button class="btn btn-primary btn-block" id="pBack">دوباره</button>
       <button class="btn btn-ghost btn-block" id="pExit2">بازگشت</button>
     </div>`;
   
@@ -875,17 +1146,17 @@ function renderCards(){
   if (!state.cards.length) return showPlaceholder('🎴', 'هنوز فلش‌کارتی نساختی.<br>روی کلمه‌ها یا عبارت‌های پاسخ‌ها بزن و ذخیره کن.');
   
   const due = dueCount();
-  let html = `<div class="cards-head">
+  let html = `<div class="screen"><div class="cards-head">
     <div><div class="cards-count">${state.cards.length} کارت</div><div class="cards-due">${due > 0 ? `${due} کارت برای مرور امروز` : 'همه‌چیز مرور شده ✓'}</div></div>
-    ${due > 0 ? `<button class="btn btn-primary" id="startReview">شروع مرور</button>` : ''}
+    ${due > 0 ? `<button class="btn btn-primary btn-sm" id="startReview">شروع مرور</button>` : ''}
   </div>`;
   state.cards.slice().reverse().forEach(c => {
     html += `<div class="card-item">
-      <div class="card-body" data-speak="${esc(c.t)}"><div class="card-en">${esc(c.t)}</div><div class="card-fa">${esc(c.fa)}</div></div>
-      <button class="card-del" data-del="${esc(c.t)}" aria-label="حذف">✕</button>
+      <div class="card-body" data-speak="${esc(c.t)}"><div class="card-en" dir="ltr">${esc(c.t)}</div><div class="card-fa" dir="rtl">${esc(c.fa)}</div></div>
+      <button class="card-del" data-del="${esc(c.t)}" aria-label="حذف">${ICONS.close}</button>
     </div>`;
   });
-  html += `<button class="btn btn-ghost btn-block" id="clearCards" style="margin-top:14px">🗑️ پاک کردن همه</button>`;
+  html += `<button class="btn btn-ghost btn-block" id="clearCards">🗑️ پاک کردن همه</button></div>`;
   $('#content').innerHTML = html;
 
   if (due > 0) $('#startReview').onclick = startReview;
@@ -902,31 +1173,52 @@ function startReview(){
 
 function renderReview(){
   if (!review.queue.length){
-    $('#content').innerHTML = `<div class="empty"><span class="icon">🎉</span><div style="font-size:17px;font-weight:800;color:var(--text);margin-bottom:6px">تمام شد!</div>${review.done} کارت مرور شد.<button class="btn btn-primary btn-block" id="reviewDone" style="margin-top:18px">بازگشت</button></div>`;
+    $('#content').innerHTML = `<div class="empty screen"><span class="icon">🎉</span><div style="font-size:1.05rem;font-weight:800;margin-bottom:6px">تمام شد!</div><div style="color:var(--text-2);font-size:.86rem">${review.done} کارت مرور شد.</div><button class="btn btn-primary btn-block" id="reviewDone" style="margin-top:18px">بازگشت</button></div>`;
     $('#reviewDone').onclick = () => { review = null; renderCards(); };
     return;
   }
   const card = review.queue[0], pct = review.total ? Math.round(review.done / review.total * 100) : 0;
   $('#content').innerHTML = `
-    <div class="review-progress"><i style="width:${pct}%"></i></div>
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:12px;color:var(--text-soft);font-weight:700">
-      <span>${review.done} از ${review.total}</span><button class="btn btn-ghost btn-sm" id="exitReview">✕ خروج</button>
-    </div>
-    <div class="review-card" id="reviewCard" role="button" tabindex="0">
-      ${review.shown ? `<div class="review-back-en">${esc(card.t)}</div><div class="review-back-fa">${esc(card.fa)}</div>` : `<div class="review-front">${esc(card.t)}</div><div class="review-hint">برای دیدن معنی، لمس کن</div>`}
-    </div>
-    ${review.shown ? `<div class="rating-buttons">
-      <button class="rating-btn again" data-rate="0"><span class="rt">😞</span>دوباره</button>
-      <button class="rating-btn hard"  data-rate="3"><span class="rt">😐</span>سخت</button>
-      <button class="rating-btn good"  data-rate="4"><span class="rt">🙂</span>خوب</button>
-      <button class="rating-btn easy"  data-rate="5"><span class="rt">😎</span>راحت</button>
-    </div>` : ''}`;
+    <div class="screen">
+      <div class="review-progress"><i style="width:${pct}%"></i></div>
+      <div class="review-top">
+        <span>${review.done} از ${review.total}</span>
+        <button class="btn btn-ghost btn-sm" id="exitReview">${ICONS.close} خروج</button>
+      </div>
+      <div class="review-card${review.shown ? ' flipped' : ''}" id="reviewCard" role="button" tabindex="0" aria-label="فلش‌کارت؛ برای دیدن معنی لمس کنید">
+        <div class="flip-inner">
+          <div class="face face-front">
+            <div class="review-front" dir="ltr">${esc(card.t)}</div>
+            <div class="review-hint" dir="rtl">برای دیدن معنی، لمس کن</div>
+          </div>
+          <div class="face face-back">
+            <div class="review-back-en" dir="ltr">${esc(card.t)}</div>
+            <div class="review-back-fa" dir="rtl">${esc(card.fa)}</div>
+          </div>
+        </div>
+      </div>
+      <div class="rating-buttons" id="ratings" dir="rtl" ${review.shown ? '' : 'hidden'}>
+        <button class="rating-btn again" data-rate="0">دوباره</button>
+        <button class="rating-btn hard"  data-rate="3">سخت</button>
+        <button class="rating-btn good"  data-rate="4">خوب</button>
+        <button class="rating-btn easy"  data-rate="5">راحت</button>
+      </div>
+    </div>`;
 
-  $('#exitReview').onclick = () => { review = null; renderCards(); };
+  $('#exitReview').onclick = () => { haptic(5); review = null; renderCards(); };
   const cardEl = $('#reviewCard');
-  cardEl.onclick = () => { if (!review.shown){ review.shown = true; speak(card.t); renderReview(); } };
-  cardEl.onkeydown = e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); if (!review.shown){ review.shown = true; speak(card.t); renderReview(); } } };
-  $$('[data-rate]').forEach(b => { b.onclick = () => rateCard(+b.dataset.rate); });
+  const reveal = () => {
+    if (review.shown) return;
+    review.shown = true;
+    cardEl.classList.add('flipped');
+    const ratings = $('#ratings');
+    if (ratings) ratings.hidden = false;
+    haptic(10);
+    speak(card.t);
+  };
+  cardEl.onclick = reveal;
+  cardEl.onkeydown = e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); reveal(); } };
+  $$('[data-rate]').forEach(b => { b.onclick = () => { haptic(8); rateCard(+b.dataset.rate); }; });
 }
 
 function rateCard(quality){
@@ -952,16 +1244,76 @@ function addCard(t, fa){
    SHEET & API
    ============================================================ */
 let sheetMode = null;
-function openSheet(html, mode){ $('#sheetBody').innerHTML = html; $('#sheet').classList.add('show'); $('#backdrop').classList.add('show'); sheetMode = mode || 'generic'; }
-function closeSheet(){ $('#sheet').classList.remove('show'); $('#backdrop').classList.remove('show'); sheetMode = null; }
-$('#backdrop').onclick = closeSheet; $('#sheetClose').onclick = closeSheet;
+function openSheet(html, mode){
+  $('#sheetBody').innerHTML = html;
+  $('#sheet').classList.add('show');
+  $('#backdrop').classList.add('show');
+  document.body.dataset.locked = '1';
+  sheetMode = mode || 'generic';
+  haptic(5);
+}
+function closeSheet(){
+  $('#sheet').classList.remove('show');
+  $('#backdrop').classList.remove('show');
+  delete document.body.dataset.locked;
+  sheetMode = null;
+}
+$('#backdrop').onclick = closeSheet;
+$('#sheetClose').onclick = () => { haptic(4); closeSheet(); };
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet(); });
+
+// Drag the sheet down to dismiss
+(() => {
+  const sheet = $('#sheet'), grip = $('#sheetGrip');
+  let startY = 0, dy = 0, dragging = false;
+  const down = e => { dragging = true; startY = e.clientY; dy = 0; sheet.classList.add('dragging'); };
+  const move = e => { if (!dragging) return; dy = Math.max(0, e.clientY - startY); sheet.style.transform = `translateY(${dy}px)`; };
+  const up = () => {
+    if (!dragging) return;
+    dragging = false;
+    sheet.classList.remove('dragging');
+    sheet.style.transform = '';
+    if (dy > 92){ haptic(6); closeSheet(); }
+    dy = 0;
+  };
+  grip.addEventListener('pointerdown', down);
+  grip.addEventListener('pointermove', move);
+  grip.addEventListener('pointerup', up);
+  grip.addEventListener('pointercancel', up);
+})();
+
+// Pull-to-refresh: a light, tactile refresh of the current tab
+(() => {
+  const ptr = $('#ptr');
+  let startY = null, pulling = false, dist = 0;
+  window.addEventListener('touchstart', e => {
+    const sheetOpen = $('#sheet').classList.contains('show');
+    if (window.scrollY > 2 || sheetOpen){ startY = null; return; }
+    startY = e.touches[0].clientY; dist = 0;
+  }, { passive: true });
+  window.addEventListener('touchmove', e => {
+    if (startY === null) return;
+    dist = e.touches[0].clientY - startY;
+    if (dist > 8){
+      pulling = true;
+      ptr.classList.add('pull');
+      ptr.style.transform = `translate(-50%, ${Math.min(dist * .52, 56) - 46}px)`;
+    }
+  }, { passive: true });
+  window.addEventListener('touchend', () => {
+    if (!pulling){ startY = null; return; }
+    ptr.classList.remove('pull');
+    ptr.style.transform = '';
+    if (dist > 92){ ptr.classList.add('spin'); haptic(10); renderTab(state.tab); setTimeout(() => ptr.classList.remove('spin'), 650); }
+    pulling = false; startY = null; dist = 0;
+  }, { passive: true });
+})();
 
 function openChunk(eng, fa){
   const inCards = state.cards.some(c => c.t.toLowerCase() === eng.toLowerCase());
   openSheet(`
-    <div class="sheet-head"><div class="sheet-word">${esc(eng)}</div></div>
-    <div class="sheet-meaning">${esc(fa)}</div>
+    <div class="sheet-head"><div class="sheet-word" dir="ltr">${esc(eng)}</div></div>
+    <div class="sheet-meaning" dir="rtl">${esc(fa)}</div>
     <div class="sheet-actions">
       <button class="btn btn-ghost" id="shSpeak">🔊 شنیدن</button>
       <button class="btn ${inCards ? 'btn-ghost' : 'btn-primary'}" id="shAdd" ${inCards ? 'disabled' : ''}>${inCards ? '✓ ذخیره شده' : '＋ ذخیره'}</button>
@@ -978,8 +1330,8 @@ async function openWord(raw){
 
   const inCards = state.cards.some(c => c.t.toLowerCase() === key);
   openSheet(`
-    <div class="sheet-head"><div class="sheet-word">${esc(raw)}</div></div>
-    <div class="sheet-meaning" id="shMeaning">${meaning ? esc(meaning) : '<span style="color:var(--text-soft);font-size:13px">در حال دریافت از اینترنت...</span>'}</div>
+    <div class="sheet-head"><div class="sheet-word" dir="ltr">${esc(raw)}</div></div>
+    <div class="sheet-meaning" id="shMeaning" dir="rtl">${meaning ? esc(meaning) : '<span style="color:var(--text-soft);font-size:13px">در حال دریافت از اینترنت...</span>'}</div>
     <div class="sheet-actions">
       <button class="btn btn-ghost" id="shSpeak">🔊 شنیدن</button>
       <button class="btn ${inCards ? 'btn-ghost' : 'btn-primary'}" id="shAdd" ${inCards || !meaning ? 'disabled' : ''}>${inCards ? '✓ ذخیره شده' : '＋ ذخیره'}</button>
@@ -1013,7 +1365,7 @@ async function fetchTranslation(word) {
 function openGrammar(key, phrase){
   // Simple fallback for tapping grammar in the speaking tab
   openSheet(`
-    <div class="sheet-head"><div class="sheet-label">الگوی گرامری</div><div class="sheet-word">${esc(phrase)}</div></div>
+    <div class="sheet-head"><div class="sheet-label">الگوی گرامری</div><div class="sheet-word" dir="ltr">${esc(phrase)}</div></div>
     <div class="sheet-def" style="margin-top:10px">این یک الگوی گرامری است. برای توضیح کامل به تب گرامر (📖) بروید.</div>
     <div class="sheet-actions"><button class="btn btn-ghost" id="shSpeak">🔊 شنیدن</button></div>
   `, 'grammar'); 

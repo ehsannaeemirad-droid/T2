@@ -1,33 +1,37 @@
-const CACHE_NAME = 'touchstone-v6';
+const CACHE_NAME = 'touchstone-v14';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './styles.css',
   './app.js',
+  './manifest.json',
+  './icon-192.png',
+  './icon-512.png',
   './data/topics.json'
 ];
 
-// Install: Cache the app shell
+// Install: cache the app shell, bypassing the HTTP cache so a new
+// CACHE_NAME really does deliver fresh files.
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS_TO_CACHE))
+    caches.open(CACHE_NAME).then(cache =>
+      cache.addAll(ASSETS_TO_CACHE.map(url => new Request(url, { cache: 'reload' })))
+    )
   );
   self.skipWaiting();
 });
 
-// Activate: Clean up old caches
+// Activate: drop old caches
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys => Promise.all(
-      keys.map(key => {
-        if (key !== CACHE_NAME) return caches.delete(key);
-      })
+      keys.map(key => (key !== CACHE_NAME ? caches.delete(key) : undefined))
     ))
   );
   self.clients.claim();
 });
 
-// Fetch: fresh content from the network, cached shell and assets for offline
+// Fetch: fresh content from the network, cached shell/assets for offline
 self.addEventListener('fetch', event => {
   const req = event.request;
 
@@ -44,7 +48,7 @@ self.addEventListener('fetch', event => {
   const putInCache = res => {
     if (res && res.ok) {
       const copy = res.clone();
-      caches.open(CACHE_NAME).then(cache => cache.put(req, copy));
+      caches.open(CACHE_NAME).then(cache => cache.put(req, copy)).catch(() => {});
     }
     return res;
   };

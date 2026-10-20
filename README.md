@@ -7,10 +7,13 @@ A mobile-first Persian-language speaking app for Touchstone 2, shipped as an ins
 ## Screens
 
 - **Home** — lesson list and daily stats
-- **Speaking** — model answers with inline translations and tap-to-reveal words
+- **Speaking** — model answers with inline translations; tap a word for its meaning,
+  double-tap for the meaning of the whole sentence, and use «ترجمه متن» for a
+  sentence-by-sentence translation of the full text
 - **Grammar** — swipeable lesson cards: teach → quick 2-item check → 10-item final test → score
 - **Flashcards** — spaced-repetition cards built from each lesson's words
-- **Exercise** — word practice and matching games
+- **Exercise** — word practice and matching games; a correct answer keeps its ✓
+  feedback on screen for a moment, then moves to the next question automatically
 
 ## Content layout
 
